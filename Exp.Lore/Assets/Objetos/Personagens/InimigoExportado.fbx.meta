@@ -1,0 +1,1080 @@
+fileFormatVersion: 2
+guid: 48a8cfcdb6d86054ead03d12eaaa4e2c
+ModelImporter:
+  serializedVersion: 26
+  internalIDToNameTable:
+  - first:
+      74: -7287852920152451214
+    second: inimigoarmature|ataqueinimigo
+  - first:
+      74: 4304527543439952048
+    second: inimigoarmature|caminharinimigo
+  - first:
+      74: 2647490623812278298
+    second: inimigoarmature|correrinimigo
+  - first:
+      74: 6577354726394229441
+    second: inimigoarmature|idlecombateinimigo
+  - first:
+      74: -3533397143657854804
+    second: inimigoarmature|idleinimigo
+  - first:
+      74: -5092745640476878453
+    second: inimigoarmature|morrerinimigo
+  - first:
+      74: -7899694742880361347
+    second: inimigoarmature|PoseLib
+  - first:
+      74: 5872876112162859787
+    second: inimigoarmature|tomardanoinimigo
+  externalObjects:
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: No Name
+    second: {fileID: 2100000, guid: ce189959432595e49b689a68b99e1c6a, type: 2}
+  materials:
+    importMaterials: 1
+    materialName: 0
+    materialSearch: 1
+    materialLocation: 0
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    resampleCurves: 1
+    optimizeGameObjects: 0
+    motionNodeName: 
+    rigImportErrors: 
+    rigImportWarnings: 
+    animationImportErrors: 
+    animationImportWarnings: "\nClip 'inimigoarmature|idleinimigo' has import animation
+      warnings that might lower retargeting quality:\nNote: Activate translation DOF
+      on avatar to improve retargeting quality.\n\t'torax' has scale animation that
+      will be discarded.\n\nClip 'inimigoarmature|morrerinimigo' has import animation
+      warnings that might lower retargeting quality:\nNote: Activate translation DOF
+      on avatar to improve retargeting quality.\n\t'coxa.L' has scale animation that
+      will be discarded.\n\t'canela.L' has scale animation that will be discarded.\n\t'pe.L'
+      has scale animation that will be discarded.\n\t'pontadope.L' has scale animation
+      that will be discarded.\n\t'coxa.R' has scale animation that will be discarded.\n\t'canela.R'
+      has scale animation that will be discarded.\n\t'pe.R' has scale animation that
+      will be discarded.\n\t'pontadope.R' has scale animation that will be discarded.\n\t'braco.L'
+      has scale animation that will be discarded.\n\t'antibraco.L' has scale animation
+      that will be discarded.\n\t'mao.L' has scale animation that will be discarded.\n\t'braco.R'
+      has scale animation that will be discarded.\n\t'antibraco.R' has scale animation
+      that will be discarded.\n\t'mao.R' has scale animation that will be discarded.\n"
+    animationRetargetingWarnings: 
+    animationDoRetargetingWarnings: 0
+    importAnimatedCustomProperties: 0
+    importConstraints: 0
+    animationCompression: 3
+    animationRotationError: 0.5
+    animationPositionError: 0.5
+    animationScaleError: 0.5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    extraUserProperties: []
+    clipAnimations:
+    - serializedVersion: 16
+      name: inimigoarmature|ataqueinimigo
+      takeName: inimigoarmature|ataqueinimigo
+      internalID: -7287852920152451214
+      firstFrame: 0
+      lastFrame: 16.9
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      hasAdditiveReferencePose: 0
+      loopTime: 0
+      loopBlend: 0
+      loopBlendOrientation: 1
+      loopBlendPositionY: 1
+      loopBlendPositionXZ: 1
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask: []
+      maskType: 3
+      maskSource: {instanceID: 0}
+      additiveReferencePoseFrame: 0
+    - serializedVersion: 16
+      name: inimigoarmature|caminharinimigo
+      takeName: inimigoarmature|caminharinimigo
+      internalID: 4304527543439952048
+      firstFrame: 0
+      lastFrame: 32
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      hasAdditiveReferencePose: 0
+      loopTime: 1
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 1
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask: []
+      maskType: 3
+      maskSource: {instanceID: 0}
+      additiveReferencePoseFrame: 0
+    - serializedVersion: 16
+      name: inimigoarmature|correrinimigo
+      takeName: inimigoarmature|correrinimigo
+      internalID: 2647490623812278298
+      firstFrame: 0
+      lastFrame: 32
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      hasAdditiveReferencePose: 0
+      loopTime: 1
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 1
+      loopBlendPositionXZ: 1
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask: []
+      maskType: 3
+      maskSource: {instanceID: 0}
+      additiveReferencePoseFrame: 0
+    - serializedVersion: 16
+      name: inimigoarmature|idlecombateinimigo
+      takeName: inimigoarmature|idlecombateinimigo
+      internalID: 6577354726394229441
+      firstFrame: 0
+      lastFrame: 24
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      hasAdditiveReferencePose: 0
+      loopTime: 1
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 1
+      loopBlendPositionXZ: 1
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask: []
+      maskType: 3
+      maskSource: {instanceID: 0}
+      additiveReferencePoseFrame: 0
+    - serializedVersion: 16
+      name: inimigoarmature|idleinimigo
+      takeName: inimigoarmature|idleinimigo
+      internalID: -3533397143657854804
+      firstFrame: 0
+      lastFrame: 60
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      hasAdditiveReferencePose: 0
+      loopTime: 0
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask: []
+      maskType: 3
+      maskSource: {instanceID: 0}
+      additiveReferencePoseFrame: 0
+    - serializedVersion: 16
+      name: inimigoarmature|morrerinimigo
+      takeName: inimigoarmature|morrerinimigo
+      internalID: -5092745640476878453
+      firstFrame: 0
+      lastFrame: 34
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      hasAdditiveReferencePose: 0
+      loopTime: 0
+      loopBlend: 0
+      loopBlendOrientation: 1
+      loopBlendPositionY: 1
+      loopBlendPositionXZ: 1
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask: []
+      maskType: 3
+      maskSource: {instanceID: 0}
+      additiveReferencePoseFrame: 0
+    - serializedVersion: 16
+      name: inimigoarmature|PoseLib
+      takeName: inimigoarmature|PoseLib
+      internalID: -7899694742880361347
+      firstFrame: 0
+      lastFrame: 3
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      hasAdditiveReferencePose: 0
+      loopTime: 0
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask: []
+      maskType: 3
+      maskSource: {instanceID: 0}
+      additiveReferencePoseFrame: 0
+    - serializedVersion: 16
+      name: inimigoarmature|tomardanoinimigo
+      takeName: inimigoarmature|tomardanoinimigo
+      internalID: 5872876112162859787
+      firstFrame: 0
+      lastFrame: 18
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      hasAdditiveReferencePose: 0
+      loopTime: 0
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 1
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask: []
+      maskType: 3
+      maskSource: {instanceID: 0}
+      additiveReferencePoseFrame: 0
+    isReadable: 0
+  meshes:
+    lODScreenPercentages: []
+    globalScale: 0.54
+    meshCompression: 0
+    addColliders: 0
+    useSRGBMaterialColor: 1
+    sortHierarchyByName: 1
+    importVisibility: 1
+    importBlendShapes: 1
+    importCameras: 0
+    importLights: 0
+    swapUVChannels: 0
+    generateSecondaryUV: 0
+    useFileUnits: 1
+    keepQuads: 0
+    weldVertices: 1
+    preserveHierarchy: 0
+    skinWeightsMode: 0
+    maxBonesPerVertex: 4
+    minBoneWeight: 0.001
+    meshOptimizationFlags: -1
+    indexFormat: 0
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVPackMargin: 4
+    useFileScale: 1
+  tangentSpace:
+    normalSmoothAngle: 60
+    normalImportMode: 1
+    tangentImportMode: 3
+    normalCalculationMode: 4
+    legacyComputeAllNormalsFromSmoothingGroupsWhenMeshHasBlendShapes: 0
+    blendShapeNormalImportMode: 1
+    normalSmoothingSource: 0
+  referencedClips: []
+  importAnimation: 1
+  copyAvatar: 0
+  humanDescription:
+    serializedVersion: 3
+    human:
+    - boneName: CORPO
+      humanName: Hips
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: coxa.L
+      humanName: LeftUpperLeg
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: coxa.R
+      humanName: RightUpperLeg
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: canela.L
+      humanName: LeftLowerLeg
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: canela.R
+      humanName: RightLowerLeg
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: pe.L
+      humanName: LeftFoot
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: pe.R
+      humanName: RightFoot
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: abdomen
+      humanName: Spine
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: torax
+      humanName: Chest
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: cabeca
+      humanName: Neck
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: clavicula.L
+      humanName: LeftShoulder
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: clavicula.R
+      humanName: RightShoulder
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: braco.L
+      humanName: LeftUpperArm
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: braco.R
+      humanName: RightUpperArm
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: antibraco.L
+      humanName: LeftLowerArm
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: antibraco.R
+      humanName: RightLowerArm
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: mao.L
+      humanName: LeftHand
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: mao.R
+      humanName: RightHand
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: pontadope.L
+      humanName: LeftToes
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: pontadope.R
+      humanName: RightToes
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: dedopolegar.L
+      humanName: Left Thumb Proximal
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: dedopolegarmeio.L
+      humanName: Left Thumb Intermediate
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: dedopolegarponta.L
+      humanName: Left Thumb Distal
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: dedoindicador.L
+      humanName: Left Index Proximal
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: dedoindicadormeio.L
+      humanName: Left Index Intermediate
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: dedoindicadorponta.L
+      humanName: Left Index Distal
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: dedomeio.L
+      humanName: Left Ring Proximal
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: dedomeiomeio.L
+      humanName: Left Ring Intermediate
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: dedomeioponta.L
+      humanName: Left Ring Distal
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: dedoanelar.L
+      humanName: Left Little Proximal
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: dedoanelarmeio.L
+      humanName: Left Little Intermediate
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: dedoanelarponta.L
+      humanName: Left Little Distal
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: dedopolegar.R
+      humanName: Right Thumb Proximal
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: dedopolegarmeio.R
+      humanName: Right Thumb Intermediate
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: dedopolegarponta.R
+      humanName: Right Thumb Distal
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: dedoindicador.R
+      humanName: Right Index Proximal
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: dedoindicadormeio.R
+      humanName: Right Index Intermediate
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: dedoindicadorponta.R
+      humanName: Right Index Distal
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: dedomeio.R
+      humanName: Right Ring Proximal
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: dedomeiomeio.R
+      humanName: Right Ring Intermediate
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: dedomeioponta.R
+      humanName: Right Ring Distal
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: dedoanelar.R
+      humanName: Right Little Proximal
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: dedoanelarmeio.R
+      humanName: Right Little Intermediate
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: dedoanelarponta.R
+      humanName: Right Little Distal
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: cabeca_end
+      humanName: Head
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    skeleton:
+    - name: InimigoExportado(Clone)
+      parentName: 
+      position: {x: 0, y: 0, z: 0}
+      rotation: {x: 0, y: 0, z: 0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: inimigo
+      parentName: InimigoExportado(Clone)
+      position: {x: -0, y: 0, z: 0}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 2.0060687, y: 2.0060687, z: 2.0060687}
+    - name: inimigoarmature
+      parentName: InimigoExportado(Clone)
+      position: {x: -0, y: 0, z: 0}
+      rotation: {x: -0.7071068, y: 0, z: -0, w: 0.7071067}
+      scale: {x: 100, y: 100, z: 100}
+    - name: CORPO
+      parentName: inimigoarmature
+      position: {x: 6.476301e-17, y: 0, z: 0.010414796}
+      rotation: {x: 0.003816843, y: -1.2019852e-10, z: -0.0000000090670405, w: 0.9999927}
+      scale: {x: 0.99999976, y: 1.0000001, z: 1.0000002}
+    - name: cintura
+      parentName: CORPO
+      position: {x: 1.5867727e-12, y: -1.5879772e-10, z: -1.052795e-12}
+      rotation: {x: 0.7098005, y: 0.000000006326372, z: -0.0000000064963595, w: -0.7044028}
+      scale: {x: 1, y: 1, z: 0.9999998}
+    - name: coxa.L
+      parentName: cintura
+      position: {x: -0.0013739447, y: 0.00034567004, z: -0.0001146008}
+      rotation: {x: -0.018865053, y: 0.9992081, z: -0.035011083, w: 0.0012525611}
+      scale: {x: 1.0000033, y: 0.9998264, z: 1.0001954}
+    - name: canela.L
+      parentName: coxa.L
+      position: {x: -0, y: 0.005313292, z: 3.4198164e-10}
+      rotation: {x: 0.0019337868, y: -0.99583, z: 0.091207296, w: -0.00016651386}
+      scale: {x: 0.99999523, y: 1.0002328, z: 0.99982345}
+    - name: pe.L
+      parentName: canela.L
+      position: {x: -9.4296404e-11, y: 0.0043305983, z: -1.0058285e-10}
+      rotation: {x: 0.014619349, y: 0.7483926, z: -0.66303086, w: -0.009219764}
+      scale: {x: 0.9999906, y: 1.0000328, z: 0.9999826}
+    - name: pontadope.L
+      parentName: pe.L
+      position: {x: 1.2930393e-10, y: 0.0007739263, z: -2.0116566e-11}
+      rotation: {x: 0.080443226, y: 0.43422642, z: 0.035152745, w: 0.8965159}
+      scale: {x: 0.99988747, y: 0.9999576, z: 1.0001576}
+    - name: pontadope.L_end
+      parentName: pontadope.L
+      position: {x: -0, y: 0.0005601012, z: 0}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: coxa.R
+      parentName: cintura
+      position: {x: 0.0013739442, y: 0.0003456691, z: -0.00011460066}
+      rotation: {x: 0.018865041, y: 0.9992081, z: -0.035011172, w: -0.0012526184}
+      scale: {x: 1.0000386, y: 1.0000098, z: 0.9999748}
+    - name: canela.R
+      parentName: coxa.R
+      position: {x: 8.0466266e-11, y: 0.0053132903, z: 8.0466266e-11}
+      rotation: {x: -0.0019337831, y: -0.99583, z: 0.09120739, w: 0.00016645569}
+      scale: {x: 0.99999756, y: 0.9999607, z: 1.0000474}
+    - name: pe.R
+      parentName: canela.R
+      position: {x: -2.4642802e-10, y: 0.0043305983, z: 6.034972e-11}
+      rotation: {x: -0.014619338, y: 0.7483926, z: -0.6630308, w: 0.009219785}
+      scale: {x: 1.0000056, y: 1.000054, z: 0.9999893}
+    - name: pontadope.R
+      parentName: pe.R
+      position: {x: -2.6403e-10, y: 0.0007739263, z: -5.0291424e-11}
+      rotation: {x: 0.08044331, y: -0.4342264, z: -0.035152752, w: 0.89651585}
+      scale: {x: 0.9999939, y: 0.999962, z: 1.000042}
+    - name: pontadope.R_end
+      parentName: pontadope.R
+      position: {x: -0, y: 0.0005601012, z: 0}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: abdomen
+      parentName: CORPO
+      position: {x: 1.5867673e-12, y: -1.587974e-10, z: -1.0527974e-12}
+      rotation: {x: 0.7044028, y: -0.000000070836265, z: -0.00000007021857, w: 0.7098005}
+      scale: {x: 0.99999994, y: 0.9999999, z: 0.9999997}
+    - name: torax
+      parentName: abdomen
+      position: {x: 2.541583e-12, y: 0.0023006038, z: 5.0291416e-12}
+      rotation: {x: -0, y: -0.000000027202287, z: -0.000000002408541, w: 1}
+      scale: {x: 0.9999999, y: 0.9999999, z: 1}
+    - name: cabeca
+      parentName: torax
+      position: {x: -1.9403203e-11, y: 0.0030520202, z: -1.7601996e-10}
+      rotation: {x: -3.580196e-16, y: 0.00000013586981, z: -0.0000000011312142, w: 1}
+      scale: {x: 1, y: 0.99999994, z: 1.0000002}
+    - name: cabeca_end
+      parentName: cabeca
+      position: {x: -0, y: 0.0018574805, z: 0}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: clavicula.L
+      parentName: torax
+      position: {x: 3.0683292e-10, y: 0.0019248456, z: 0.000761221}
+      rotation: {x: -0.53589773, y: 0.42235127, z: 0.33276597, w: 0.65092236}
+      scale: {x: 1.0000013, y: 1.0000021, z: 1.0000021}
+    - name: braco.L
+      parentName: clavicula.L
+      position: {x: -0.00021132194, y: 0.0013913895, z: -0.0004997822}
+      rotation: {x: -0.08431982, y: 0.023453083, z: 0.24668097, w: 0.9651366}
+      scale: {x: 0.99985266, y: 1.0000482, z: 1.0000049}
+    - name: antibraco.L
+      parentName: braco.L
+      position: {x: 1.6093253e-10, y: 0.0039710198, z: -1.40816e-10}
+      rotation: {x: 0.011803759, y: -0.707936, z: 0.003160547, w: -0.7061709}
+      scale: {x: 0.9999735, y: 0.99983245, z: 1.0001708}
+    - name: mao.L
+      parentName: antibraco.L
+      position: {x: 0.00000002615154, y: 0.0036641129, z: -0.00000012882649}
+      rotation: {x: -0.009668917, y: 0.7098308, z: 0.004248745, w: -0.70429295}
+      scale: {x: 0.999995, y: 1.0000845, z: 1.0000179}
+    - name: dedoindicador.L
+      parentName: mao.L
+      position: {x: -0.00019852503, y: 0.0007466234, z: -0.000029940042}
+      rotation: {x: -0.0047621215, y: -0.00049412245, z: 0.05149892, w: 0.99866164}
+      scale: {x: 0.9999834, y: 1.0000455, z: 0.9999713}
+    - name: dedoindicadormeio.L
+      parentName: dedoindicador.L
+      position: {x: 1.6093253e-10, y: 0.00031753312, z: -0.0000000012720586}
+      rotation: {x: -0.00000014387844, y: 0.000000031582946, z: -0.01785593, w: 0.9998406}
+      scale: {x: 1.0000027, y: 0.9999734, z: 1.0000279}
+    - name: dedoindicadorponta.L
+      parentName: dedoindicadormeio.L
+      position: {x: 7.2231054e-10, y: 0.00027872977, z: 0.000000001126528}
+      rotation: {x: 0.0000000940411, y: 0.000000038203883, z: 0.0063350787, w: 0.99998}
+      scale: {x: 1.0000013, y: 1.0000277, z: 0.99997544}
+    - name: dedoindicadorponta.L_end
+      parentName: dedoindicadorponta.L
+      position: {x: -0, y: 0.00019614107, z: 0}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: dedomeio.L
+      parentName: mao.L
+      position: {x: 0.000018838524, y: 0.0007907651, z: -0.000033623473}
+      rotation: {x: -0.000008347446, y: 0.00000026822096, z: -0.0049385405, w: 0.99998784}
+      scale: {x: 1.0000018, y: 1.0000302, z: 0.9999705}
+    - name: dedomeiomeio.L
+      parentName: dedomeio.L
+      position: {x: -8.046628e-10, y: 0.00027527742, z: 4.4256443e-10}
+      rotation: {x: 0.000016428343, y: -0.000000057773974, z: -0.0047805794, w: 0.9999886}
+      scale: {x: 1.0000013, y: 0.9999727, z: 1.0000273}
+    - name: dedomeioponta.L
+      parentName: dedomeiomeio.L
+      position: {x: -4.023314e-10, y: 0.0002974005, z: 0}
+      rotation: {x: 0.000012243209, y: 0.000000036732914, z: -0.006493223, w: 0.99997896}
+      scale: {x: 1.0000014, y: 1.0000249, z: 0.9999745}
+    - name: dedomeioponta.L_end
+      parentName: dedomeioponta.L
+      position: {x: -0, y: 0.00020267168, z: 0}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: dedoanelar.L
+      parentName: mao.L
+      position: {x: 0.00022324314, y: 0.0007423045, z: -0.00004076855}
+      rotation: {x: -0.00120509, y: 0.00014737248, z: -0.1105527, w: 0.99386954}
+      scale: {x: 1.0000204, y: 1.0000077, z: 0.99997205}
+    - name: dedoanelarmeio.L
+      parentName: dedoanelar.L
+      position: {x: -3.2186506e-10, y: 0.00030096687, z: -3.2186506e-10}
+      rotation: {x: 0.00000025868206, y: -9.524681e-10, z: 0.033139072, w: 0.99945074}
+      scale: {x: 0.9999914, y: 0.9999827, z: 1.0000257}
+    - name: dedoanelarponta.L
+      parentName: dedoanelarmeio.L
+      position: {x: -3.2186506e-10, y: 0.00027433282, z: 3.2186506e-10}
+      rotation: {x: -0.00000016359616, y: 0.000000013359634, z: -0.0034918245, w: 0.9999939}
+      scale: {x: 1.000002, y: 1.0000256, z: 0.99997544}
+    - name: dedoanelarponta.L_end
+      parentName: dedoanelarponta.L
+      position: {x: -0, y: 0.0002133124, z: 0}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: dedopolegar.L
+      parentName: mao.L
+      position: {x: -0.0003717637, y: 0.0001778704, z: 0.000025890504}
+      rotation: {x: 0.1652856, y: -0.35423225, z: 0.3971137, w: 0.83036196}
+      scale: {x: 0.9999808, y: 1.0000167, z: 1.000002}
+    - name: dedopolegarmeio.L
+      parentName: dedopolegar.L
+      position: {x: 1.6093253e-10, y: 0.0002835933, z: -8.8512886e-10}
+      rotation: {x: -0.026627967, y: 0.0000003874301, z: -0.02571434, w: 0.9993146}
+      scale: {x: 0.99998534, y: 1.0000646, z: 0.99995315}
+    - name: dedopolegarponta.L
+      parentName: dedopolegarmeio.L
+      position: {x: -6.437301e-10, y: 0.00027405098, z: -0.0000000014483925}
+      rotation: {x: -0.014190603, y: 0.0000002543178, z: -0.013703555, w: 0.9998054}
+      scale: {x: 1.0000001, y: 0.9999896, z: 1.0000147}
+    - name: dedopolegarponta.L_end
+      parentName: dedopolegarponta.L
+      position: {x: -0, y: 0.0001953257, z: 0}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: clavicula.R
+      parentName: torax
+      position: {x: 3.8730044e-10, y: 0.001924844, z: 0.0007612207}
+      rotation: {x: -0.535898, y: -0.42235094, z: -0.3327657, w: 0.6509225}
+      scale: {x: 0.99999976, y: 1.0000007, z: 1.0000008}
+    - name: braco.R
+      parentName: clavicula.R
+      position: {x: 0.00021132252, y: 0.0013913902, z: -0.0004997821}
+      rotation: {x: -0.08432022, y: -0.023452789, z: -0.2466818, w: 0.96513635}
+      scale: {x: 0.9998989, y: 1.0003147, z: 0.99983615}
+    - name: antibraco.R
+      parentName: braco.R
+      position: {x: -1.6093253e-10, y: 0.0039710198, z: 8.448956e-10}
+      rotation: {x: 0.011809807, y: 0.70793617, z: -0.003152486, w: -0.7061707}
+      scale: {x: 0.99996644, y: 0.99970084, z: 1.0003911}
+    - name: mao.R
+      parentName: antibraco.R
+      position: {x: -0.000000024662913, y: 0.0036641136, z: -0.00000012975183}
+      rotation: {x: 0.009672014, y: 0.70983094, z: 0.004245423, w: 0.70429283}
+      scale: {x: 0.99999654, y: 1.0000079, z: 0.9999926}
+    - name: dedoindicador.R
+      parentName: mao.R
+      position: {x: 0.00019852526, y: 0.0007466252, z: -0.000029939853}
+      rotation: {x: -0.004769999, y: 0.000494361, z: -0.05146493, w: 0.9986633}
+      scale: {x: 0.9999642, y: 0.99981314, z: 1.0002227}
+    - name: dedoindicadormeio.R
+      parentName: dedoindicador.R
+      position: {x: -8.0466266e-11, y: 0.00031753132, z: 4.3250617e-10}
+      rotation: {x: -0.00000014315512, y: -0.000000105017904, z: 0.01785596, w: 0.99984056}
+      scale: {x: 0.99999917, y: 1.0002087, z: 0.9997955}
+    - name: dedoindicadorponta.R
+      parentName: dedoindicadormeio.R
+      position: {x: 7.0407985e-10, y: 0.00027873032, z: -0.0000000011667607}
+      rotation: {x: 0.00000012335957, y: -0.0000000096090815, z: -0.0063352063, w: 0.99998}
+      scale: {x: 0.9999997, y: 0.9997953, z: 1.0002043}
+    - name: dedoindicadorponta.R_end
+      parentName: dedoindicadorponta.R
+      position: {x: -0, y: 0.00019614107, z: 0}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: dedomeio.R
+      parentName: mao.R
+      position: {x: -0.000018837596, y: 0.0007907663, z: -0.000033622204}
+      rotation: {x: -0.000003826804, y: -0.00000008940696, z: 0.004938676, w: 0.99998784}
+      scale: {x: 1.0000029, y: 0.9997871, z: 1.0002137}
+    - name: dedomeiomeio.R
+      parentName: dedomeio.R
+      position: {x: -2.0116566e-11, y: 0.00027527695, z: 4.4256443e-10}
+      rotation: {x: -0.000007463037, y: 0.00000002535067, z: -0.004780528, w: -0.9999886}
+      scale: {x: 1.0000015, y: 1.0001873, z: 0.9998104}
+    - name: dedomeioponta.R
+      parentName: dedomeiomeio.R
+      position: {x: 6.034972e-11, y: 0.00029740232, z: -3.0174857e-10}
+      rotation: {x: 0.000005524975, y: 0.0000000593186, z: 0.0064930096, w: 0.9999789}
+      scale: {x: 1.0000031, y: 0.9998165, z: 1.0001804}
+    - name: dedomeioponta.R_end
+      parentName: dedomeioponta.R
+      position: {x: -0, y: 0.00020267168, z: 0}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: dedoanelar.R
+      parentName: mao.R
+      position: {x: -0.00022324282, y: 0.0007423068, z: -0.000040766623}
+      rotation: {x: 0.001212968, y: 0.00014707446, z: -0.11053468, w: -0.9938715}
+      scale: {x: 1.0000411, y: 0.99973243, z: 1.0002263}
+    - name: dedoanelarmeio.R
+      parentName: dedoanelar.R
+      position: {x: 4.8279775e-10, y: 0.00030096708, z: 1.0058285e-10}
+      rotation: {x: 0.0000002132501, y: 0.00000011433535, z: -0.033139016, w: 0.9994508}
+      scale: {x: 0.9999742, y: 1.0002357, z: 0.99979335}
+    - name: dedoanelarponta.R
+      parentName: dedoanelarmeio.R
+      position: {x: 3.6209813e-10, y: 0.0002743352, z: 6.437301e-10}
+      rotation: {x: -0.0000000028615545, y: -0.00000004519918, z: 0.00349167, w: 0.999994}
+      scale: {x: 1.000002, y: 0.99979174, z: 1.0002061}
+    - name: dedoanelarponta.R_end
+      parentName: dedoanelarponta.R
+      position: {x: -0, y: 0.0002133124, z: 0}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: dedopolegar.R
+      parentName: mao.R
+      position: {x: 0.00037176325, y: 0.00017787197, z: 0.000025892637}
+      rotation: {x: 0.16525482, y: 0.3542435, z: -0.39706275, w: 0.83038765}
+      scale: {x: 0.99996436, y: 0.99990225, z: 1.0001333}
+    - name: dedopolegarmeio.R
+      parentName: dedopolegar.R
+      position: {x: -1.8104906e-10, y: 0.0002835933, z: 1.15670265e-10}
+      rotation: {x: 0.02660374, y: -0.00000020861623, z: -0.025701646, w: -0.9993156}
+      scale: {x: 0.9999475, y: 1.0002215, z: 0.9998338}
+    - name: dedopolegarponta.R
+      parentName: dedopolegarmeio.R
+      position: {x: -4.023314e-10, y: 0.00027405124, z: -1.2069944e-10}
+      rotation: {x: -0.014190327, y: -0.00000020488027, z: 0.013703687, w: 0.9998054}
+      scale: {x: 0.9999927, y: 0.99995613, z: 1.0000517}
+    - name: dedopolegarponta.R_end
+      parentName: dedopolegarponta.R
+      position: {x: -0, y: 0.0001953257, z: 0}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: cacetete 1
+      parentName: mao.R
+      position: {x: -0.00049457955, y: 0.00048013122, z: -0.00023569983}
+      rotation: {x: -0.7072036, y: -0.0045434684, z: -0.70695794, w: 0.0072767334}
+      scale: {x: 0.99935776, y: 0.99999815, z: 0.99996835}
+    - name: cacetete_end
+      parentName: cacetete 1
+      position: {x: -0, y: 0.004246228, z: 0}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: cacetete
+      parentName: InimigoExportado(Clone)
+      position: {x: 0.9349462, y: 1.4257731, z: -0.008240571}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 2.0060687, y: 2.0060687, z: 2.0060687}
+    - name: FormaBracos
+      parentName: InimigoExportado(Clone)
+      position: {x: -0, y: 0, z: 0}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: FormaControlador
+      parentName: InimigoExportado(Clone)
+      position: {x: -0, y: 0, z: 0}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: FormaMaoControlador
+      parentName: InimigoExportado(Clone)
+      position: {x: -0, y: 0, z: 0}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: FormaMaster
+      parentName: InimigoExportado(Clone)
+      position: {x: -0, y: 0, z: 0}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: FormaPeControlador
+      parentName: InimigoExportado(Clone)
+      position: {x: -0, y: 0, z: 0}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: FormaPernas
+      parentName: InimigoExportado(Clone)
+      position: {x: -0, y: 0, z: 0}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: FormaPolo
+      parentName: InimigoExportado(Clone)
+      position: {x: -0, y: 0, z: 0}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: FormaAlvoBraco
+      parentName: InimigoExportado(Clone)
+      position: {x: -0, y: 0, z: 0}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    armTwist: 0.5
+    foreArmTwist: 0.5
+    upperLegTwist: 0.5
+    legTwist: 0.5
+    armStretch: 0.05
+    legStretch: 0.05
+    feetSpacing: 0
+    globalScale: 0.54
+    rootMotionBoneName: 
+    hasTranslationDoF: 0
+    hasExtraRoot: 1
+    skeletonHasParents: 1
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  animationType: 3
+  humanoidOversampling: 1
+  additionalBone: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

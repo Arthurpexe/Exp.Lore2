@@ -1,0 +1,17 @@
+<?xml version="1.0"?>
+<PlayerSave xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <posicao>
+    <x>97.07353</x>
+    <y>70.00709</y>
+    <z>69.01217</z>
+  </posicao>
+  <vida>100</vida>
+  <missoes>
+    <Missao xsi:nil="true" />
+    <Missao xsi:nil="true" />
+    <Missao xsi:nil="true" />
+    <Missao xsi:nil="true" />
+    <Missao xsi:nil="true" />
+    <Missao xsi:nil="true" />
+  </missoes>
+</PlayerSave>

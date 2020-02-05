@@ -1,0 +1,15 @@
+fileFormatVersion: 2
+guid: 05f89be6f21fdb54b8e94c5e72b305a9
+MonoImporter:
+  externalObjects: {}
+  serializedVersion: 2
+  defaultReferences:
+  - player: {fileID: 5034884845133932264, guid: 1a37268ea2e57f7478e59364b9a62df3,
+      type: 3}
+  - painelMorte: {fileID: 1693503370966752651, guid: 6677ee83f4dfe5a4da9c0bbe01067635,
+      type: 3}
+  executionOrder: 0
+  icon: {instanceID: 0}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
