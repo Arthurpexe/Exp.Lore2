@@ -10,6 +10,8 @@ public class PersonagemCombate : MonoBehaviour
 	public float ataqueDelay = .6f;
 	PersonagemStats playerStats;
 	GameObject player;
+	float distancia;
+	
 
     public bool atacando;
 
@@ -22,13 +24,16 @@ public class PersonagemCombate : MonoBehaviour
 		playerStats = player.GetComponent<PersonagemStats>();
 
 		myStats = GetComponent<PersonagemStats>();
+		
 	}
 
 
 	void Update()
 	{
 		cooldownAtaque -= Time.deltaTime;
-		
+		distancia = Vector3.Distance(player.transform.position, transform.position);
+
+
 	}
 
 	public void Ataque(PersonagemStats alvoStats)
@@ -49,6 +54,10 @@ public class PersonagemCombate : MonoBehaviour
 	{
 		yield return new WaitForSeconds(delay);
 
-		stats.TomarDano(myStats.dano - playerStats.armadura);
+		if (distancia <= 3.5)
+		{
+			stats.TomarDano(myStats.dano - playerStats.armadura);
+		}
+
 	}
 }
