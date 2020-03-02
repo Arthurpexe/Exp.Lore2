@@ -7,7 +7,7 @@ public class InteragirNPCQuest : Interagivel
 
     public string nomeNPC;
     public Text textoNomeNPCDialogo;
-    public bool aceita = false;
+    bool aceita = false;
     public GameObject painelAceitarQuest;
     public Text textoTitulo;
     public Text textoDescricao;
@@ -66,8 +66,8 @@ public class InteragirNPCQuest : Interagivel
                     {
                         if (controladorPersonagem.missoes[i].titulo == "Começando Bem")
                         {
-                            controladorPersonagem.ouro += controladorPersonagem.missoes[i].recompensaOuro;
-                            controladorPersonagem.missoes[i].missaoConcluida();
+                            controladorPersonagem.ouro += controladorPersonagem.missoes[i].recompensaOuro;//
+                            controladorPersonagem.missoes[i].concluirMissao();
                             controladorPersonagem.mudouMissao();
                         }
                     }
@@ -108,9 +108,9 @@ public class InteragirNPCQuest : Interagivel
 
         if (!missao.concluida)
         {
-            this.textoTitulo.text = this.missao.titulo;
-            this.textoDescricao.text = this.missao.descricao;
-            this.textoOuro.text = this.missao.recompensaOuro.ToString();
+            textoTitulo.text = missao.titulo;
+            textoDescricao.text = missao.descricao;//
+            textoOuro.text = missao.recompensaOuro.ToString();//
 
             if (missao.titulo == "A Invasão")
             {
@@ -119,8 +119,8 @@ public class InteragirNPCQuest : Interagivel
 
                     if (controladorPersonagem.missoes[i].titulo == "Boatos (quase) Inacreditaveis")
                     {
-                        controladorPersonagem.ouro += controladorPersonagem.missoes[i].recompensaOuro;
-                        controladorPersonagem.missoes[i].missaoConcluida();
+                        controladorPersonagem.ouro += controladorPersonagem.missoes[i].recompensaOuro;//
+                        controladorPersonagem.missoes[i].concluirMissao();
                         controladorPersonagem.mudouMissao();
                     }
                 }

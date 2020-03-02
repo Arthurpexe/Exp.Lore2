@@ -53,8 +53,8 @@ public class InimigoStats : PersonagemStats
             {
                 if (controladorPersonagem.missoes[i].titulo == "A Hora da Verdade")
                 {
-                    controladorPersonagem.ouro = controladorPersonagem.missoes[i].recompensaOuro;
-                    controladorPersonagem.missoes[i].missaoConcluida();
+                    //controladorPersonagem.ouro = controladorPersonagem.missoes[i].recompensaOuro;
+                    controladorPersonagem.missoes[i].concluirMissao();
                     controladorPersonagem.mudouMissao();
                 }
                 

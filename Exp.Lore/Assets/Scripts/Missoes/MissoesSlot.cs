@@ -32,8 +32,8 @@ public class MissoesSlot : MonoBehaviour
     {
         if(missao.estaAtiva || missao.concluida)
         {
-            descricao.text = missao.descricao;
-            recompensaOuro.text = missao.recompensaOuro.ToString();
+            //descricao.text = missao.descricao;
+            //recompensaOuro.text = missao.recompensaOuro.ToString();
 
             painelDescricao.SetActive(!painelDescricao.activeSelf);
         }

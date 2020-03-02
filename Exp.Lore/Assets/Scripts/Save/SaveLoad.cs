@@ -22,36 +22,27 @@ public class SaveLoad : MonoBehaviour
     #endregion
 
     Criptografia cripto;
+    PlayerSave playerSave;
 
+    //só para não bugar a animação
     public GameObject personagem;
-
-    ControladorPersonagem controladorPersonagem;
-
 	Animator anim;
 
     private void Start()
     {
         cripto = new Criptografia();
-        controladorPersonagem = ControladorPersonagem.instancia;
+        playerSave = new PlayerSave();
 		anim = personagem.GetComponentInChildren<Animator>();
-    }
-
-    public void CarregarJogo()
-    {
-        Time.timeScale = 1;
-
-        carregarPlayer();
     }
 
     public void salvarPlayer()
     {
-        controladorPersonagem.personagem.posicao = controladorPersonagem.player.transform.position;
-        controladorPersonagem.personagem.vida = controladorPersonagem.vidaAtual;
+        playerSave.atualizarDependencias();
         //controladorPersonagem.personagem.missoes = controladorPersonagem.missoes;
 
         XmlSerializer serializador = new XmlSerializer(typeof(PlayerSave));
         StreamWriter arqDados = new StreamWriter("Player.xml");
-        serializador.Serialize(arqDados.BaseStream, controladorPersonagem.personagem);
+        serializador.Serialize(arqDados.BaseStream, playerSave);
         arqDados.Close();
 
         cripto.criptografarArquivo("Player.xml", '§');
@@ -64,22 +55,16 @@ public class SaveLoad : MonoBehaviour
 
         XmlSerializer serializador = new XmlSerializer(typeof(PlayerSave));
         StreamReader arqLeit = new StreamReader("Player.xml");
-        PlayerSave aux = (PlayerSave)serializador.Deserialize(arqLeit.BaseStream);
+        playerSave = (PlayerSave)serializador.Deserialize(arqLeit.BaseStream);
         arqLeit.Close();
         Debug.Log("carreguei o player");
 
-
-        controladorPersonagem.personagem.posicao = aux.posicao;
-        controladorPersonagem.player.transform.position = controladorPersonagem.personagem.posicao;
-
-        controladorPersonagem.personagem.vida = aux.vida;
-        controladorPersonagem.personagemStats.vidaAtual = controladorPersonagem.personagem.vida;
-        controladorPersonagem.personagemStats.carregarVida();
-
+        playerSave.descarregarDependencias();
         //controladorPersonagem.personagem.missoes = aux.missoes;
         //controladorPersonagem.missoes = controladorPersonagem.personagem.missoes;
         //controladorPersonagem.mudouMissao();
 
+        Time.timeScale = 1;
         anim.Rebind();
     }
 

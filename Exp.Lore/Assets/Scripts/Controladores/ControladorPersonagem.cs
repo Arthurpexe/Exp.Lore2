@@ -48,9 +48,6 @@ public class ControladorPersonagem : MonoBehaviour
 	private float cooldown;
     PersonagemCombate script;
 
-    [Header("Save")]
-    public PlayerSave personagem;
-
     [Header("Missoes")]
     public Missao[] missoes;
     public int contadorMissoesAtivas = 0;
@@ -68,7 +65,7 @@ public class ControladorPersonagem : MonoBehaviour
 		player = GetComponent<Rigidbody>();
         anim = GetComponentInChildren<Animator>();
 		script = GetComponent<PersonagemCombate>();
-        personagem = new PlayerSave();
+        //personagem = new PlayerSave();
 		Cooldown = script.CooldownAtaque;
 		cooldown = Cooldown;
 
@@ -82,15 +79,16 @@ public class ControladorPersonagem : MonoBehaviour
 		cd -= Time.deltaTime;
 		vidaAtual = personagemStats.vidaAtual;
 
+        //area dos paineis
         if (painelMenu.activeSelf || painelInventario.activeSelf || painelFimDeJogo.activeSelf)
         {
             _inputs = Vector3.zero;
             return;
         }
 
-        
 
-		_inputs = Vector3.zero;
+        //area de inputs do teclado
+        _inputs = Vector3.zero;
 		_inputs.x = Input.GetAxis("Horizontal");
 		_inputs.z = Input.GetAxis("Vertical");
         if (_inputs != Vector3.zero)
@@ -179,50 +177,16 @@ public class ControladorPersonagem : MonoBehaviour
     {
         if(other.tag == "AreaBoss")
         {
+            cameraPrincipal.fixaBoss();
             barraVidaBoss.SetActive(true);
-            cameraPrincipal.dentroAreaBoss = true;
         }
-        if (other.tag == "AreaBaseCachoeira")//verifico se cheguei na cachoeira para completar a missao Onde estão meus pais
-        {
-            for (int i = 0; i < missoes.Length; i++)
-            {
-                //Debug.Log("missão " + i + ": " + missoes[i].titulo);
-                if (missoes[i].titulo == "Onde estão meus pais")
-                {
-                    if (missoes[i].estaAtiva)
-                    {
-                        missoes[i].objetivo.chegouNumLugar();
-                        if (missoes[i].objetivo.concluiu())
-                        {
-                            ouro += missoes[i].recompensaOuro;
-                            missoes[i].missaoConcluida();
-                            //feedback de missao concluida
-                            mudouMissao();
-                        }
 
-                    }
-                }
-            }
-        }
         if (other.tag == "AreaMansãoRicasso")//verifico se cheguei na cachoeira para completar a missao Onde estão meus pais
         {
             for (int i = 0; i < missoes.Length; i++)
             {
                 Debug.Log("missão " + i + ": " + missoes[i].titulo);
-                if (missoes[i].estaAtiva)
-                {
-                    if (missoes[i].titulo == "A Invasão")
-                    {
-                        missoes[i].objetivo.chegouNumLugar();
-                        if (missoes[i].objetivo.concluiu())
-                        {
-                            ouro += missoes[i].recompensaOuro;
-                            missoes[i].missaoConcluida();
-                            //feedback de missao concluida
-                            mudouMissao();
-                        }
-                    }
-                }
+                missoes[i].invadiuRicassius();
             }
         }
     }
@@ -230,8 +194,8 @@ public class ControladorPersonagem : MonoBehaviour
     {
         if (other.tag == "AreaBoss")
         {
+            cameraPrincipal.seguePlayer();
             barraVidaBoss.SetActive(false);
-            cameraPrincipal.dentroAreaBoss = false;
         }
         if(other.tag == "AreaTitulo")
         {

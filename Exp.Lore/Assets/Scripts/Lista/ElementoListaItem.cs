@@ -1,3 +1,4 @@
+[System.Serializable]
 public class ElementoListaItem{
 	
 	public ElementoListaItem proximo;
