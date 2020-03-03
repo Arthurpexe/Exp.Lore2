@@ -17,6 +17,6 @@ MonoBehaviour:
   preco: 100
   icon: {fileID: 21300000, guid: 04e52bb7f6c9fe4449d60f52060de21b, type: 3}
   isDefaultItem: 0
-  vida: 80
+  vida: 50
   dano: 0
   armadura: 0
