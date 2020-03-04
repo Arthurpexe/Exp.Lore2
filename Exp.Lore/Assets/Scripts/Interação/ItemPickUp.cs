@@ -1,28 +1,27 @@
-﻿
-using UnityEngine;
+﻿using UnityEngine;
 
 public class ItemPickUp : Interagivel
 {
-	public Item item;
+	[SerializeField]
+	Item item;
 
     private void Update()
     {
-        float distance = Vector3.Distance(player.transform.position, interactionTransform.position);
-        if (distance <= radius)
+        float distance = Vector3.Distance(player.transform.position, transform.position);
+        if (distance <= raio)
         {
-
             Interact();
         }
     }
 
-    public override void Interact()
+    public void Interact()
 	{
 		base.Interact();
         Debug.Log("Interagindo com " + item.nome);
-		PickUp();
+		pickUp();
 	}
 
-	public void PickUp()
+	public void pickUp()
 	{
 		Debug.Log("Pegando " + item.nome);
 		bool wasPickedUp = Inventario.instance.Add(item);

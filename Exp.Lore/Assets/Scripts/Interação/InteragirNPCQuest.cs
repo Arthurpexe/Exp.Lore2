@@ -3,54 +3,42 @@ using UnityEngine.UI;
 
 public class InteragirNPCQuest : Interagivel
 {
-    public Missao missao;
-
-    public string nomeNPC;
+    [SerializeField]
+    Missao missao;
+    [SerializeField]
+    string nomeNPC;
     public Text textoNomeNPCDialogo;
-    bool aceita = false;
-    public GameObject painelAceitarQuest;
     public Text textoTitulo;
     public Text textoDescricao;
     public Text textoOuro;
     public Text textoNomeNPCMissao;
+    public GameObject painelAceitarQuest;
     public GameObject botaoAceitarQuest;
     public GameObject falarComQuemMinimapa;
     public GameObject equipsTeste;
 
     public GameObject painelDialogo;
-    public string dialogo;
-    public string dialogoMissaoAtiva;
+    [SerializeField]
+    string dialogo;
+    [SerializeField]
+    string dialogoMissaoAtiva;
     Text textoDialogo;
-
-    public GameObject botaoInteragir;
-    public Transform paiBotaoInteragir;
+    InstanciarBotao instanciarBotao;
 
     private void Start()
     {
         controladorPersonagem = ControladorPersonagem.instancia;
         textoDialogo = painelDialogo.GetComponentInChildren<Text>();
+        instanciarBotao = new InstanciarBotao();
     }
 
     private void Update()
     {
-        float distance = Vector3.Distance(player.transform.position, interactionTransform.position);
-        if (distance <= radius)
+        if (instanciarBotao.instanciarBotaoPorProximidade(transform, raio))
         {
-            if (paiBotaoInteragir.childCount == 0)
-            {
-                Instantiate(botaoInteragir, paiBotaoInteragir);
-            }
             if (Input.GetButtonDown("Interagir"))
             {
                 Interact();
-                Destroy(paiBotaoInteragir.GetChild(0).gameObject);
-            }
-        }
-        else
-        {
-            if (paiBotaoInteragir.childCount > 0)
-            {
-                Destroy(paiBotaoInteragir.GetChild(0).gameObject);
             }
         }
 
@@ -76,7 +64,7 @@ public class InteragirNPCQuest : Interagivel
         }
     }
 
-    public override void Interact()
+    public void Interact()
     {
         base.Interact();
 

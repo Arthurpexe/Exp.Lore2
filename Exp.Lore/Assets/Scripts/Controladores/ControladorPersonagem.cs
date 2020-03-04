@@ -58,7 +58,6 @@ public class ControladorPersonagem : MonoBehaviour
     public delegate void SeMissaoMudar();
     public SeMissaoMudar seMissaoMudarCallback;
 
-
     void Start()
 	{
 		missoes = new Missao[6];

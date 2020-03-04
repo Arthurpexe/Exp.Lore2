@@ -42,7 +42,6 @@ public class PersonagemStats : MonoBehaviour
             if (item != null)
             {
                 Instantiate(item, this.transform.position, Quaternion.identity);
-                item.GetComponent<Interagivel>().player = player;
             }
 			MorrerAnimaçao();
 		}

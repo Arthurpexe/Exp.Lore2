@@ -1,5 +1,4 @@
 ﻿using System.IO;
-using UnityEngine;
 
 public class Criptografia
 {
@@ -17,22 +16,16 @@ public class Criptografia
             {
                 char letraOriginal;
                 char letraCriptografada;
-                if (i % 3 == 0)
+                if (i % 2 == 0)
                 {
                     letraOriginal = linha[i];
-                    letraCriptografada = (char)(letraOriginal + (chave + i - (chave - linhaN)));
-                    linhaCriptografada += letraCriptografada;
-                }
-                else if (i % 2 == 0)
-                {
-                    letraOriginal = linha[i];
-                    letraCriptografada = (char)(letraOriginal - (chave - (chave + i) + linhaN));
+                    letraCriptografada = (char)(letraOriginal - chave - chave + i + linhaN);
                     linhaCriptografada += letraCriptografada;
                 }
                 else
                 {
                     letraOriginal = linha[i];
-                    letraCriptografada = (char)(letraOriginal + (chave + chave - (i + linhaN)));
+                    letraCriptografada = (char)(letraOriginal + chave + chave - i + linhaN);
                     linhaCriptografada += letraCriptografada;
                 }
             }
@@ -47,6 +40,7 @@ public class Criptografia
     public void descriptografarArquivo(string nome, char chave)
     {
         StreamReader arquivoCrip = new StreamReader("crip" + nome);
+        StreamWriter arquivoEscreve = new StreamWriter(nome);
         string linhaCriptografada = arquivoCrip.ReadLine();
         int linhaN = 0;
 
@@ -57,29 +51,25 @@ public class Criptografia
             {
                 char letraOriginal;
                 char letraCriptografada;
-                if (i % 3 == 0)
+
+                if (i % 2 == 0)
                 {
                     letraCriptografada = linhaCriptografada[i];
-                    letraOriginal = (char)(letraCriptografada - (Mathf.PI - (chave + i) - (chave - linhaN)));
-                    linhaOriginal += letraOriginal;
-                }
-                else if (i % 2 == 0)
-                {
-                    letraCriptografada = linhaCriptografada[i];
-                    letraOriginal = (char)(letraCriptografada + (chave - (chave + i) + linhaN));
+                    letraOriginal = (char)(letraCriptografada + chave + chave - i - linhaN);
                     linhaOriginal += letraOriginal;
                 }
                 else
                 {
                     letraCriptografada = linhaCriptografada[i];
-                    letraOriginal = (char)(letraCriptografada - (chave + chave - (i + linhaN)));
+                    letraOriginal = (char)(letraCriptografada - chave - chave + i - linhaN);
                     linhaOriginal += letraOriginal;
                 }
             }
+            arquivoEscreve.WriteLine(linhaOriginal);
             linhaCriptografada = arquivoCrip.ReadLine();
             linhaN++;
         }
-
         arquivoCrip.Close();
+        arquivoEscreve.Close();
     }
 }

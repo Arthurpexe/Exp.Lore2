@@ -1,34 +1,27 @@
-﻿
-using UnityEngine;
+﻿using UnityEngine;
 
 public class Interagivel : MonoBehaviour
 {
-	public float radius = 1f;
-	public Transform interactionTransform;
-	
-	public GameObject player;
+	[SerializeField]
+	protected float raio = 1f;
+	[SerializeField]
+	protected GameObject player;
+    protected ControladorPersonagem controladorPersonagem;
 
-    public ControladorPersonagem controladorPersonagem;
-
-    private void Start()
-    {
-        controladorPersonagem = ControladorPersonagem.instancia;
-    }
-
-    public virtual void Interact()
+	private void Start()
 	{
-		Debug.Log("CONSEGUIU");
+		controladorPersonagem = ControladorPersonagem.instancia;
+		player = GameObject.FindWithTag("Player");
+	}
+
+	public void Interact()
+	{	
+		Debug.Log("Interagiu");
 	}
 	
-
-
 	private void OnDrawGizmosSelected()
 	{
-		if (interactionTransform == null)
-			interactionTransform = transform;
-
 		Gizmos.color = Color.yellow;
-		Gizmos.DrawWireSphere(interactionTransform.position, radius);
+		Gizmos.DrawWireSphere(transform.position, raio);
 	}
-
 }

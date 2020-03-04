@@ -514,6 +514,7 @@ RectTransform:
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 0, y: 0, z: 0}
   m_Children:
+  - {fileID: 1842156574}
   - {fileID: 50983798}
   - {fileID: 1327655303}
   - {fileID: 2041067702}
@@ -1847,7 +1848,7 @@ RectTransform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 10977398}
-  m_RootOrder: 0
+  m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
@@ -3067,11 +3068,6 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1989287473092352727, guid: 6cb7c3bb16601df4c9d86382c62d90b9,
         type: 3}
-      propertyPath: player
-      value: 
-      objectReference: {fileID: 5034884846238474149}
-    - target: {fileID: 1989287473092352727, guid: 6cb7c3bb16601df4c9d86382c62d90b9,
-        type: 3}
       propertyPath: painelAceitarQuest
       value: 
       objectReference: {fileID: 1061964554}
@@ -3090,6 +3086,16 @@ PrefabInstance:
       propertyPath: paiBotaoInteragir
       value: 
       objectReference: {fileID: 1091631156}
+    - target: {fileID: 1989287473092352727, guid: 6cb7c3bb16601df4c9d86382c62d90b9,
+        type: 3}
+      propertyPath: raio
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 1989287473092352727, guid: 6cb7c3bb16601df4c9d86382c62d90b9,
+        type: 3}
+      propertyPath: player
+      value: 
+      objectReference: {fileID: 5034884846238474149}
     - target: {fileID: 3636788635424217240, guid: 6cb7c3bb16601df4c9d86382c62d90b9,
         type: 3}
       propertyPath: m_Name
@@ -5932,6 +5938,11 @@ PrefabInstance:
       propertyPath: paiBotaoInteragir
       value: 
       objectReference: {fileID: 1091631156}
+    - target: {fileID: 1989287473092352727, guid: 6cb7c3bb16601df4c9d86382c62d90b9,
+        type: 3}
+      propertyPath: raio
+      value: 3
+      objectReference: {fileID: 0}
     - target: {fileID: 3636788635424217240, guid: 6cb7c3bb16601df4c9d86382c62d90b9,
         type: 3}
       propertyPath: m_Name
@@ -8390,7 +8401,7 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 370103359}
-        m_MethodName: carregarPlayer
+        m_MethodName: carregarJogo
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -8476,7 +8487,7 @@ RectTransform:
   - {fileID: 103066827}
   - {fileID: 1142536127}
   m_Father: {fileID: 10977398}
-  m_RootOrder: 6
+  m_RootOrder: 7
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
@@ -10428,6 +10439,11 @@ PrefabInstance:
       propertyPath: paiBotaoInteragir
       value: 
       objectReference: {fileID: 1091631156}
+    - target: {fileID: 1989287473092352727, guid: 6cb7c3bb16601df4c9d86382c62d90b9,
+        type: 3}
+      propertyPath: raio
+      value: 3
+      objectReference: {fileID: 0}
     - target: {fileID: 3636788635424217240, guid: 6cb7c3bb16601df4c9d86382c62d90b9,
         type: 3}
       propertyPath: m_Name
@@ -13593,10 +13609,10 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 370103360}
-  - component: {fileID: 370103359}
   - component: {fileID: 370103362}
   - component: {fileID: 370103361}
   - component: {fileID: 370103363}
+  - component: {fileID: 370103359}
   m_Layer: 0
   m_Name: ControladorGeral
   m_TagString: Untagged
@@ -13613,10 +13629,74 @@ MonoBehaviour:
   m_GameObject: {fileID: 370103358}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 831f67849e841d54aa8a7b5a29a8f908, type: 3}
+  m_Script: {fileID: 11500000, guid: bc671ad7051f8ad4e99eddaccd3e5474, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  personagem: {fileID: 5034884846238474149}
+  saveLoad:
+    playerSave:
+      posicao: {x: 0, y: 0, z: 0}
+      vida: 100
+      missoes:
+      - estaAtiva: 0
+        concluida: 0
+        jaMostrouNaHUD: 0
+        titulo: 
+        descricao: 
+        recompensaOuro: 0
+        objetivo:
+          tipoObjetivo: 1
+          quantidadeNescessaria: 0
+          quantidadeAtual: 0
+      - estaAtiva: 0
+        concluida: 0
+        jaMostrouNaHUD: 0
+        titulo: 
+        descricao: 
+        recompensaOuro: 0
+        objetivo:
+          tipoObjetivo: 1
+          quantidadeNescessaria: 0
+          quantidadeAtual: 0
+      - estaAtiva: 0
+        concluida: 0
+        jaMostrouNaHUD: 0
+        titulo: 
+        descricao: 
+        recompensaOuro: 0
+        objetivo:
+          tipoObjetivo: 1
+          quantidadeNescessaria: 0
+          quantidadeAtual: 0
+      - estaAtiva: 0
+        concluida: 0
+        jaMostrouNaHUD: 0
+        titulo: 
+        descricao: 
+        recompensaOuro: 0
+        objetivo:
+          tipoObjetivo: 1
+          quantidadeNescessaria: 0
+          quantidadeAtual: 0
+      - estaAtiva: 0
+        concluida: 0
+        jaMostrouNaHUD: 0
+        titulo: 
+        descricao: 
+        recompensaOuro: 0
+        objetivo:
+          tipoObjetivo: 1
+          quantidadeNescessaria: 0
+          quantidadeAtual: 0
+      - estaAtiva: 0
+        concluida: 0
+        jaMostrouNaHUD: 0
+        titulo: 
+        descricao: 
+        recompensaOuro: 0
+        objetivo:
+          tipoObjetivo: 1
+          quantidadeNescessaria: 0
+          quantidadeAtual: 0
 --- !u!4 &370103360
 Transform:
   m_ObjectHideFlags: 0
@@ -15000,6 +15080,11 @@ PrefabInstance:
       propertyPath: paiBotaoInteragir
       value: 
       objectReference: {fileID: 1091631156}
+    - target: {fileID: 1989287473092352727, guid: 6cb7c3bb16601df4c9d86382c62d90b9,
+        type: 3}
+      propertyPath: raio
+      value: 3
+      objectReference: {fileID: 0}
     - target: {fileID: 3636788635424217240, guid: 6cb7c3bb16601df4c9d86382c62d90b9,
         type: 3}
       propertyPath: m_Name
@@ -18011,6 +18096,130 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 489440678}
   m_PrefabAsset: {fileID: 0}
+--- !u!1001 &489540090
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 10977398}
+    m_Modifications:
+    - target: {fileID: 7297091198383143364, guid: c62fdc65886aeca46955c26796850549,
+        type: 3}
+      propertyPath: m_Name
+      value: BotaoInteragir
+      objectReference: {fileID: 0}
+    - target: {fileID: 7297091198383143364, guid: c62fdc65886aeca46955c26796850549,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7297091198383143365, guid: c62fdc65886aeca46955c26796850549,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7297091198383143365, guid: c62fdc65886aeca46955c26796850549,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7297091198383143365, guid: c62fdc65886aeca46955c26796850549,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7297091198383143365, guid: c62fdc65886aeca46955c26796850549,
+        type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7297091198383143365, guid: c62fdc65886aeca46955c26796850549,
+        type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7297091198383143365, guid: c62fdc65886aeca46955c26796850549,
+        type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7297091198383143365, guid: c62fdc65886aeca46955c26796850549,
+        type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7297091198383143365, guid: c62fdc65886aeca46955c26796850549,
+        type: 3}
+      propertyPath: m_RootOrder
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7297091198383143365, guid: c62fdc65886aeca46955c26796850549,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7297091198383143365, guid: c62fdc65886aeca46955c26796850549,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7297091198383143365, guid: c62fdc65886aeca46955c26796850549,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7297091198383143365, guid: c62fdc65886aeca46955c26796850549,
+        type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7297091198383143365, guid: c62fdc65886aeca46955c26796850549,
+        type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: -350
+      objectReference: {fileID: 0}
+    - target: {fileID: 7297091198383143365, guid: c62fdc65886aeca46955c26796850549,
+        type: 3}
+      propertyPath: m_SizeDelta.x
+      value: 60
+      objectReference: {fileID: 0}
+    - target: {fileID: 7297091198383143365, guid: c62fdc65886aeca46955c26796850549,
+        type: 3}
+      propertyPath: m_SizeDelta.y
+      value: 60
+      objectReference: {fileID: 0}
+    - target: {fileID: 7297091198383143365, guid: c62fdc65886aeca46955c26796850549,
+        type: 3}
+      propertyPath: m_AnchorMin.x
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 7297091198383143365, guid: c62fdc65886aeca46955c26796850549,
+        type: 3}
+      propertyPath: m_AnchorMin.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7297091198383143365, guid: c62fdc65886aeca46955c26796850549,
+        type: 3}
+      propertyPath: m_AnchorMax.x
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 7297091198383143365, guid: c62fdc65886aeca46955c26796850549,
+        type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7297091198383143365, guid: c62fdc65886aeca46955c26796850549,
+        type: 3}
+      propertyPath: m_Pivot.x
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 7297091198383143365, guid: c62fdc65886aeca46955c26796850549,
+        type: 3}
+      propertyPath: m_Pivot.y
+      value: 0.5
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: c62fdc65886aeca46955c26796850549, type: 3}
 --- !u!1001 &490953141
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -20130,7 +20339,7 @@ RectTransform:
   - {fileID: 370482242}
   - {fileID: 2049670762}
   m_Father: {fileID: 10977398}
-  m_RootOrder: 5
+  m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 1, y: 0}
   m_AnchorMax: {x: 1, y: 0}
@@ -21474,7 +21683,7 @@ RectTransform:
   - {fileID: 1983207883}
   - {fileID: 755185799}
   m_Father: {fileID: 10977398}
-  m_RootOrder: 8
+  m_RootOrder: 9
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
@@ -26258,7 +26467,7 @@ RectTransform:
   - {fileID: 1262654890}
   - {fileID: 1131951872}
   m_Father: {fileID: 10977398}
-  m_RootOrder: 3
+  m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 1, y: 1}
   m_AnchorMax: {x: 1, y: 1}
@@ -26826,10 +27035,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: eab1c1708931ac645b6c57699f826e24, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  radius: 1
-  interactionTransform: {fileID: 847226121}
-  player: {fileID: 5034884846238474149}
-  controladorPersonagem: {fileID: 5034884846238474154}
+  raio: 1
+  player: {fileID: 0}
   item: {fileID: 11400000, guid: ff7df1bf716117f45a1ca884abf8655c, type: 2}
 --- !u!23 &847226123
 MeshRenderer:
@@ -31057,7 +31264,7 @@ RectTransform:
   - {fileID: 420736601}
   - {fileID: 1404949109}
   m_Father: {fileID: 10977398}
-  m_RootOrder: 9
+  m_RootOrder: 10
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
@@ -32079,12 +32286,12 @@ RectTransform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 10977398}
-  m_RootOrder: 13
+  m_RootOrder: 14
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 0, y: 0}
+  m_AnchorMin: {x: 0.5, y: 0}
+  m_AnchorMax: {x: 0.5, y: 0}
+  m_AnchoredPosition: {x: 0, y: 130}
+  m_SizeDelta: {x: 60, y: 60}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!1 &1092405536
 GameObject:
@@ -34344,7 +34551,7 @@ RectTransform:
   - {fileID: 129300642}
   - {fileID: 1715430527}
   m_Father: {fileID: 10977398}
-  m_RootOrder: 7
+  m_RootOrder: 8
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
@@ -34796,7 +35003,7 @@ RectTransform:
   - {fileID: 1035512349}
   - {fileID: 1648041077}
   m_Father: {fileID: 10977398}
-  m_RootOrder: 10
+  m_RootOrder: 11
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
@@ -38384,10 +38591,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f29d644620d1b1d4da7b5a7515c3f0ea, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  radius: 4
-  interactionTransform: {fileID: 4237431898118855867}
+  raio: 3
   player: {fileID: 5034884846238474149}
-  controladorPersonagem: {fileID: 0}
   missao:
     estaAtiva: 0
     concluida: 0
@@ -38401,20 +38606,17 @@ MonoBehaviour:
       quantidadeAtual: 0
   nomeNPC: Jubileus Sabio
   textoNomeNPCDialogo: {fileID: 1953885129}
-  painelAceitarQuest: {fileID: 1061964554}
   textoTitulo: {fileID: 719544586}
   textoDescricao: {fileID: 1434615308}
   textoOuro: {fileID: 1887531096}
   textoNomeNPCMissao: {fileID: 22496278}
+  painelAceitarQuest: {fileID: 1061964554}
   botaoAceitarQuest: {fileID: 1875510083}
   falarComQuemMinimapa: {fileID: 0}
   equipsTeste: {fileID: 0}
   painelDialogo: {fileID: 626508271}
   dialogo: Boa sorte em sua aventura pequeno Aventureiro
   dialogoMissaoAtiva: "Antonius est\xE1 na pra\xE7a da cidade, ao lado do po\xE7o."
-  botaoInteragir: {fileID: 7297091198383143364, guid: c62fdc65886aeca46955c26796850549,
-    type: 3}
-  paiBotaoInteragir: {fileID: 1091631156}
 --- !u!4 &1296607613 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 8597826185811941086, guid: 68dbab9ffc07d704082ae2f206d6901a,
@@ -38932,7 +39134,7 @@ RectTransform:
   - {fileID: 1887518997}
   - {fileID: 548241721}
   m_Father: {fileID: 10977398}
-  m_RootOrder: 4
+  m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 1, y: 0}
   m_AnchorMax: {x: 1, y: 0}
@@ -39178,10 +39380,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: eab1c1708931ac645b6c57699f826e24, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  radius: 1
-  interactionTransform: {fileID: 1327614606}
-  player: {fileID: 5034884846238474149}
-  controladorPersonagem: {fileID: 0}
+  raio: 1
+  player: {fileID: 0}
   item: {fileID: 11400000, guid: ff7df1bf716117f45a1ca884abf8655c, type: 2}
 --- !u!23 &1327614608
 MeshRenderer:
@@ -39262,7 +39462,7 @@ RectTransform:
   - {fileID: 1756747029}
   - {fileID: 441488033}
   m_Father: {fileID: 10977398}
-  m_RootOrder: 1
+  m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
@@ -43961,6 +44161,11 @@ PrefabInstance:
       propertyPath: radius
       value: 4
       objectReference: {fileID: 0}
+    - target: {fileID: 1989287473092352727, guid: 6cb7c3bb16601df4c9d86382c62d90b9,
+        type: 3}
+      propertyPath: raio
+      value: 3
+      objectReference: {fileID: 0}
     - target: {fileID: 3636788635424217240, guid: 6cb7c3bb16601df4c9d86382c62d90b9,
         type: 3}
       propertyPath: m_Name
@@ -44871,6 +45076,11 @@ PrefabInstance:
       propertyPath: paiBotaoInteragir
       value: 
       objectReference: {fileID: 1091631156}
+    - target: {fileID: 1989287473092352727, guid: 6cb7c3bb16601df4c9d86382c62d90b9,
+        type: 3}
+      propertyPath: raio
+      value: 3
+      objectReference: {fileID: 0}
     - target: {fileID: 3636788635424217240, guid: 6cb7c3bb16601df4c9d86382c62d90b9,
         type: 3}
       propertyPath: m_Name
@@ -45287,6 +45497,11 @@ PrefabInstance:
       propertyPath: paiBotaoInteragir
       value: 
       objectReference: {fileID: 1091631156}
+    - target: {fileID: 1989287473092352727, guid: 6cb7c3bb16601df4c9d86382c62d90b9,
+        type: 3}
+      propertyPath: raio
+      value: 3
+      objectReference: {fileID: 0}
     - target: {fileID: 3636788635424217240, guid: 6cb7c3bb16601df4c9d86382c62d90b9,
         type: 3}
       propertyPath: m_Name
@@ -49555,7 +49770,7 @@ RectTransform:
   m_Children:
   - {fileID: 2136515312}
   m_Father: {fileID: 10977398}
-  m_RootOrder: 12
+  m_RootOrder: 13
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 1, y: 1}
@@ -55003,7 +55218,7 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 370103359}
-        m_MethodName: salvarPlayer
+        m_MethodName: salvarJogo
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -55192,7 +55407,7 @@ RectTransform:
   m_Children:
   - {fileID: 1623719836}
   m_Father: {fileID: 10977398}
-  m_RootOrder: 11
+  m_RootOrder: 12
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
@@ -55937,6 +56152,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5f7201a12d95ffc409449d95f23cf332, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!224 &1842156574 stripped
+RectTransform:
+  m_CorrespondingSourceObject: {fileID: 7297091198383143365, guid: c62fdc65886aeca46955c26796850549,
+    type: 3}
+  m_PrefabInstance: {fileID: 489540090}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1844882215
 GameObject:
   m_ObjectHideFlags: 0
@@ -57519,6 +57740,11 @@ PrefabInstance:
       propertyPath: paiBotaoInteragir
       value: 
       objectReference: {fileID: 1091631156}
+    - target: {fileID: 1989287473092352727, guid: 6cb7c3bb16601df4c9d86382c62d90b9,
+        type: 3}
+      propertyPath: raio
+      value: 3
+      objectReference: {fileID: 0}
     - target: {fileID: 3636788635424217240, guid: 6cb7c3bb16601df4c9d86382c62d90b9,
         type: 3}
       propertyPath: m_Name
@@ -60064,10 +60290,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: eab1c1708931ac645b6c57699f826e24, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  radius: 1
-  interactionTransform: {fileID: 2003695793}
-  player: {fileID: 5034884846238474149}
-  controladorPersonagem: {fileID: 0}
+  raio: 1
+  player: {fileID: 0}
   item: {fileID: 11400000, guid: ff7df1bf716117f45a1ca884abf8655c, type: 2}
 --- !u!23 &2003695795
 MeshRenderer:
@@ -61240,7 +61464,7 @@ RectTransform:
   - {fileID: 1995554046}
   - {fileID: 32253829}
   m_Father: {fileID: 10977398}
-  m_RootOrder: 2
+  m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 1}
   m_AnchorMax: {x: 0.5, y: 1}
@@ -71928,7 +72152,7 @@ PrefabInstance:
         type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
-      objectReference: {fileID: 370103359}
+      objectReference: {fileID: 0}
     - target: {fileID: 1693503370966752650, guid: 6677ee83f4dfe5a4da9c0bbe01067635,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -71967,7 +72191,7 @@ PrefabInstance:
     - target: {fileID: 1693503370966752650, guid: 6677ee83f4dfe5a4da9c0bbe01067635,
         type: 3}
       propertyPath: m_RootOrder
-      value: 14
+      value: 15
       objectReference: {fileID: 0}
     - target: {fileID: 1693503370966752650, guid: 6677ee83f4dfe5a4da9c0bbe01067635,
         type: 3}
@@ -72048,7 +72272,7 @@ PrefabInstance:
         type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
-      objectReference: {fileID: 370103359}
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 6677ee83f4dfe5a4da9c0bbe01067635, type: 3}
 --- !u!4 &1700086182456841534
@@ -80430,10 +80654,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f29d644620d1b1d4da7b5a7515c3f0ea, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  radius: 3
-  interactionTransform: {fileID: 5418903349457236171}
+  raio: 3
   player: {fileID: 5034884846238474149}
-  controladorPersonagem: {fileID: 5034884846238474154}
   missao:
     estaAtiva: 0
     concluida: 0
@@ -80447,11 +80669,11 @@ MonoBehaviour:
       quantidadeAtual: 0
   nomeNPC: Antonius Vigarista
   textoNomeNPCDialogo: {fileID: 1953885129}
-  painelAceitarQuest: {fileID: 1061964554}
   textoTitulo: {fileID: 719544586}
   textoDescricao: {fileID: 1434615308}
   textoOuro: {fileID: 1887531096}
   textoNomeNPCMissao: {fileID: 22496278}
+  painelAceitarQuest: {fileID: 1061964554}
   botaoAceitarQuest: {fileID: 1875510083}
   falarComQuemMinimapa: {fileID: 0}
   equipsTeste: {fileID: 0}
@@ -80459,9 +80681,6 @@ MonoBehaviour:
   dialogo: "Vo-voc\xEA conseguiu voltar vivo!? (uau n\xE3o esperava por isso) HAHAHA!!
     Boa garoto!"
   dialogoMissaoAtiva: A casa do Ricassius fica logo depois da floresta, ao norte.
-  botaoInteragir: {fileID: 7297091198383143364, guid: c62fdc65886aeca46955c26796850549,
-    type: 3}
-  paiBotaoInteragir: {fileID: 1091631156}
 --- !u!1 &3664215863640500524
 GameObject:
   m_ObjectHideFlags: 0
@@ -86397,18 +86616,6 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 45368aa64f1fabe4ca7f5bbb40583ca4, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
---- !u!114 &5034884846238474154 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 1604488581812827304, guid: 76759819411728c4ca2ad5355b0d055e,
-    type: 3}
-  m_PrefabInstance: {fileID: 6024629697589357314}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5034884846238474149}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 896505e0604674d479bd8a6d7c762234, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
 --- !u!23 &5035736201846043689
@@ -98646,10 +98853,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f29d644620d1b1d4da7b5a7515c3f0ea, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  radius: 3
-  interactionTransform: {fileID: 5418903349201051387}
-  player: {fileID: 5034884846238474149}
-  controladorPersonagem: {fileID: 0}
+  raio: 3
+  player: {fileID: 0}
   missao:
     estaAtiva: 0
     concluida: 0
@@ -98663,11 +98868,11 @@ MonoBehaviour:
       quantidadeAtual: 0
   nomeNPC: Marcus Consagrado
   textoNomeNPCDialogo: {fileID: 1953885129}
-  painelAceitarQuest: {fileID: 1061964554}
   textoTitulo: {fileID: 719544586}
   textoDescricao: {fileID: 1434615308}
   textoOuro: {fileID: 1887531096}
   textoNomeNPCMissao: {fileID: 22496278}
+  painelAceitarQuest: {fileID: 1061964554}
   botaoAceitarQuest: {fileID: 1875510083}
   falarComQuemMinimapa: {fileID: 0}
   equipsTeste: {fileID: 857848465}
@@ -98675,9 +98880,6 @@ MonoBehaviour:
   dialogo: "Agora que voc\xEA tem esses itens voc\xEA deve aguentar tudo"
   dialogoMissaoAtiva: "\"-Atr\xE1s da arvore da ponte. -Enttre dois barris no porto.
     -O segundo pier. -Ao lado do po\xE7o no centro da vila.\" Boa sorte!"
-  botaoInteragir: {fileID: 7297091198383143364, guid: c62fdc65886aeca46955c26796850549,
-    type: 3}
-  paiBotaoInteragir: {fileID: 1091631156}
 --- !u!1 &8213912879877810200
 GameObject:
   m_ObjectHideFlags: 0
@@ -102469,10 +102671,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f29d644620d1b1d4da7b5a7515c3f0ea, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  radius: 3
-  interactionTransform: {fileID: 3164621325863321293}
+  raio: 3
   player: {fileID: 5034884846238474149}
-  controladorPersonagem: {fileID: 0}
   missao:
     estaAtiva: 0
     concluida: 0
@@ -102486,11 +102686,11 @@ MonoBehaviour:
       quantidadeAtual: 0
   nomeNPC: Fabius Exiladus
   textoNomeNPCDialogo: {fileID: 1953885129}
-  painelAceitarQuest: {fileID: 1061964554}
   textoTitulo: {fileID: 719544586}
   textoDescricao: {fileID: 1434615308}
   textoOuro: {fileID: 1887531096}
   textoNomeNPCMissao: {fileID: 22496278}
+  painelAceitarQuest: {fileID: 1061964554}
   botaoAceitarQuest: {fileID: 1875510083}
   falarComQuemMinimapa: {fileID: 0}
   equipsTeste: {fileID: 0}
@@ -102498,9 +102698,6 @@ MonoBehaviour:
   dialogo: "Parab\xE9ns Voc\xEA zerou o Joguinho"
   dialogoMissaoAtiva: O monstro se encontra seguindo este caminho a direita toda
     vida e subindo um morrinho
-  botaoInteragir: {fileID: 7297091198383143364, guid: c62fdc65886aeca46955c26796850549,
-    type: 3}
-  paiBotaoInteragir: {fileID: 1091631156}
 --- !u!1 &8887720199349101158
 GameObject:
   m_ObjectHideFlags: 0

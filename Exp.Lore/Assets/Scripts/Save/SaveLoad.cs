@@ -1,38 +1,19 @@
 ﻿using UnityEngine;
 using System.IO;
 using System.Xml.Serialization;
-using UnityEngine.SceneManagement;
-
-public class SaveLoad : MonoBehaviour
+[System.Serializable]
+public class SaveLoad
 {
-    #region Singleton
-    public static SaveLoad instancia;
-
-    private void Awake()
-    {
-        if(instancia != null)
-        {
-            Debug.LogWarning("Mais de uma instancia de SaveLoad encontrada!");
-            return;
-        }
-        instancia = this;
-
-        DontDestroyOnLoad(this.gameObject);
-    }
-    #endregion
-
     Criptografia cripto;
-    PlayerSave playerSave;
+    public PlayerSave playerSave;
 
-    //só para não bugar a animação
-    public GameObject personagem;
-	Animator anim;
+	Animator anim;//só para não bugar a animação
 
-    private void Start()
+    public SaveLoad(GameObject player)
     {
         cripto = new Criptografia();
         playerSave = new PlayerSave();
-		anim = personagem.GetComponentInChildren<Animator>();
+		anim = player.GetComponentInChildren<Animator>();//pegando o componente animator do player.
     }
 
     public void salvarPlayer()
@@ -45,13 +26,14 @@ public class SaveLoad : MonoBehaviour
         serializador.Serialize(arqDados.BaseStream, playerSave);
         arqDados.Close();
 
-        cripto.criptografarArquivo("Player.xml", '§');
-        Debug.Log("salvei e criptografei o player");
+        cripto.criptografarArquivo("Player.xml", 'Ø');
+        File.Delete("Player.xml");
+        Debug.Log("salvei e criptografei o progresso do player");
     }
 
     public void carregarPlayer()
     {
-        cripto.descriptografarArquivo("Player.xml", '§');
+        cripto.descriptografarArquivo("Player.xml", 'Ø');
 
         XmlSerializer serializador = new XmlSerializer(typeof(PlayerSave));
         StreamReader arqLeit = new StreamReader("Player.xml");
@@ -63,18 +45,8 @@ public class SaveLoad : MonoBehaviour
         //controladorPersonagem.personagem.missoes = aux.missoes;
         //controladorPersonagem.missoes = controladorPersonagem.personagem.missoes;
         //controladorPersonagem.mudouMissao();
-
+        File.Delete("Player.xml");
         Time.timeScale = 1;
         anim.Rebind();
-    }
-
-    public void sairJogo()
-    {
-        Application.Quit();
-    }
-
-    public void Add(System.Object ot)
-    {
-        throw new FileNotFoundException();
     }
 }
