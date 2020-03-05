@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 3491798393567163693}
   - component: {fileID: 3368738064971716805}
   - component: {fileID: 7887797862588851715}
-  - component: {fileID: 1989287473092352727}
+  - component: {fileID: 2107178263}
   m_Layer: 0
   m_Name: Capsule
   m_TagString: Untagged
@@ -56,6 +56,7 @@ MeshRenderer:
   m_MotionVectors: 1
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
+  m_RayTracingMode: 2
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
@@ -94,7 +95,7 @@ CapsuleCollider:
   m_Height: 2
   m_Direction: 1
   m_Center: {x: 0, y: 0, z: 0}
---- !u!114 &1989287473092352727
+--- !u!114 &2107178263
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -103,38 +104,11 @@ MonoBehaviour:
   m_GameObject: {fileID: 3636788635424217240}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f29d644620d1b1d4da7b5a7515c3f0ea, type: 3}
+  m_Script: {fileID: 11500000, guid: 878f3ac400f025f488ddbbfc9488296c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  radius: 3
-  interactionTransform: {fileID: 5418903349477180514}
-  player: {fileID: 0}
-  controladorPersonagem: {fileID: 0}
-  missao:
-    estaAtiva: 0
-    concluida: 1
-    jaMostrouNaHUD: 0
-    titulo: novaMissao
-    descricao: novaDescricao
-    recompensaOuro: 0
-    objetivo:
-      tipoObjetivo: 1
-      quantidadeNescessaria: 0
-      quantidadeAtual: 0
+  raio: 3
   nomeNPC: Jorge O Pescador
   textoNomeNPCDialogo: {fileID: 0}
-  aceita: 0
-  painelAceitarQuest: {fileID: 0}
-  textoTitulo: {fileID: 0}
-  textoDescricao: {fileID: 0}
-  textoOuro: {fileID: 0}
-  textoNomeNPCMissao: {fileID: 0}
-  botaoAceitarQuest: {fileID: 0}
-  falarComQuemMinimapa: {fileID: 0}
-  equipsTeste: {fileID: 0}
   painelDialogo: {fileID: 0}
   dialogo: "Hoje os peixes est\xE3o calmos demais..."
-  dialogoMissaoAtiva: 
-  botaoInteragir: {fileID: 7297091198383143364, guid: c62fdc65886aeca46955c26796850549,
-    type: 3}
-  paiBotaoInteragir: {fileID: 0}

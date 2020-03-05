@@ -1,6 +1,4 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
+﻿using UnityEngine;
 using UnityEngine.EventSystems;
 using UnityEngine.UI;
 
@@ -16,9 +14,9 @@ public class PassarOMouse : MonoBehaviour, IPointerEnterHandler,IPointerExitHand
         item = gameObject.GetComponentInParent<InventarioSlot>().item;
         if (item != null)
         {
-            painelDescricaoItem.transform.GetChild(0).GetComponent<Text>().text = item.nome;
-            painelDescricaoItem.transform.GetChild(1).GetComponent<Text>().text = item.descricao;
-            painelDescricaoItem.transform.GetChild(5).GetComponent<Text>().text = item.preco.ToString();
+            painelDescricaoItem.transform.GetChild(0).GetComponent<Text>().text = (string)item.info(Item.TipoInformacao.nome);
+            painelDescricaoItem.transform.GetChild(1).GetComponent<Text>().text = (string)item.info(Item.TipoInformacao.descricao);
+            painelDescricaoItem.transform.GetChild(5).GetComponent<Text>().text = (string)item.info(Item.TipoInformacao.preco);
             Instantiate(painelDescricaoItem, localPainelDescricaoItem);
         }
     }

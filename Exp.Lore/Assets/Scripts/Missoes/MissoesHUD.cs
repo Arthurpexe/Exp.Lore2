@@ -22,21 +22,21 @@ public class MissoesHUD : MonoBehaviour
             {
                 if (controladorPersonagem.missoes[i] != null)
                 {
-                    if (controladorPersonagem.missoes[i].estaAtiva)
+                    if ((bool)controladorPersonagem.missoes[i].info(Missao.TipoInformacao.estaAtiva))
                     {
                         slotsMissoesAtivas[i].AdicionarMissao(controladorPersonagem.missoes[i]);
                     }
-                    else if (controladorPersonagem.missoes[i].concluida)
+                    else if ((bool)controladorPersonagem.missoes[i].info(Missao.TipoInformacao.concluida))
                     {
                         slotsMissoesConcluidas[i].AdicionarMissao(controladorPersonagem.missoes[i]);
                         slotsMissoesAtivas[i].concluirMissao();
 
-                        if (!controladorPersonagem.missoes[i].jaMostrouNaHUD)
+                        if (!(bool)controladorPersonagem.missoes[i].info(Missao.TipoInformacao.jaMostrouNaHUD))
                         {
-                            painelMissaoConcluida.GetComponentInChildren<Text>().text = "Missão " + controladorPersonagem.missoes[i].titulo + " concluida!";
+                            painelMissaoConcluida.GetComponentInChildren<Text>().text = "Missão " + (string)controladorPersonagem.missoes[i].info(Missao.TipoInformacao.titulo) + " concluida!";
                             painelMissaoConcluida.SetActive(true);
                             Invoke("desativarPainelMissaoConcluida", 5f);
-                            controladorPersonagem.missoes[i].jaMostrouNaHUD = true;
+                            controladorPersonagem.missoes[i].mostreiNaHUD();
                         }
                     }
                 }

@@ -3055,6 +3055,14 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1388300184}
     m_Modifications:
+    - target: {fileID: 2107178263, guid: 6cb7c3bb16601df4c9d86382c62d90b9, type: 3}
+      propertyPath: textoNomeNPCDialogo
+      value: 
+      objectReference: {fileID: 1953885129}
+    - target: {fileID: 2107178263, guid: 6cb7c3bb16601df4c9d86382c62d90b9, type: 3}
+      propertyPath: painelDialogo
+      value: 
+      objectReference: {fileID: 626508271}
     - target: {fileID: 1989287473092352727, guid: 6cb7c3bb16601df4c9d86382c62d90b9,
         type: 3}
       propertyPath: painelDialogo
@@ -5903,6 +5911,14 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1388300184}
     m_Modifications:
+    - target: {fileID: 2107178263, guid: 6cb7c3bb16601df4c9d86382c62d90b9, type: 3}
+      propertyPath: textoNomeNPCDialogo
+      value: 
+      objectReference: {fileID: 1953885129}
+    - target: {fileID: 2107178263, guid: 6cb7c3bb16601df4c9d86382c62d90b9, type: 3}
+      propertyPath: painelDialogo
+      value: 
+      objectReference: {fileID: 626508271}
     - target: {fileID: 1989287473092352727, guid: 6cb7c3bb16601df4c9d86382c62d90b9,
         type: 3}
       propertyPath: painelDialogo
@@ -10404,6 +10420,14 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1388300184}
     m_Modifications:
+    - target: {fileID: 2107178263, guid: 6cb7c3bb16601df4c9d86382c62d90b9, type: 3}
+      propertyPath: textoNomeNPCDialogo
+      value: 
+      objectReference: {fileID: 1953885129}
+    - target: {fileID: 2107178263, guid: 6cb7c3bb16601df4c9d86382c62d90b9, type: 3}
+      propertyPath: painelDialogo
+      value: 
+      objectReference: {fileID: 626508271}
     - target: {fileID: 1989287473092352727, guid: 6cb7c3bb16601df4c9d86382c62d90b9,
         type: 3}
       propertyPath: painelDialogo
@@ -13637,66 +13661,42 @@ MonoBehaviour:
       posicao: {x: 0, y: 0, z: 0}
       vida: 100
       missoes:
-      - estaAtiva: 0
-        concluida: 0
-        jaMostrouNaHUD: 0
-        titulo: 
+      - titulo: 
         descricao: 
         recompensaOuro: 0
         objetivo:
           tipoObjetivo: 1
           quantidadeNescessaria: 0
-          quantidadeAtual: 0
-      - estaAtiva: 0
-        concluida: 0
-        jaMostrouNaHUD: 0
-        titulo: 
+      - titulo: 
         descricao: 
         recompensaOuro: 0
         objetivo:
           tipoObjetivo: 1
           quantidadeNescessaria: 0
-          quantidadeAtual: 0
-      - estaAtiva: 0
-        concluida: 0
-        jaMostrouNaHUD: 0
-        titulo: 
+      - titulo: 
         descricao: 
         recompensaOuro: 0
         objetivo:
           tipoObjetivo: 1
           quantidadeNescessaria: 0
-          quantidadeAtual: 0
-      - estaAtiva: 0
-        concluida: 0
-        jaMostrouNaHUD: 0
-        titulo: 
+      - titulo: 
         descricao: 
         recompensaOuro: 0
         objetivo:
           tipoObjetivo: 1
           quantidadeNescessaria: 0
-          quantidadeAtual: 0
-      - estaAtiva: 0
-        concluida: 0
-        jaMostrouNaHUD: 0
-        titulo: 
+      - titulo: 
         descricao: 
         recompensaOuro: 0
         objetivo:
           tipoObjetivo: 1
           quantidadeNescessaria: 0
-          quantidadeAtual: 0
-      - estaAtiva: 0
-        concluida: 0
-        jaMostrouNaHUD: 0
-        titulo: 
+      - titulo: 
         descricao: 
         recompensaOuro: 0
         objetivo:
           tipoObjetivo: 1
           quantidadeNescessaria: 0
-          quantidadeAtual: 0
 --- !u!4 &370103360
 Transform:
   m_ObjectHideFlags: 0
@@ -15055,36 +15055,14 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1388300184}
     m_Modifications:
-    - target: {fileID: 1989287473092352727, guid: 6cb7c3bb16601df4c9d86382c62d90b9,
-        type: 3}
-      propertyPath: player
-      value: 
-      objectReference: {fileID: 5034884846238474149}
-    - target: {fileID: 1989287473092352727, guid: 6cb7c3bb16601df4c9d86382c62d90b9,
-        type: 3}
+    - target: {fileID: 2107178263, guid: 6cb7c3bb16601df4c9d86382c62d90b9, type: 3}
       propertyPath: textoNomeNPCDialogo
       value: 
       objectReference: {fileID: 1953885129}
-    - target: {fileID: 1989287473092352727, guid: 6cb7c3bb16601df4c9d86382c62d90b9,
-        type: 3}
-      propertyPath: painelAceitarQuest
-      value: 
-      objectReference: {fileID: 1061964554}
-    - target: {fileID: 1989287473092352727, guid: 6cb7c3bb16601df4c9d86382c62d90b9,
-        type: 3}
+    - target: {fileID: 2107178263, guid: 6cb7c3bb16601df4c9d86382c62d90b9, type: 3}
       propertyPath: painelDialogo
       value: 
       objectReference: {fileID: 626508271}
-    - target: {fileID: 1989287473092352727, guid: 6cb7c3bb16601df4c9d86382c62d90b9,
-        type: 3}
-      propertyPath: paiBotaoInteragir
-      value: 
-      objectReference: {fileID: 1091631156}
-    - target: {fileID: 1989287473092352727, guid: 6cb7c3bb16601df4c9d86382c62d90b9,
-        type: 3}
-      propertyPath: raio
-      value: 3
-      objectReference: {fileID: 0}
     - target: {fileID: 3636788635424217240, guid: 6cb7c3bb16601df4c9d86382c62d90b9,
         type: 3}
       propertyPath: m_Name
@@ -27036,7 +27014,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   raio: 1
-  player: {fileID: 0}
   item: {fileID: 11400000, guid: ff7df1bf716117f45a1ca884abf8655c, type: 2}
 --- !u!23 &847226123
 MeshRenderer:
@@ -38592,20 +38569,17 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   raio: 3
-  player: {fileID: 5034884846238474149}
+  nomeNPC: Jubileus Sabio
+  textoNomeNPCDialogo: {fileID: 1953885129}
+  painelDialogo: {fileID: 626508271}
+  dialogo: Boa sorte em sua aventura pequeno Aventureiro
   missao:
-    estaAtiva: 0
-    concluida: 0
-    jaMostrouNaHUD: 0
     titulo: 
     descricao: 
     recompensaOuro: 0
     objetivo:
       tipoObjetivo: 1
       quantidadeNescessaria: 0
-      quantidadeAtual: 0
-  nomeNPC: Jubileus Sabio
-  textoNomeNPCDialogo: {fileID: 1953885129}
   textoTitulo: {fileID: 719544586}
   textoDescricao: {fileID: 1434615308}
   textoOuro: {fileID: 1887531096}
@@ -38614,9 +38588,8 @@ MonoBehaviour:
   botaoAceitarQuest: {fileID: 1875510083}
   falarComQuemMinimapa: {fileID: 0}
   equipsTeste: {fileID: 0}
-  painelDialogo: {fileID: 626508271}
-  dialogo: Boa sorte em sua aventura pequeno Aventureiro
   dialogoMissaoAtiva: "Antonius est\xE1 na pra\xE7a da cidade, ao lado do po\xE7o."
+  dialogoMissaoConcluida: 
 --- !u!4 &1296607613 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 8597826185811941086, guid: 68dbab9ffc07d704082ae2f206d6901a,
@@ -39381,7 +39354,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   raio: 1
-  player: {fileID: 0}
   item: {fileID: 11400000, guid: ff7df1bf716117f45a1ca884abf8655c, type: 2}
 --- !u!23 &1327614608
 MeshRenderer:
@@ -42977,8 +42949,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1407086678}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 38.8, y: 1.6, z: -1.2}
-  m_LocalScale: {x: 8, y: 1, z: 5}
+  m_LocalPosition: {x: 38.8, y: 1.6, z: -1}
+  m_LocalScale: {x: 8, y: 1, z: 5.4839997}
   m_Children: []
   m_Father: {fileID: 1339792206}
   m_RootOrder: 2
@@ -44116,6 +44088,14 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1388300184}
     m_Modifications:
+    - target: {fileID: 2107178263, guid: 6cb7c3bb16601df4c9d86382c62d90b9, type: 3}
+      propertyPath: textoNomeNPCDialogo
+      value: 
+      objectReference: {fileID: 1953885129}
+    - target: {fileID: 2107178263, guid: 6cb7c3bb16601df4c9d86382c62d90b9, type: 3}
+      propertyPath: painelDialogo
+      value: 
+      objectReference: {fileID: 626508271}
     - target: {fileID: 1989287473092352727, guid: 6cb7c3bb16601df4c9d86382c62d90b9,
         type: 3}
       propertyPath: dialogo
@@ -45036,6 +45016,14 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1388300184}
     m_Modifications:
+    - target: {fileID: 2107178263, guid: 6cb7c3bb16601df4c9d86382c62d90b9, type: 3}
+      propertyPath: textoNomeNPCDialogo
+      value: 
+      objectReference: {fileID: 1953885129}
+    - target: {fileID: 2107178263, guid: 6cb7c3bb16601df4c9d86382c62d90b9, type: 3}
+      propertyPath: painelDialogo
+      value: 
+      objectReference: {fileID: 626508271}
     - target: {fileID: 1989287473092352727, guid: 6cb7c3bb16601df4c9d86382c62d90b9,
         type: 3}
       propertyPath: painelDialogo
@@ -45461,6 +45449,14 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1388300184}
     m_Modifications:
+    - target: {fileID: 2107178263, guid: 6cb7c3bb16601df4c9d86382c62d90b9, type: 3}
+      propertyPath: textoNomeNPCDialogo
+      value: 
+      objectReference: {fileID: 1953885129}
+    - target: {fileID: 2107178263, guid: 6cb7c3bb16601df4c9d86382c62d90b9, type: 3}
+      propertyPath: painelDialogo
+      value: 
+      objectReference: {fileID: 626508271}
     - target: {fileID: 1989287473092352727, guid: 6cb7c3bb16601df4c9d86382c62d90b9,
         type: 3}
       propertyPath: painelDialogo
@@ -50762,7 +50758,7 @@ PrefabInstance:
     - target: {fileID: 2354483632782179127, guid: 395780b54e99df8428fc9d1fd306d079,
         type: 3}
       propertyPath: m_IsActive
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 2354483633553290938, guid: 395780b54e99df8428fc9d1fd306d079,
         type: 3}
@@ -57705,6 +57701,14 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1388300184}
     m_Modifications:
+    - target: {fileID: 2107178263, guid: 6cb7c3bb16601df4c9d86382c62d90b9, type: 3}
+      propertyPath: textoNomeNPCDialogo
+      value: 
+      objectReference: {fileID: 1953885129}
+    - target: {fileID: 2107178263, guid: 6cb7c3bb16601df4c9d86382c62d90b9, type: 3}
+      propertyPath: painelDialogo
+      value: 
+      objectReference: {fileID: 626508271}
     - target: {fileID: 1989287473092352727, guid: 6cb7c3bb16601df4c9d86382c62d90b9,
         type: 3}
       propertyPath: painelDialogo
@@ -60291,7 +60295,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   raio: 1
-  player: {fileID: 0}
   item: {fileID: 11400000, guid: ff7df1bf716117f45a1ca884abf8655c, type: 2}
 --- !u!23 &2003695795
 MeshRenderer:
@@ -80655,20 +80658,18 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   raio: 3
-  player: {fileID: 5034884846238474149}
-  missao:
-    estaAtiva: 0
-    concluida: 0
-    jaMostrouNaHUD: 0
-    titulo: "A Invas\xE3o"
-    descricao: Invada a casa de Ricassius
-    recompensaOuro: 2
-    objetivo:
-      tipoObjetivo: 2
-      quantidadeNescessaria: 1
-      quantidadeAtual: 0
   nomeNPC: Antonius Vigarista
   textoNomeNPCDialogo: {fileID: 1953885129}
+  painelDialogo: {fileID: 626508271}
+  dialogo: "Vo-voc\xEA conseguiu voltar vivo!? (uau n\xE3o esperava por isso) HAHAHA!!
+    Boa garoto!"
+  missao:
+    titulo: pitu
+    descricao: biruleibe
+    recompensaOuro: 1
+    objetivo:
+      tipoObjetivo: 0
+      quantidadeNescessaria: 5
   textoTitulo: {fileID: 719544586}
   textoDescricao: {fileID: 1434615308}
   textoOuro: {fileID: 1887531096}
@@ -80677,10 +80678,8 @@ MonoBehaviour:
   botaoAceitarQuest: {fileID: 1875510083}
   falarComQuemMinimapa: {fileID: 0}
   equipsTeste: {fileID: 0}
-  painelDialogo: {fileID: 626508271}
-  dialogo: "Vo-voc\xEA conseguiu voltar vivo!? (uau n\xE3o esperava por isso) HAHAHA!!
-    Boa garoto!"
   dialogoMissaoAtiva: A casa do Ricassius fica logo depois da floresta, ao norte.
+  dialogoMissaoConcluida: 
 --- !u!1 &3664215863640500524
 GameObject:
   m_ObjectHideFlags: 0
@@ -98854,20 +98853,17 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   raio: 3
-  player: {fileID: 0}
+  nomeNPC: Marcus Consagrado
+  textoNomeNPCDialogo: {fileID: 1953885129}
+  painelDialogo: {fileID: 626508271}
+  dialogo: "Agora que voc\xEA tem esses itens voc\xEA deve aguentar tudo"
   missao:
-    estaAtiva: 0
-    concluida: 0
-    jaMostrouNaHUD: 0
     titulo: 
     descricao: 
     recompensaOuro: 0
     objetivo:
       tipoObjetivo: 1
       quantidadeNescessaria: 0
-      quantidadeAtual: 0
-  nomeNPC: Marcus Consagrado
-  textoNomeNPCDialogo: {fileID: 1953885129}
   textoTitulo: {fileID: 719544586}
   textoDescricao: {fileID: 1434615308}
   textoOuro: {fileID: 1887531096}
@@ -98876,10 +98872,9 @@ MonoBehaviour:
   botaoAceitarQuest: {fileID: 1875510083}
   falarComQuemMinimapa: {fileID: 0}
   equipsTeste: {fileID: 857848465}
-  painelDialogo: {fileID: 626508271}
-  dialogo: "Agora que voc\xEA tem esses itens voc\xEA deve aguentar tudo"
   dialogoMissaoAtiva: "\"-Atr\xE1s da arvore da ponte. -Enttre dois barris no porto.
     -O segundo pier. -Ao lado do po\xE7o no centro da vila.\" Boa sorte!"
+  dialogoMissaoConcluida: 
 --- !u!1 &8213912879877810200
 GameObject:
   m_ObjectHideFlags: 0
@@ -102672,20 +102667,17 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   raio: 3
-  player: {fileID: 5034884846238474149}
+  nomeNPC: Fabius Exiladus
+  textoNomeNPCDialogo: {fileID: 1953885129}
+  painelDialogo: {fileID: 626508271}
+  dialogo: "Parab\xE9ns Voc\xEA zerou o Joguinho"
   missao:
-    estaAtiva: 0
-    concluida: 0
-    jaMostrouNaHUD: 0
     titulo: 
     descricao: 
     recompensaOuro: 0
     objetivo:
       tipoObjetivo: 1
       quantidadeNescessaria: 0
-      quantidadeAtual: 0
-  nomeNPC: Fabius Exiladus
-  textoNomeNPCDialogo: {fileID: 1953885129}
   textoTitulo: {fileID: 719544586}
   textoDescricao: {fileID: 1434615308}
   textoOuro: {fileID: 1887531096}
@@ -102694,10 +102686,9 @@ MonoBehaviour:
   botaoAceitarQuest: {fileID: 1875510083}
   falarComQuemMinimapa: {fileID: 0}
   equipsTeste: {fileID: 0}
-  painelDialogo: {fileID: 626508271}
-  dialogo: "Parab\xE9ns Voc\xEA zerou o Joguinho"
   dialogoMissaoAtiva: O monstro se encontra seguindo este caminho a direita toda
     vida e subindo um morrinho
+  dialogoMissaoConcluida: 
 --- !u!1 &8887720199349101158
 GameObject:
   m_ObjectHideFlags: 0

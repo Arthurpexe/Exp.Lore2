@@ -38,7 +38,7 @@ public class ControladorPersonagem : MonoBehaviour
     public ControladorCamera cameraPrincipal;
 
     [Header("Combate")]
-    public PersonagemStats personagemStats;
+    public SerVivoStats personagemStats;
     public int vidaAtual;
     public GameObject barraVidaBoss;
     public GameObject[] inimigos;
@@ -68,7 +68,7 @@ public class ControladorPersonagem : MonoBehaviour
 		Cooldown = script.CooldownAtaque;
 		cooldown = Cooldown;
 
-		personagemStats = this.GetComponent<PersonagemStats>();
+		personagemStats = this.GetComponent<SerVivoStats>();
 		cd = CD;
     }
 
@@ -81,8 +81,13 @@ public class ControladorPersonagem : MonoBehaviour
         //area dos paineis
         if (painelMenu.activeSelf || painelInventario.activeSelf || painelFimDeJogo.activeSelf)
         {
+            Time.timeScale = 0.1f;
             _inputs = Vector3.zero;
             return;
+        }
+        else
+        {
+            Time.timeScale = 1;
         }
 
 
@@ -184,7 +189,7 @@ public class ControladorPersonagem : MonoBehaviour
         {
             for (int i = 0; i < missoes.Length; i++)
             {
-                Debug.Log("missão " + i + ": " + missoes[i].titulo);
+                Debug.Log("missão " + i + ": " + (string)missoes[i].info(Missao.TipoInformacao.titulo));
                 missoes[i].invadiuRicassius();
             }
         }

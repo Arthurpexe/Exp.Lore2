@@ -22,7 +22,7 @@ public class InimigoVidaHUD : VidaHUD
         barraVida = ui.GetChild(0).GetComponent<Image>();
         ui.gameObject.SetActive(false);
 
-        GetComponent<PersonagemStats>().seVidaMudar += seVidaMudar;
+        GetComponent<SerVivoStats>().seVidaMudar += seVidaMudar;
     }
 
     void LateUpdate()

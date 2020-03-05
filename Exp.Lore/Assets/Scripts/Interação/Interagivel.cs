@@ -4,7 +4,6 @@ public class Interagivel : MonoBehaviour
 {
 	[SerializeField]
 	protected float raio = 1f;
-	[SerializeField]
 	protected GameObject player;
     protected ControladorPersonagem controladorPersonagem;
 

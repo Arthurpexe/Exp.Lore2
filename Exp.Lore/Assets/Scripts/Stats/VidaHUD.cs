@@ -1,14 +1,14 @@
 ﻿using UnityEngine;
 using UnityEngine.UI;
 
-[RequireComponent(typeof(PersonagemStats))]
+[RequireComponent(typeof(SerVivoStats))]
 public class VidaHUD : MonoBehaviour
 {
     public Image barraVida;
 
     void Start()
     {
-        GetComponent<PersonagemStats>().seVidaMudar += seVidaMudar;
+        GetComponent<SerVivoStats>().seVidaMudar += seVidaMudar;
     }
 
     public virtual void seVidaMudar(int vidaMaxima,int vidaAtual)

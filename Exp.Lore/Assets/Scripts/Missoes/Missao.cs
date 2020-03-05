@@ -1,17 +1,22 @@
-﻿[System.Serializable]
+﻿using UnityEngine;
+[System.Serializable]
 public class Missao
 {
     ControladorPersonagem controladorPersonagem;
 
-    public bool estaAtiva;
-    public bool concluida;
-    public bool jaMostrouNaHUD;
+    bool estaAtiva;
+    bool concluida;
+    bool jaMostrouNaHUD;
 
-    public string titulo;
-    public string descricao;
-    public int recompensaOuro;
+    [SerializeField]
+    string titulo;
+    [SerializeField]
+    string descricao;
+    [SerializeField]
+    int recompensaOuro;
 
-    public ObjetivoMissao objetivo;
+    [SerializeField]
+    ObjetivoMissao objetivo;
 
     public Missao()
     {
@@ -23,13 +28,25 @@ public class Missao
         recompensaOuro = 0;
         objetivo = new ObjetivoMissao();
     }
+    public void ativarMissao()
+    {
+        if(controladorPersonagem != null)
+            controladorPersonagem = ControladorPersonagem.instancia;
+        estaAtiva = true;
+        controladorPersonagem.mudouMissao();
+    }
     public void concluirMissao()
     {
-        controladorPersonagem = ControladorPersonagem.instancia;
+        if (controladorPersonagem != null)
+            controladorPersonagem = ControladorPersonagem.instancia;//TEMPORARIO
         concluida = true;
         estaAtiva = false;
-        controladorPersonagem.ouro += recompensaOuro;
-        controladorPersonagem.mudouMissao();
+        controladorPersonagem.ouro += recompensaOuro;//TEMPORARIO
+        controladorPersonagem.mudouMissao();//TEMPORARIO
+    }
+    public void mostreiNaHUD()
+    {
+        jaMostrouNaHUD = true;
     }
 
     public void invadiuRicassius()
@@ -40,4 +57,29 @@ public class Missao
             concluirMissao();
         }
     }
+
+    public object info(TipoInformacao ti)
+    {
+        switch (ti)
+        {
+            case TipoInformacao.estaAtiva:
+                return estaAtiva;
+            case TipoInformacao.concluida:
+                return concluida;
+            case TipoInformacao.jaMostrouNaHUD:
+                return jaMostrouNaHUD;
+            case TipoInformacao.titulo:
+                return titulo;
+            case TipoInformacao.descricao:
+                return descricao;
+            case TipoInformacao.recompensaOuro:
+                return recompensaOuro;
+            case TipoInformacao.objetivo:
+                return objetivo;
+            default:
+                return null;
+        }
+    }
+
+    public enum TipoInformacao { estaAtiva, concluida, jaMostrouNaHUD, titulo, descricao, recompensaOuro, objetivo}
 }

@@ -1,11 +1,11 @@
 ﻿using UnityEngine;
 using UnityEngine.AI;
 // Cuida das interações com o inimigo
-[RequireComponent(typeof(PersonagemStats))]
+[RequireComponent(typeof(SerVivoStats))]
 public class Inimigo : MonoBehaviour
 {
 	Ref_posiçao_jogador playerManager;
-	PersonagemStats myStats;
+	SerVivoStats myStats;
 
     public float radius = 3f;
     public Transform interactionTransform;
@@ -15,7 +15,7 @@ public class Inimigo : MonoBehaviour
     private void Start()
 	{
 		playerManager = Ref_posiçao_jogador.instance;
-		myStats = GetComponent<PersonagemStats>();
+		myStats = GetComponent<SerVivoStats>();
 	}
 
     void Update()

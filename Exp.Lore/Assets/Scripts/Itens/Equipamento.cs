@@ -1,6 +1,4 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
+﻿using UnityEngine;
 
 [CreateAssetMenu(fileName = "Novo Equipamento", menuName = "Inventário/Equipamento")]
 public class Equipamento : Item
@@ -8,20 +6,20 @@ public class Equipamento : Item
 	public EquipamentoSlot equiparSlot;
 
 	public int armaduraModificador;
-	public int danoModificador;
+    public int danoModificador;
+    public int vidaModificador;
 
-	public override void Use()
+    public override void Use()
 	{
-		
 		ControladorEquipamento.instance.Equipar(this);
-        //colocar noa aba equipamentos no slot referente ao enum EquipamentoSlot
+        //colocar na aba equipamentos no slot referente ao enum EquipamentoSlot
         RemoverDoInventario();
     }
 
     public override void desequipar()
     {
         base.desequipar();
-        ControladorEquipamento.instance.Desequipar((int)this.equiparSlot);
+        ControladorEquipamento.instance.Desequipar((int)equiparSlot);
     }
 }
 

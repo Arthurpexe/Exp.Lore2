@@ -1,6 +1,4 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
+﻿using UnityEngine;
 
 [CreateAssetMenu(fileName = "Novo COnsumivel", menuName = "Inventário/Consumivel")]
 public class Consumiveis : Item
@@ -14,7 +12,7 @@ public class Consumiveis : Item
     GameObject player;
     JogadorStats stats;
 
-    public override void Use()
+    public override void Use()//TEM Q MUDAR ISSO AQUI chamar alguma função do jogadorStats
     {
         player = GameObject.FindGameObjectWithTag("Player");
         stats = player.GetComponent<JogadorStats>();

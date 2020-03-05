@@ -38,7 +38,7 @@ public class ControladorBoss1 : MonoBehaviour
 		if (distancia <= raioDeVisao)
 		{
 			 
-			PersonagemStats alvoStats = target.GetComponent<PersonagemStats>();
+			SerVivoStats alvoStats = target.GetComponent<SerVivoStats>();
 			if (alvoStats != null && cooldownAtaque <= 0)
 			{
 				combate.Ataque(alvoStats);

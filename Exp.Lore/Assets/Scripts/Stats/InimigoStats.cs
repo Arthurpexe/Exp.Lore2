@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class InimigoStats : PersonagemStats
+public class InimigoStats : SerVivoStats
 {
 	public float radius = 3f;
 	public Transform interactionTransform;
@@ -51,7 +51,7 @@ public class InimigoStats : PersonagemStats
 
             for (int i = 0; i < controladorPersonagem.missoes.Length; i++)
             {
-                if (controladorPersonagem.missoes[i].titulo == "A Hora da Verdade")
+                if ((string)controladorPersonagem.missoes[i].info(Missao.TipoInformacao.titulo) == "A Hora da Verdade")
                 {
                     //controladorPersonagem.ouro = controladorPersonagem.missoes[i].recompensaOuro;
                     controladorPersonagem.missoes[i].concluirMissao();

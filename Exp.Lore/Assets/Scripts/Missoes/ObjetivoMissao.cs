@@ -1,10 +1,13 @@
-﻿[System.Serializable]
+﻿using UnityEngine;
+[System.Serializable]
 public class ObjetivoMissao
 {
-    public TipoObjetivo tipoObjetivo;
+    [SerializeField]
+    TipoObjetivo tipoObjetivo;
 
-    public int quantidadeNescessaria;
-    public int quantidadeAtual;
+    [SerializeField]
+    int quantidadeNescessaria;
+    int quantidadeAtual;
 
     public ObjetivoMissao()
     {
@@ -34,12 +37,11 @@ public class ObjetivoMissao
         if (tipoObjetivo == TipoObjetivo.irAte)
             quantidadeAtual++;
     }
-}
 
-public enum TipoObjetivo
-{
-    matar,
-    coletar,
-    irAte,
-    falarCom
+    public TipoObjetivo meuObjetivo()
+    {
+        return tipoObjetivo;
+    }
+
+    public enum TipoObjetivo { matar, coletar, irAte, falarCom}
 }

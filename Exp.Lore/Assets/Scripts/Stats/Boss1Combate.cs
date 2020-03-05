@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-[RequireComponent(typeof(PersonagemStats))]
+[RequireComponent(typeof(SerVivoStats))]
 public class Boss1Combate : MonoBehaviour
 {
 	public float velocidadeAtaque = 1f;
@@ -15,19 +15,19 @@ public class Boss1Combate : MonoBehaviour
 	float delayAnimaçaoAtual = 0f;
 	Renderer rend;
 	GameObject jogador;
-	PersonagemStats playerStats;
+	SerVivoStats playerStats;
 	Animator mecanimBoss;
 
 
 
 
-	public PersonagemStats myStats;
+	public SerVivoStats myStats;
 
 	void Start()
 	{
 		player = GetComponent<Rigidbody>();
-		playerStats = player.GetComponent<PersonagemStats>();
-		myStats = GetComponent<PersonagemStats>();
+		playerStats = player.GetComponent<SerVivoStats>();
+		myStats = GetComponent<SerVivoStats>();
 		jogador = GameObject.FindGameObjectWithTag("Player");
 		rend = jogador.GetComponentInChildren<Renderer>();
 		mecanimBoss = GetComponentInChildren<Animator>();
@@ -45,7 +45,7 @@ public class Boss1Combate : MonoBehaviour
 
 
 
-	public void Ataque(PersonagemStats alvoStats)
+	public void Ataque(SerVivoStats alvoStats)
 	{
 
 		if (cooldownAtaque <= 0)
@@ -61,7 +61,7 @@ public class Boss1Combate : MonoBehaviour
 
 
 
-	public void Disparar(PersonagemStats alvoStats)
+	public void Disparar(SerVivoStats alvoStats)
 	{
 		Physics.SphereCast(transform.position + Vector3.down * 2, 1, transform.forward * 10, out alvo);
 		if (alvo.transform.name == "Personagem")
@@ -80,7 +80,7 @@ public class Boss1Combate : MonoBehaviour
 	}
 
 
-	public void DarDano(PersonagemStats stats)
+	public void DarDano(SerVivoStats stats)
 	{
 
 		stats.TomarDano(myStats.dano - playerStats.armadura);

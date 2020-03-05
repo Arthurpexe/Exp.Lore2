@@ -1,7 +1,6 @@
-﻿using System.Collections;
-using UnityEngine;
+﻿using UnityEngine;
 
-public class JogadorStats : PersonagemStats
+public class JogadorStats : SerVivoStats
 {
     static Animator anim;
     // Start is called before the first frame update

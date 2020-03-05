@@ -1,14 +1,14 @@
 ﻿using System.Collections;
 using UnityEngine;
 
-[RequireComponent(typeof(PersonagemStats))]
+[RequireComponent(typeof(SerVivoStats))]
 public class PersonagemCombate : MonoBehaviour
 {
 	public float velocidadeAtaque = 1f;
 	public float cooldownAtaque = 0f;
 	public float CooldownAtaque;
 	public float ataqueDelay = .6f;
-	PersonagemStats playerStats;
+	SerVivoStats playerStats;
 	GameObject player;
 	float distancia;
 	
@@ -16,14 +16,14 @@ public class PersonagemCombate : MonoBehaviour
     public bool atacando;
 
 
-    PersonagemStats myStats;
+    SerVivoStats myStats;
 
 	void Start()
 	{
 		player = GameObject.FindGameObjectWithTag("Player");
-		playerStats = player.GetComponent<PersonagemStats>();
+		playerStats = player.GetComponent<SerVivoStats>();
 
-		myStats = GetComponent<PersonagemStats>();
+		myStats = GetComponent<SerVivoStats>();
 		
 	}
 
@@ -36,7 +36,7 @@ public class PersonagemCombate : MonoBehaviour
 
 	}
 
-	public void Ataque(PersonagemStats alvoStats)
+	public void Ataque(SerVivoStats alvoStats)
 	{
 		
 
@@ -50,7 +50,7 @@ public class PersonagemCombate : MonoBehaviour
 		}
 	}
 
-	IEnumerator DarDano(PersonagemStats stats, float delay) // Atraso para dano acontecer apenas no final da animação de ataque, ao invez de imediatamente.
+	IEnumerator DarDano(SerVivoStats stats, float delay) // Atraso para dano acontecer apenas no final da animação de ataque, ao invez de imediatamente.
 	{
 		yield return new WaitForSeconds(delay);
 

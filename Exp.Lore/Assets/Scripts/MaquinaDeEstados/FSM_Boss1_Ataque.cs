@@ -6,7 +6,7 @@ public class FSM_Boss1_Ataque : StateMachineBehaviour
 {
 	public GameObject Boss;
 	private Boss1Combate script;
-	private PersonagemStats script2;
+	private SerVivoStats script2;
 	public GameObject player;
 	
 	
@@ -16,7 +16,7 @@ public class FSM_Boss1_Ataque : StateMachineBehaviour
 		Boss = GameObject.Find("Boss");
 		script = Boss.GetComponent<Boss1Combate>();
 		player = GameObject.Find("Personagem");
-		script2 = player.GetComponent<PersonagemStats>();
+		script2 = player.GetComponent<SerVivoStats>();
 		//playerStats = player.GetComponent<PersonagemStats>();
 
 	}
