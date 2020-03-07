@@ -4,6 +4,8 @@ public class SerVivoStats : MonoBehaviour
 {
 	Renderer rend;
     Color corInicial;
+	[SerializeField]
+	float tempoFeedbackDano = 0.1f;
 	public int vidaMaxima = 100;
     public int vidaAtual; //{ get; private set; }
 	public int danoInimigo;
@@ -32,7 +34,7 @@ public class SerVivoStats : MonoBehaviour
 
 		vidaAtual -= dano;
         rend.material.color = Color.red;
-        Invoke("voltarCor", 0.075f);
+        Invoke("voltarCor", tempoFeedbackDano);
         Debug.Log(transform.name + " Tomou " + dano + " dano.");
 
         seVidaMudar(vidaMaxima, vidaAtual);
@@ -41,9 +43,9 @@ public class SerVivoStats : MonoBehaviour
 		{
             if (item != null)
             {
-                Instantiate(item, this.transform.position, Quaternion.identity);
+                Instantiate(item, this.transform.position + Vector3.up, Quaternion.identity);
             }
-			MorrerAnimaçao();
+			MorrerAnimacao();
 		}
 
 		
@@ -56,16 +58,12 @@ public class SerVivoStats : MonoBehaviour
     }
 
 
-	public virtual void MorrerAnimaçao()
+	public virtual void MorrerAnimacao()
 	{
-
-
-		
 	}
 
 	public virtual void Morrer()
 	{
-
 	}
     public void voltarCor()
     {

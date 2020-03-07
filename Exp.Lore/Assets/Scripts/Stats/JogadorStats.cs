@@ -28,7 +28,7 @@ public class JogadorStats : SerVivoStats
 	}
 
 
-	public override void MorrerAnimaçao()
+	public override void MorrerAnimacao()
 	{
 		anim.SetTrigger("morto");
 

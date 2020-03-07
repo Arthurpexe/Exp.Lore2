@@ -41,7 +41,7 @@ public class InimigoStats : SerVivoStats
 	}
 
 
-	public override void MorrerAnimaçao()
+	public override void MorrerAnimacao()
 	{
         anim.SetTrigger("Morrer");
 
