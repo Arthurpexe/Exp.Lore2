@@ -15,11 +15,10 @@ public class ControladorInimigo : MonoBehaviour
 	// Start is called before the first frame update
 	void Start()
     {
-		target = Ref_posiçao_jogador.instance.player.transform;
+		target = ControladorPersonagem.instancia.transform;
 		agent = GetComponent<NavMeshAgent>();
 		combate = GetComponent<PersonagemCombate>();
         anim = this.gameObject.GetComponentInChildren<Animator>();
-
 	}
 
     // Update is called once per frame

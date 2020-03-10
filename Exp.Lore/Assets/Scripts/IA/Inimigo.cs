@@ -4,7 +4,6 @@ using UnityEngine.AI;
 [RequireComponent(typeof(SerVivoStats))]
 public class Inimigo : MonoBehaviour
 {
-	Ref_posiçao_jogador playerManager;
 	SerVivoStats myStats;
 
     public float radius = 3f;
@@ -14,13 +13,12 @@ public class Inimigo : MonoBehaviour
 
     private void Start()
 	{
-		playerManager = Ref_posiçao_jogador.instance;
 		myStats = GetComponent<SerVivoStats>();
 	}
 
     void Update()
     {
-        PersonagemCombate playerCombat = playerManager.player.GetComponent<PersonagemCombate>();
+        PersonagemCombate playerCombat = ControladorPersonagem.instancia.GetComponent<PersonagemCombate>();
         float distance = Vector3.Distance(player.position, interactionTransform.position);
 
 		if (distance <= radius && Input.GetButtonDown("Atacar"))

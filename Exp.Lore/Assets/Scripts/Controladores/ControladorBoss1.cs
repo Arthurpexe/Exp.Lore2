@@ -11,22 +11,17 @@ public class ControladorBoss1 : MonoBehaviour
 
 	Renderer rend;
 	Transform target;
-	NavMeshAgent agent;
 	Boss1Combate combate;
-
     Animator mecanimBoss;
 
-	// Start is called before the first frame update
 	void Start()
     {
-		target = Ref_posiçao_jogador.instance.player.transform;
-		agent = GetComponent<NavMeshAgent>();
+		target = ControladorPersonagem.instancia.transform;
 		combate = GetComponent<Boss1Combate>();
         mecanimBoss = GetComponentInChildren<Animator>();
 		rend = GetComponentInChildren<Renderer>();
 	}
 
-    // Update is called once per frame
     void Update()
     {
 		cooldownAtaque -= Time.deltaTime;

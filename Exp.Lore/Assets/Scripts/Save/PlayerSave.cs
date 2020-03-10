@@ -18,7 +18,7 @@ public class PlayerSave
 
     public void atualizarDependencias()
     {
-        posicao = controladorPersonagem.player.transform.position;
+        posicao = controladorPersonagem.transform.position;
         vida = controladorPersonagem.vidaAtual;
     }
     public void descarregarDependencias()

@@ -1175,7 +1175,7 @@ GameObject:
   - component: {fileID: 32253831}
   - component: {fileID: 32253830}
   m_Layer: 5
-  m_Name: BordaBarraDeVidaBoss
+  m_Name: BarraDeVidaBossBorda
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -13656,47 +13656,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: bc671ad7051f8ad4e99eddaccd3e5474, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  saveLoad:
-    playerSave:
-      posicao: {x: 0, y: 0, z: 0}
-      vida: 100
-      missoes:
-      - titulo: 
-        descricao: 
-        recompensaOuro: 0
-        objetivo:
-          tipoObjetivo: 1
-          quantidadeNescessaria: 0
-      - titulo: 
-        descricao: 
-        recompensaOuro: 0
-        objetivo:
-          tipoObjetivo: 1
-          quantidadeNescessaria: 0
-      - titulo: 
-        descricao: 
-        recompensaOuro: 0
-        objetivo:
-          tipoObjetivo: 1
-          quantidadeNescessaria: 0
-      - titulo: 
-        descricao: 
-        recompensaOuro: 0
-        objetivo:
-          tipoObjetivo: 1
-          quantidadeNescessaria: 0
-      - titulo: 
-        descricao: 
-        recompensaOuro: 0
-        objetivo:
-          tipoObjetivo: 1
-          quantidadeNescessaria: 0
-      - titulo: 
-        descricao: 
-        recompensaOuro: 0
-        objetivo:
-          tipoObjetivo: 1
-          quantidadeNescessaria: 0
+  painelMenu: {fileID: 1162538330}
+  painelInventario: {fileID: 834576592}
+  painelFimDeJogo: {fileID: 316224192}
+  barraDeVidaBoss: {fileID: 2041067701}
 --- !u!4 &370103360
 Transform:
   m_ObjectHideFlags: 0
@@ -13757,8 +13720,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 05f89be6f21fdb54b8e94c5e72b305a9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  player: {fileID: 5034884846238474149}
-  painelMorte: {fileID: 316224192}
 --- !u!1 &370482241
 GameObject:
   m_ObjectHideFlags: 0
@@ -60007,7 +59968,7 @@ GameObject:
   - component: {fileID: 1995554048}
   - component: {fileID: 1995554047}
   m_Layer: 5
-  m_Name: BarraDeVidaBoss
+  m_Name: BarraDeVidaBossConteudo
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -61447,7 +61408,7 @@ GameObject:
   - component: {fileID: 2041067704}
   - component: {fileID: 2041067703}
   m_Layer: 5
-  m_Name: BarraDeVidaBossBase
+  m_Name: BarraDeVidaBoss
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -72155,6 +72116,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
+      objectReference: {fileID: 370103359}
+    - target: {fileID: 1693503370355626832, guid: 6677ee83f4dfe5a4da9c0bbe01067635,
+        type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: carregarJogo
       objectReference: {fileID: 0}
     - target: {fileID: 1693503370966752650, guid: 6677ee83f4dfe5a4da9c0bbe01067635,
         type: 3}
@@ -72275,6 +72241,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
+      objectReference: {fileID: 370103359}
+    - target: {fileID: 1693503371402738655, guid: 6677ee83f4dfe5a4da9c0bbe01067635,
+        type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: sairJogo
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 6677ee83f4dfe5a4da9c0bbe01067635, type: 3}
@@ -84804,6 +84775,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 95aafa602d97e19488bed6f7111d9910, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  tempoFeedbackDano: 0.1
   vidaMaxima: 50
   vidaAtual: 0
   danoInimigo: 3
@@ -86039,6 +86011,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 95aafa602d97e19488bed6f7111d9910, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  tempoFeedbackDano: 0.1
   vidaMaxima: 50
   vidaAtual: 0
   danoInimigo: 5
@@ -100821,6 +100794,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 95aafa602d97e19488bed6f7111d9910, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  tempoFeedbackDano: 0.1
   vidaMaxima: 50
   vidaAtual: 0
   danoInimigo: 3
@@ -101631,6 +101605,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 95aafa602d97e19488bed6f7111d9910, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  tempoFeedbackDano: 0.1
   vidaMaxima: 50
   vidaAtual: 0
   danoInimigo: 5

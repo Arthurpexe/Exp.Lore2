@@ -15,38 +15,26 @@ public class ControladorPersonagem : MonoBehaviour
         instancia = this;
 
     }
-	#endregion
+    #endregion
 
-	[Header("Paineis")]
-    public GameObject painelMenu;
-    public GameObject painelInventario;
-    public GameObject painelFimDeJogo;
+    ControladorJogo controladorJogo;
 
-    [Header("Movimento")]
-    public float SpeedIncrease = 10f;
-	public float VelocidadeAbaixado = 0.5f;
-    public float Speed = 5f;
-    public float DashDistance = 2f;
-    public int PlayerNumber = 1;
-    public Rigidbody player;
-    public Vector3 _inputs = Vector3.zero;
-    public bool _isFastSpeed = false;
-    private bool Abaixar = false;
-    static Animator anim;
-	public float CD = 3;
-	private float cd;
-    public ControladorCamera cameraPrincipal;
+    //movimentação do personagem
+    MovimentoPersonagem movimentoPersonagem;
+    Vector3 _inputs = Vector3.zero;
+	float cdRolamentoMax = 3;
+	float cdRolamentoAtual;
+    bool pausa;
 
     [Header("Combate")]
     public SerVivoStats personagemStats;
     public int vidaAtual;
-    public GameObject barraVidaBoss;
     public GameObject[] inimigos;
     public float distancia;
     public float distaciaMaxima = 5.0f;
-	float Cooldown;
-	private float cooldown;
-    PersonagemCombate script;
+	//float Cooldown;
+	//private float cooldown;
+    //PersonagemCombate script;
 
     [Header("Missoes")]
     public Missao[] missoes;
@@ -61,115 +49,81 @@ public class ControladorPersonagem : MonoBehaviour
     void Start()
 	{
 		missoes = new Missao[6];
-		player = GetComponent<Rigidbody>();
-        anim = GetComponentInChildren<Animator>();
-		script = GetComponent<PersonagemCombate>();
-        //personagem = new PlayerSave();
-		Cooldown = script.CooldownAtaque;
-		cooldown = Cooldown;
+        movimentoPersonagem = new MovimentoPersonagem(GetComponent<Rigidbody>(), GetComponentInChildren<Animator>());
+		//script = GetComponent<PersonagemCombate>();
+        controladorJogo = GameObject.Find("ControladorGeral").GetComponent<ControladorJogo>();
+		//Cooldown = script.CooldownAtaque;
+		//cooldown = Cooldown;
 
 		personagemStats = this.GetComponent<SerVivoStats>();
-		cd = CD;
+		cdRolamentoAtual = cdRolamentoMax;
     }
 
 	void Update()
 	{
-		cooldown -= Time.deltaTime;
-		cd -= Time.deltaTime;
-		vidaAtual = personagemStats.vidaAtual;
-
-        //area dos paineis
-        if (painelMenu.activeSelf || painelInventario.activeSelf || painelFimDeJogo.activeSelf)
-        {
-            Time.timeScale = 0.1f;
-            _inputs = Vector3.zero;
-            return;
-        }
-        else
-        {
-            Time.timeScale = 1;
-        }
-
-
-        //area de inputs do teclado
         _inputs = Vector3.zero;
-		_inputs.x = Input.GetAxis("Horizontal");
+
+        if (pausa)//se o jogo estiver pausado o jogador não vai poder se mexer
+            return;
+
+        //Area dos cooldowns
+        //cooldown -= Time.deltaTime;
+		cdRolamentoAtual -= Time.deltaTime;
+		vidaAtual = personagemStats.vidaAtual;//acho q tem q mudar isso
+
+        //Area de inputs
+        _inputs.x = Input.GetAxis("Horizontal");
 		_inputs.z = Input.GetAxis("Vertical");
+
         if (_inputs != Vector3.zero)
         {
-            anim.SetFloat("mov", 1);
-
-            transform.forward = -_inputs;
+            movimentoPersonagem.andar(_inputs);
         }
 
-        if (Input.GetButtonDown("Correr_p1") && Abaixar == false) 
+        if (Input.GetButtonDown("Correr_p1")) 
 		{
-			if (_isFastSpeed == false)
-			{
-				_isFastSpeed = true;
-			}
+            movimentoPersonagem.correr();
 		}
 
 		if (_inputs.magnitude < 0.05f)
 		{
-			anim.SetFloat("mov", 0);
-			_isFastSpeed = false;
+            movimentoPersonagem.parar();
 		}
 
-		if (_isFastSpeed == true)
+        //se o personagem estiver correndo
+        if ((bool)movimentoPersonagem.info(MovimentoPersonagem.TipoInformacao.correndo))
 		{
-            anim.SetFloat("mov", 2);
-            anim.SetBool("agachado", false);
-			_inputs = _inputs * SpeedIncrease;
-		}
+			_inputs = _inputs * (float)movimentoPersonagem.info(MovimentoPersonagem.TipoInformacao.velocidadeCorrendo);//pegando a velocidade correndo do movimento do personagem
+        }
 
-		 if (_inputs != Vector3.zero && Abaixar == true)
-		 {
-			_inputs = _inputs * VelocidadeAbaixado;
-		 }
+        //se o personagem estiver abaixado e estiver andando
+        if (_inputs != Vector3.zero && (bool)movimentoPersonagem.info(MovimentoPersonagem.TipoInformacao.abaixado))
+		{
+		    _inputs = _inputs * (float)movimentoPersonagem.info(MovimentoPersonagem.TipoInformacao.velocidadeAbaixado);//pegando a velocidade abaixado do movimento do personagem
+        }
 
 		if (Input.GetButtonDown("Abaixar"))
 		{
-			if(Abaixar == false)
-			{
-				Abaixar = true;
-                anim.SetBool("agachado", true);
-
-
-			}
-
-
-			else
-			{
-				Abaixar = false;
-				anim.SetBool("agachado", false);
-			}
+            movimentoPersonagem.abaixar();
 		} 
-		
-			
-        
 
-
-		if (Abaixar == true && Input.GetButtonDown("Dash_p1") && cd <= 0)
+		if (Input.GetButtonDown("Dash_p1") && cdRolamentoAtual <= 0)
 		{
-			anim.SetTrigger("rolar");
-			_isFastSpeed = false;
-			anim.SetBool("agachado", true);
-			Vector3 dashVelocity = Vector3.Scale(transform.forward, DashDistance * new Vector3(5,0,5));
-			player.AddForce(dashVelocity, ForceMode.VelocityChange);
-			cd = CD;
+            movimentoPersonagem.rolar();
+			cdRolamentoAtual = cdRolamentoMax;
 		}
 
-        if (Input.GetButtonDown("Atacar") && !_isFastSpeed && cooldown <= 0)
-        {
-            anim.SetTrigger("atacar");
-			cooldown = Cooldown;
-        }
+        //já que não vai ter mais combate não precisa disso
+   //     if (Input.GetButtonDown("Atacar") && !_isFastSpeed && cooldown <= 0)
+   //     {
+   //         anim.SetTrigger("atacar");
+   //		  cooldown = Cooldown;
+   //     }
     }
 
 	void FixedUpdate()
 	{
-		player.MovePosition(player.position - _inputs * Speed * Time.fixedDeltaTime);
+        movimentoPersonagem.movePosicao(_inputs);
 	}
 
     public void mudouMissao()
@@ -177,12 +131,17 @@ public class ControladorPersonagem : MonoBehaviour
         seMissaoMudarCallback.Invoke();
     }
 
+    public void pausarPlayer(bool pausado)
+    {
+        pausa = pausado;
+    }
+
+
     private void OnTriggerEnter(Collider other)
     {
         if(other.tag == "AreaBoss")
         {
-            cameraPrincipal.fixaBoss();
-            barraVidaBoss.SetActive(true);
+            controladorJogo.entreiAreaBoss();
         }
 
         if (other.tag == "AreaMansãoRicasso")//verifico se cheguei na cachoeira para completar a missao Onde estão meus pais
@@ -198,8 +157,7 @@ public class ControladorPersonagem : MonoBehaviour
     {
         if (other.tag == "AreaBoss")
         {
-            cameraPrincipal.seguePlayer();
-            barraVidaBoss.SetActive(false);
+            controladorJogo.saiAreaBoss();
         }
         if(other.tag == "AreaTitulo")
         {
