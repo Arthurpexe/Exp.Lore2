@@ -12,7 +12,7 @@ public class InteragirNPC : Interagivel
     protected string dialogo;
 
     InstanciarBotao instanciarBotao;
-    void Start()
+    protected virtual void Start()
     {
         textoDialogo = painelDialogo.GetComponentInChildren<Text>();
         instanciarBotao = new InstanciarBotao();
@@ -22,7 +22,7 @@ public class InteragirNPC : Interagivel
     {
         if (instanciarBotao.instanciarBotaoPorProximidade(transform, raio) && Input.GetButtonDown("Interagir"))
         {
-                Interact();
+            Interact();
         }
     }
 

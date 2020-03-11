@@ -6,7 +6,6 @@ public class ControladorJogo : MonoBehaviour
     SaveLoad saveLoad;
     ControladorPersonagem controladorPersonagem;
     ControladorCamera cameraPrincipal;
-    WaitForSeconds espera;
 
     [Header("GameObjects")]
     public GameObject painelMenu;
@@ -20,7 +19,6 @@ public class ControladorJogo : MonoBehaviour
         saveLoad = new SaveLoad(GameObject.FindWithTag("Player"));
         controladorPersonagem = ControladorPersonagem.instancia;
         cameraPrincipal = GameObject.Find("Main Camera").GetComponent<ControladorCamera>();
-        espera = new WaitForSeconds(0.1f);
     }
     private void Update()
     {

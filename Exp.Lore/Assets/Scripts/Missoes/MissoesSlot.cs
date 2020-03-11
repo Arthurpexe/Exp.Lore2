@@ -16,7 +16,7 @@ public class MissoesSlot : MonoBehaviour
     {
         missao = novaMissao;
 
-        titulo.text = (string)missao.info(Missao.TipoInformacao.titulo);
+        titulo.text = missao.getTitulo();
         titulo.enabled = true;
     }
 
@@ -30,25 +30,12 @@ public class MissoesSlot : MonoBehaviour
 
     public void MostrarDescricao()
     {
-        if((bool)missao.info(Missao.TipoInformacao.estaAtiva) || (bool)missao.info(Missao.TipoInformacao.concluida))
+        if(missao.getEstaAtiva() || missao.getConcluida())
         {
             //descricao.text = missao.descricao;
             //recompensaOuro.text = missao.recompensaOuro.ToString();
 
             painelDescricao.SetActive(!painelDescricao.activeSelf);
         }
-    }
-
-    public void concluirMissao()
-    {
-
-        //if (slotMissaoConcluida != null)
-        //{
-            //if (slotMissaoConcluida.missao == null)
-            //{
-            //    slotMissaoConcluida.AdicionarMissao(this.missao);
-            //}
-            ClearSlot();
-        //}
     }
 }

@@ -20,22 +20,25 @@ public class ObjetivoMissao
         return (quantidadeAtual >= quantidadeNescessaria);
     }
 
-    public void inimigoMorto()
+    public bool inimigoMorto()
     {
         if(tipoObjetivo == TipoObjetivo.matar)
             quantidadeAtual++;
+        return concluiu();
     }
 
-    public void coletarItem()
+    public bool coletarItem()
     {
         if (tipoObjetivo == TipoObjetivo.coletar)
             quantidadeAtual++;
+        return concluiu();
     }
 
-    public void chegouNumLugar()
+    public bool chegouNumLugar()
     {
         if (tipoObjetivo == TipoObjetivo.irAte)
             quantidadeAtual++;
+        return concluiu();
     }
 
     public TipoObjetivo meuObjetivo()

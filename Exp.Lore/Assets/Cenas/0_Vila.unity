@@ -102642,14 +102642,14 @@ MonoBehaviour:
   nomeNPC: Fabius Exiladus
   textoNomeNPCDialogo: {fileID: 1953885129}
   painelDialogo: {fileID: 626508271}
-  dialogo: "Parab\xE9ns Voc\xEA zerou o Joguinho"
+  dialogo: Oi
   missao:
-    titulo: 
-    descricao: 
-    recompensaOuro: 0
+    titulo: A Hora da Verdade
+    descricao: qualquer coisa ai
+    recompensaOuro: 16
     objetivo:
-      tipoObjetivo: 1
-      quantidadeNescessaria: 0
+      tipoObjetivo: 0
+      quantidadeNescessaria: 1
   textoTitulo: {fileID: 719544586}
   textoDescricao: {fileID: 1434615308}
   textoOuro: {fileID: 1887531096}
@@ -102660,7 +102660,7 @@ MonoBehaviour:
   equipsTeste: {fileID: 0}
   dialogoMissaoAtiva: O monstro se encontra seguindo este caminho a direita toda
     vida e subindo um morrinho
-  dialogoMissaoConcluida: 
+  dialogoMissaoConcluida: "Parab\xE9ns Voc\xEA zerou o Joguinho"
 --- !u!1 &8887720199349101158
 GameObject:
   m_ObjectHideFlags: 0

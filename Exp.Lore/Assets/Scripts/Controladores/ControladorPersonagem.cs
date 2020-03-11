@@ -17,6 +17,7 @@ public class ControladorPersonagem : MonoBehaviour
     }
     #endregion
 
+    GameObject controladorGeral;
     ControladorJogo controladorJogo;
 
     //movimentação do personagem
@@ -29,23 +30,17 @@ public class ControladorPersonagem : MonoBehaviour
     //parte de combate
     SerVivoStats personagemStats;
 
-    [Header("Missoes")]
-    public Missao[] missoes;//criar um controlador de missoes
-    public int contadorMissoesAtivas = 0;
-    public int ouro;
-
-
-    public delegate void SeMissaoMudar();
-    public SeMissaoMudar seMissaoMudarCallback;
+    //parte das missoes
+    ControladorMissoes controladorMissoes;
+    [SerializeField]
+    int ouro;
 
     void Start()
 	{
-		missoes = new Missao[6];
+        controladorGeral = GameObject.Find("ControladorGeral");
+        controladorMissoes = controladorGeral.GetComponent<ControladorMissoes>();
+        controladorJogo = controladorGeral.GetComponent<ControladorJogo>();
         movimentoPersonagem = new MovimentoPersonagem(GetComponent<Rigidbody>(), GetComponentInChildren<Animator>());
-		//script = GetComponent<PersonagemCombate>();
-        controladorJogo = GameObject.Find("ControladorGeral").GetComponent<ControladorJogo>();
-		//Cooldown = script.CooldownAtaque;
-		//cooldown = Cooldown;
 
 		personagemStats = GetComponent<SerVivoStats>();
 		cdRolamentoAtual = cdRolamentoMax;
@@ -59,7 +54,6 @@ public class ControladorPersonagem : MonoBehaviour
             return;
 
         //Area dos cooldowns
-        //cooldown -= Time.deltaTime;
 		cdRolamentoAtual -= Time.deltaTime;
 
         //Area de inputs
@@ -82,15 +76,15 @@ public class ControladorPersonagem : MonoBehaviour
 		}
 
         //se o personagem estiver correndo
-        if ((bool)movimentoPersonagem.info(MovimentoPersonagem.TipoInformacao.correndo))
+        if (movimentoPersonagem.getCorrendo())
 		{
-			inputs = inputs * (float)movimentoPersonagem.info(MovimentoPersonagem.TipoInformacao.velocidadeCorrendo);//pegando a velocidade correndo do movimento do personagem
+			inputs = inputs * movimentoPersonagem.getVelocidadeCorrendo();//pegando a velocidade correndo do movimento do personagem
         }
 
         //se o personagem estiver abaixado e estiver andando
-        if (inputs != Vector3.zero && (bool)movimentoPersonagem.info(MovimentoPersonagem.TipoInformacao.abaixado))
+        if (inputs != Vector3.zero && movimentoPersonagem.getAbaixado())
 		{
-		    inputs = inputs * (float)movimentoPersonagem.info(MovimentoPersonagem.TipoInformacao.velocidadeAbaixado);//pegando a velocidade abaixado do movimento do personagem
+		    inputs = inputs * movimentoPersonagem.getVelocidadeAbaixado();//pegando a velocidade abaixado do movimento do personagem
         }
 
 		if (Input.GetButtonDown("Abaixar"))
@@ -110,9 +104,9 @@ public class ControladorPersonagem : MonoBehaviour
         movimentoPersonagem.movePosicao(inputs);
 	}
 
-    public void mudouMissao()
+    public void atualizarOuro(int ouroGanho)
     {
-        seMissaoMudarCallback.Invoke();
+        ouro += ouroGanho;
     }
 
     public void pausarPlayer(bool pausado)
@@ -129,11 +123,7 @@ public class ControladorPersonagem : MonoBehaviour
         }
         if (other.tag == "AreaMansãoRicasso")//verifico se cheguei na mansão do ricassius para completar a missao de chegar lá
         {
-            for (int i = 0; i < missoes.Length; i++)
-            {
-                Debug.Log("missão " + i + ": " + (string)missoes[i].info(Missao.TipoInformacao.titulo));
-                missoes[i].invadiuRicassius();
-            }
+            controladorMissoes.entreiAreaMansao();
         }
         if (other.tag == "AreaTitulo")
         {
@@ -152,15 +142,6 @@ public class ControladorPersonagem : MonoBehaviour
         }
     }
 
-    public object getInfo(Tipo t)
-    {
-        switch (t)
-        {
-            case Tipo.SerVivoStats:
-                return personagemStats;
-            default:
-                return null;
-        }
-    }
-    public enum Tipo { SerVivoStats }
+    public SerVivoStats getSerVivoStats(){ return personagemStats; }
+    public int getOuro() { return ouro; }
 }

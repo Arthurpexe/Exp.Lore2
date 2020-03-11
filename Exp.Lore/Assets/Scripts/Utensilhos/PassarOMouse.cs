@@ -14,9 +14,9 @@ public class PassarOMouse : MonoBehaviour, IPointerEnterHandler,IPointerExitHand
         item = gameObject.GetComponentInParent<InventarioSlot>().item;
         if (item != null)
         {
-            painelDescricaoItem.transform.GetChild(0).GetComponent<Text>().text = (string)item.getInfo(Item.Tipo.nome);
-            painelDescricaoItem.transform.GetChild(1).GetComponent<Text>().text = (string)item.getInfo(Item.Tipo.descricao);
-            painelDescricaoItem.transform.GetChild(5).GetComponent<Text>().text = (string)item.getInfo(Item.Tipo.preco);
+            painelDescricaoItem.transform.GetChild(0).GetComponent<Text>().text = item.getNome();
+            painelDescricaoItem.transform.GetChild(1).GetComponent<Text>().text = item.getDescricao();
+            painelDescricaoItem.transform.GetChild(5).GetComponent<Text>().text = item.getPreco().ToString();
             Instantiate(painelDescricaoItem, localPainelDescricaoItem);
         }
     }

@@ -15,7 +15,7 @@ public class InventarioSlot : MonoBehaviour
 	{
 		item = newItem;
 
-		icone.sprite = (Sprite)item.getInfo(Item.Tipo.icone);
+		icone.sprite = item.getIcone();
 		icone.enabled = true;
         if(botaoExcluir != null)
             botaoExcluir.enabled = true;

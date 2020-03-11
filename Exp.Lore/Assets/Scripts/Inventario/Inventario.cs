@@ -1,6 +1,4 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
+﻿using UnityEngine;
 using System.Text;
 
 public class Inventario : MonoBehaviour
@@ -33,7 +31,7 @@ public class Inventario : MonoBehaviour
     }
     public bool Add (Item item)
 	{
-		if (item.getInfo(Item.Tipo.isDefaultItem) == "false")
+		if (!item.getIsDefaultItem())
         {
             if (listaItens.contador >= space)
             {
@@ -63,7 +61,7 @@ public class Inventario : MonoBehaviour
         vItens = listaItens.imprimirLista();
         for(int i = 0; i < vItens.Length; i++)
         {
-            aux.Append(i+"° "+vItens[i].getInfo(Item.Tipo.nome)+". ");
+            aux.Append(i + "° " + vItens[i].getNome() + ". ");
         }
         return aux.ToString();
     }

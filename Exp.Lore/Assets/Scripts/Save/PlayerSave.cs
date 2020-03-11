@@ -19,14 +19,14 @@ public class PlayerSave
 
     public void atualizarDependencias()
     {
-        svs = (SerVivoStats)controladorPersonagem.getInfo(ControladorPersonagem.Tipo.SerVivoStats);
+        svs = controladorPersonagem.getSerVivoStats();
 
         posicao = controladorPersonagem.transform.position;
         vida = svs.vidaAtual;
     }
     public void descarregarDependencias()
     {
-        svs = (SerVivoStats)controladorPersonagem.getInfo(ControladorPersonagem.Tipo.SerVivoStats);
+        svs = controladorPersonagem.getSerVivoStats();
 
         controladorPersonagem.transform.position = posicao;
         svs.vidaAtual = vida;

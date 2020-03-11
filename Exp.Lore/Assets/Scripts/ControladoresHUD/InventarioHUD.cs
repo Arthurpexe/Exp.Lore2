@@ -21,7 +21,8 @@ public class InventarioHUD : MonoBehaviour
         inventario.onItemChangedCallback += atualizarInventarioHUD;
         slotsItens = itensParent.GetComponentsInChildren<InventarioSlot>();
 
-        ControladorPersonagem.instancia.seMissaoMudarCallback += marcadorNovaMissaoHUD;
+        //o codigo abaixo faz aparecer o marcador de nova missao mas esse codigo deveria estar em outro lugar.
+        //ControladorPersonagem.instancia.seMissaoMudarCallback += marcadorNovaMissaoHUD;
     }
 
     private void Update()
@@ -70,7 +71,7 @@ public class InventarioHUD : MonoBehaviour
             }
         }
 
-        textoOuroJogador.text = ControladorPersonagem.instancia.ouro.ToString();
+        textoOuroJogador.text = ControladorPersonagem.instancia.getOuro().ToString();
         if (!painelInventario.activeSelf)
             marcadorNovoItem.SetActive(true);
     }

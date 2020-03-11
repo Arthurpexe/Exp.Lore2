@@ -71,22 +71,8 @@ public class MovimentoPersonagem
     }
 
 
-    public object info(TipoInformacao t)
-    {
-        switch (t)
-        {
-            case TipoInformacao.velocidadeCorrendo:
-                return velocidadeCorrendo;
-            case TipoInformacao.velocidadeAbaixado:
-                return velocidadeAbaixado;
-            case TipoInformacao.correndo:
-                return correndo;
-            case TipoInformacao.abaixado:
-                return abaixado;
-            default:
-                return null;
-        }
-    }
-
-    public enum TipoInformacao { velocidadeCorrendo, velocidadeAbaixado, correndo, abaixado }
+    public float getVelocidadeCorrendo() { return velocidadeCorrendo; }
+    public float getVelocidadeAbaixado() { return velocidadeAbaixado; }
+    public bool getCorrendo() { return correndo; }
+    public bool getAbaixado() { return abaixado; }
 }

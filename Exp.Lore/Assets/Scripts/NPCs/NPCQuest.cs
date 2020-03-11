@@ -5,7 +5,8 @@ public class NPCQuest : InteragirNPC
 {
     [SerializeField]
     Missao missao;
-    
+    ControladorMissoes controladorMissoes;
+
     public Text textoTitulo;
     public Text textoDescricao;
     public Text textoOuro;
@@ -19,6 +20,13 @@ public class NPCQuest : InteragirNPC
     string dialogoMissaoAtiva;
     [SerializeField]
     string dialogoMissaoConcluida;
+
+    protected override void Start()
+    {
+        base.Start();
+
+        controladorMissoes = GameObject.Find("ControladorGeral").GetComponent<ControladorMissoes>();
+    }
 
     protected override void Update()
     {
@@ -50,14 +58,14 @@ public class NPCQuest : InteragirNPC
     {
         base.Interact();
 
-        if ((bool)missao.info(Missao.TipoInformacao.concluida))
+        if (missao.getConcluida())
         {
             //conversação diferente caso já tenha completado a missão desse NPC
             textoDialogo.text = dialogoMissaoConcluida;
             painelDialogo.SetActive(!painelDialogo.activeSelf);
             return;
         }
-        else if ((bool)missao.info(Missao.TipoInformacao.estaAtiva))
+        else if (missao.getEstaAtiva())
         {
             //caso já esteja fazendo a missão desse NPC
             textoDialogo.text = dialogoMissaoAtiva;
@@ -74,44 +82,36 @@ public class NPCQuest : InteragirNPC
 
             textoNomeNPCMissao.text = nomeNPC;
 
-            textoTitulo.text = (string)missao.info(Missao.TipoInformacao.titulo);
-            textoDescricao.text = (string)missao.info(Missao.TipoInformacao.descricao);
-            textoOuro.text = ((int)missao.info(Missao.TipoInformacao.recompensaOuro)).ToString();
-            if ((string)missao.info(Missao.TipoInformacao.titulo) == "A Invasão")
-            {
-                for (int i = 0; i < controladorPersonagem.missoes.Length; i++)
-                {
-                    if ((string)controladorPersonagem.missoes[i].info(Missao.TipoInformacao.titulo) == "Boatos (quase) Inacreditaveis")
-                    {
-                        controladorPersonagem.ouro += (int)controladorPersonagem.missoes[i].info(Missao.TipoInformacao.recompensaOuro);//controlador personagem n devia ta aqui
-                        controladorPersonagem.missoes[i].concluirMissao();
-                        controladorPersonagem.mudouMissao();
-                    }
-                }
-            }
+            textoTitulo.text = missao.getTitulo();
+            textoDescricao.text = missao.getDescricao();
+            textoOuro.text = missao.getRecompensaOuro().ToString();
+
+            #region Missao "Boatos (quase) Inacreditaveis" Desativada
+            //if (missao.getTitulo() == "A Invasão")
+            //{
+            //    for (int i = 0; i < controladorMissoes.missoes.Length; i++)
+            //    {
+            //        if (controladorPersonagem.missoes[i].getTitulo() == "Boatos (quase) Inacreditaveis")
+            //        {
+            //            controladorPersonagem.ouro += controladorPersonagem.missoes[i].getRecompensaOuro();//controlador personagem n devia ta aqui
+            //            controladorPersonagem.missoes[i].concluirMissao();
+            //            controladorPersonagem.mudouMissao();
+            //        }
+            //    }
+            //}
+            #endregion
         }
-        if (Input.GetButtonDown("Interagir"))
+        else if(painelAceitarQuest.activeSelf)
+        {
+            painelDialogo.SetActive(false);
             painelAceitarQuest.SetActive(false);
+        }
     }
 
     public void aceitarQuest()
     {
-        Debug.Log("Adicionei a quest " + (string)missao.info(Missao.TipoInformacao.titulo) + "!");
-        missao.ativarMissao();
-        Debug.Log(controladorPersonagem.gameObject.name);
-        controladorPersonagem.missoes[controladorPersonagem.contadorMissoesAtivas] = missao;
-        controladorPersonagem.contadorMissoesAtivas++;
-        controladorPersonagem.mudouMissao();
-
-        if ((string)missao.info(Missao.TipoInformacao.titulo) == "Começando Bem")
-        {
-            equipsTeste.SetActive(true);
-        }
-
-        if (((ObjetivoMissao) missao.info(Missao.TipoInformacao.objetivo)).meuObjetivo() == ObjetivoMissao.TipoObjetivo.falarCom)
-        {
-            //mudar a cor do NPCQuestMinimapa
-        }
+        Debug.Log(controladorMissoes.name);
+        controladorMissoes.adicionarMissao(missao);
     }
     public void respostaSim()
     {

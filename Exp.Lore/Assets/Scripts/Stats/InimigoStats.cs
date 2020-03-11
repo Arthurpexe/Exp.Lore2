@@ -1,6 +1,4 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
+﻿using UnityEngine;
 
 public class InimigoStats : SerVivoStats
 {
@@ -13,7 +11,7 @@ public class InimigoStats : SerVivoStats
 
     public AudioSource audioListenerBoss;
 
-    ControladorPersonagem controladorPersonagem;
+    ControladorMissoes controladorMissoes;
 
     private void Start()
 	{
@@ -22,7 +20,7 @@ public class InimigoStats : SerVivoStats
 		CoolDown = Cooldown;
 		anim = GetComponentInChildren<Animator>();
 
-        controladorPersonagem = ControladorPersonagem.instancia;
+        controladorMissoes = GameObject.Find("ControladorGeral").GetComponent<ControladorMissoes>();
 
 	}
 
@@ -49,18 +47,8 @@ public class InimigoStats : SerVivoStats
         {
             audioListenerBoss.enabled = false;
 
-            for (int i = 0; i < controladorPersonagem.missoes.Length; i++)
-            {
-                if ((string)controladorPersonagem.missoes[i].info(Missao.TipoInformacao.titulo) == "A Hora da Verdade")
-                {
-                    //controladorPersonagem.ouro = controladorPersonagem.missoes[i].recompensaOuro;
-                    controladorPersonagem.missoes[i].concluirMissao();
-                    controladorPersonagem.mudouMissao();
-                }
-                
-            }
+			controladorMissoes.matarBoss();
         }
-
 		
 		//Destroy(gameObject);
 	}

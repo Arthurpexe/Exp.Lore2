@@ -2,11 +2,11 @@
 [System.Serializable]
 public class Missao
 {
-    ControladorPersonagem controladorPersonagem;
+    ControladorMissoes controladorMissoes;
 
-    bool estaAtiva;
-    bool concluida;
-    bool jaMostrouNaHUD;
+    bool estaAtiva = false;
+    bool concluida = false;
+    bool jaMostrouNaHUD = false;
 
     [SerializeField]
     string titulo;
@@ -30,56 +30,30 @@ public class Missao
     }
     public void ativarMissao()
     {
-        if(controladorPersonagem != null)
-            controladorPersonagem = ControladorPersonagem.instancia;
+        if(controladorMissoes != null)
+            controladorMissoes = GameObject.Find("ControladorGeral").GetComponent<ControladorMissoes>();
         estaAtiva = true;
-        controladorPersonagem.mudouMissao();
+        controladorMissoes.atualizarMissoesCallback();
     }
-    public void concluirMissao()
+    public int concluirMissao()
     {
-        if (controladorPersonagem != null)
-            controladorPersonagem = ControladorPersonagem.instancia;//TEMPORARIO
+        if (controladorMissoes != null)
+            controladorMissoes = GameObject.Find("ControladorGeral").GetComponent<ControladorMissoes>();
         concluida = true;
         estaAtiva = false;
-        controladorPersonagem.ouro += recompensaOuro;//TEMPORARIO
-        controladorPersonagem.mudouMissao();//TEMPORARIO
+        controladorMissoes.atualizarMissoesCallback();
+        return recompensaOuro;
     }
     public void mostreiNaHUD()
     {
         jaMostrouNaHUD = true;
     }
 
-    public void invadiuRicassius()
-    {
-        if(titulo == "A Invasão" && !concluida)
-        {
-            objetivo.chegouNumLugar();
-            concluirMissao();
-        }
-    }
-
-    public object info(TipoInformacao ti)
-    {
-        switch (ti)
-        {
-            case TipoInformacao.estaAtiva:
-                return estaAtiva;
-            case TipoInformacao.concluida:
-                return concluida;
-            case TipoInformacao.jaMostrouNaHUD:
-                return jaMostrouNaHUD;
-            case TipoInformacao.titulo:
-                return titulo;
-            case TipoInformacao.descricao:
-                return descricao;
-            case TipoInformacao.recompensaOuro:
-                return recompensaOuro;
-            case TipoInformacao.objetivo:
-                return objetivo;
-            default:
-                return null;
-        }
-    }
-
-    public enum TipoInformacao { estaAtiva, concluida, jaMostrouNaHUD, titulo, descricao, recompensaOuro, objetivo}
+    public bool getEstaAtiva() { return estaAtiva; }
+    public bool getConcluida() { return concluida; }
+    public bool getJaMostrouNaHUD() { return jaMostrouNaHUD; }
+    public string getTitulo() { return titulo; }
+    public string getDescricao() { return descricao; }
+    public int getRecompensaOuro() { return recompensaOuro; }
+    public ObjetivoMissao getObjetivo() { return objetivo; }
 }

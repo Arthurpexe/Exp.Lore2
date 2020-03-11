@@ -17,13 +17,13 @@ public class ItemPickUp : Interagivel
     public void Interact()
 	{
 		base.Interact();
-        Debug.Log("Interagindo com " + (string)item.getInfo(Item.Tipo.nome));
+        Debug.Log("Interagindo com " + item.getNome());
 		pickUp();
 	}
 
 	public void pickUp()
 	{
-		Debug.Log("Pegando " + (string)item.getInfo(Item.Tipo.nome));
+		Debug.Log("Pegando " + item.getNome());
 		bool wasPickedUp = Inventario.instance.Add(item);
 
 		if(wasPickedUp)
