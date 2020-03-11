@@ -3,14 +3,15 @@
 [System.Serializable]
 public class PlayerSave 
 {
-    ControladorPersonagem controladorPersonagem = ControladorPersonagem.instancia;
-
+    ControladorPersonagem controladorPersonagem;
+    SerVivoStats svs;
     public Vector3 posicao;
     public int vida;
     public Missao[] missoes;
 
     public PlayerSave()
     {
+        controladorPersonagem = ControladorPersonagem.instancia;
         posicao = new Vector3(0f, 0f, 0f);
         vida = 100;
         missoes = new Missao[6];
@@ -18,14 +19,17 @@ public class PlayerSave
 
     public void atualizarDependencias()
     {
+        svs = (SerVivoStats)controladorPersonagem.getInfo(ControladorPersonagem.Tipo.SerVivoStats);
+
         posicao = controladorPersonagem.transform.position;
-        vida = controladorPersonagem.vidaAtual;
+        vida = svs.vidaAtual;
     }
     public void descarregarDependencias()
     {
+        svs = (SerVivoStats)controladorPersonagem.getInfo(ControladorPersonagem.Tipo.SerVivoStats);
+
         controladorPersonagem.transform.position = posicao;
-        controladorPersonagem.vidaAtual = vida;
-        controladorPersonagem.personagemStats.vidaAtual = vida;
-        controladorPersonagem.personagemStats.carregarVida();
+        svs.vidaAtual = vida;
+        svs.carregarVida();
     }
 }

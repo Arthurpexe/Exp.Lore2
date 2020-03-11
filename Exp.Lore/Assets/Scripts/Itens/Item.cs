@@ -35,24 +35,24 @@ public class Item : ScriptableObject
     /// </summary>
     /// <param name="ti">Item.TipoInformação</param>
     /// <returns></returns>
-    public object info(TipoInformacao ti)
+    public object getInfo(Tipo ti)
     {
         switch (ti)
         {
-            case TipoInformacao.nome:
+            case Tipo.nome:
                 return nome;
-            case TipoInformacao.descricao:
+            case Tipo.descricao:
                 return descricao;
-            case TipoInformacao.preco:
+            case Tipo.preco:
                 return preco;
-            case TipoInformacao.icone:
+            case Tipo.icone:
                 return icone;
-            case TipoInformacao.isDefaultItem:
+            case Tipo.isDefaultItem:
                 return isDefaultItem;
             default:
                 return null;
         }
     }
 
-    public enum TipoInformacao { nome, descricao, preco, icone, isDefaultItem}
+    public enum Tipo { nome, descricao, preco, icone, isDefaultItem}
 }

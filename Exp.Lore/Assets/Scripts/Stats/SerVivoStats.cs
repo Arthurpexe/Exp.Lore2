@@ -6,12 +6,11 @@ public class SerVivoStats : MonoBehaviour
     Color corInicial;
 	[SerializeField]
 	float tempoFeedbackDano = 0.1f;
-	public int vidaMaxima = 100;
+	int vidaMaxima = 100;
     public int vidaAtual; //{ get; private set; }
 	public int danoInimigo;
 	public int dano;
 	public int armadura;
-	
 
 	public GameObject item;
 	public GameObject player;
@@ -25,7 +24,6 @@ public class SerVivoStats : MonoBehaviour
 		vidaAtual = vidaMaxima;
         player = GameObject.FindWithTag("Player");
     }
-
 
 	public void TomarDano(int dano)
 	{
@@ -47,24 +45,20 @@ public class SerVivoStats : MonoBehaviour
             }
 			MorrerAnimacao();
 		}
-
-		
 	}
 
-    public void carregarVida()
+    public int carregarVida()
     {
         seVidaMudar(vidaMaxima, vidaAtual);
         Debug.Log("vida atual "+vidaAtual);
+		return vidaAtual;
     }
 
 
-	public virtual void MorrerAnimacao()
-	{
-	}
+	public virtual void MorrerAnimacao(){}
 
-	public virtual void Morrer()
-	{
-	}
+	public virtual void Morrer(){}
+
     public void voltarCor()
     {
         rend.material.color = corInicial;

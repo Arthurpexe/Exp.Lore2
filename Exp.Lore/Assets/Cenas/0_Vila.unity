@@ -13660,6 +13660,7 @@ MonoBehaviour:
   painelInventario: {fileID: 834576592}
   painelFimDeJogo: {fileID: 316224192}
   barraDeVidaBoss: {fileID: 2041067701}
+  titulo: {fileID: 1786486271}
 --- !u!4 &370103360
 Transform:
   m_ObjectHideFlags: 0
@@ -26410,7 +26411,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 1, y: 1}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 0, y: -11.450012}
+  m_AnchoredPosition: {x: 0, y: -11.449951}
   m_SizeDelta: {x: 581.24, y: 438.63}
   m_Pivot: {x: 1, y: 1}
 --- !u!222 &834576594
@@ -39399,7 +39400,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
-  m_AnchoredPosition: {x: 109.609375, y: 46.899994}
+  m_AnchoredPosition: {x: 109.609375, y: 46.899902}
   m_SizeDelta: {x: 486.52, y: 32.29}
   m_Pivot: {x: 0, y: 0}
 --- !u!114 &1327655304
@@ -84776,7 +84777,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   tempoFeedbackDano: 0.1
-  vidaMaxima: 50
   vidaAtual: 0
   danoInimigo: 3
   dano: 3
@@ -86012,7 +86012,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   tempoFeedbackDano: 0.1
-  vidaMaxima: 50
   vidaAtual: 0
   danoInimigo: 5
   dano: 5
@@ -100795,7 +100794,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   tempoFeedbackDano: 0.1
-  vidaMaxima: 50
   vidaAtual: 0
   danoInimigo: 3
   dano: 3
@@ -101606,7 +101604,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   tempoFeedbackDano: 0.1
-  vidaMaxima: 50
   vidaAtual: 0
   danoInimigo: 5
   dano: 5

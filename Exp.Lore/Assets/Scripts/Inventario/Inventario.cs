@@ -33,7 +33,7 @@ public class Inventario : MonoBehaviour
     }
     public bool Add (Item item)
 	{
-		if (item.info(Item.TipoInformacao.isDefaultItem) == "false")
+		if (item.getInfo(Item.Tipo.isDefaultItem) == "false")
         {
             if (listaItens.contador >= space)
             {
@@ -63,7 +63,7 @@ public class Inventario : MonoBehaviour
         vItens = listaItens.imprimirLista();
         for(int i = 0; i < vItens.Length; i++)
         {
-            aux.Append(i+"° "+vItens[i].info(Item.TipoInformacao.nome)+". ");
+            aux.Append(i+"° "+vItens[i].getInfo(Item.Tipo.nome)+". ");
         }
         return aux.ToString();
     }

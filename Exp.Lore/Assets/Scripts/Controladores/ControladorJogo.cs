@@ -1,22 +1,26 @@
-﻿using UnityEngine;
+﻿using System.Collections;
+using UnityEngine;
 
 public class ControladorJogo : MonoBehaviour
 {
     SaveLoad saveLoad;
     ControladorPersonagem controladorPersonagem;
     ControladorCamera cameraPrincipal;
+    WaitForSeconds espera;
 
-    [Header("Paineis")]
+    [Header("GameObjects")]
     public GameObject painelMenu;
     public GameObject painelInventario;
     public GameObject painelFimDeJogo;
     public GameObject barraDeVidaBoss;
+    public GameObject titulo;
 
     void Start()
     {
         saveLoad = new SaveLoad(GameObject.FindWithTag("Player"));
         controladorPersonagem = ControladorPersonagem.instancia;
         cameraPrincipal = GameObject.Find("Main Camera").GetComponent<ControladorCamera>();
+        espera = new WaitForSeconds(0.1f);
     }
     private void Update()
     {
@@ -53,5 +57,52 @@ public class ControladorJogo : MonoBehaviour
     {
         cameraPrincipal.seguePlayer();
         barraDeVidaBoss.SetActive(false);
+    }
+
+    public IEnumerator entreiAreaTitulo()
+    {
+        Transform[] filhosTitulo = new Transform[titulo.transform.childCount];
+        for (int i = 0; i < titulo.transform.childCount; i++)
+        {
+            filhosTitulo[i] = titulo.transform.GetChild(i);
+        }
+
+        float j = 0.1f;
+        while (j < 1)
+        {
+            yield return new WaitForSeconds(0.03f);
+            titulo.transform.GetChild(0).localScale = new Vector3(j, j, j);
+            foreach (var transform in filhosTitulo)
+            {
+                if (transform.GetSiblingIndex() != 0)
+                {
+                    transform.gameObject.SetActive(true);
+                }
+            }
+            j += 0.1f;
+        }
+    }
+    public IEnumerator saiAreaTitulo()
+    {
+        Transform[] filhosTitulo = new Transform[titulo.transform.childCount];
+        for(int i = 0; i < titulo.transform.childCount; i++)
+        {
+            filhosTitulo[i] = titulo.transform.GetChild(i);
+        }
+
+        float j = 1;
+        while (j > 0.1f)
+        {
+            yield return new WaitForSeconds(0.03f);
+            titulo.transform.GetChild(0).localScale = new Vector3(j, j, j);
+            foreach(var transform in filhosTitulo)
+            {
+                if(transform.GetSiblingIndex() != 0)
+                {
+                    transform.gameObject.SetActive(false);
+                }
+            }
+            j -= 0.1f;
+        }
     }
 }
