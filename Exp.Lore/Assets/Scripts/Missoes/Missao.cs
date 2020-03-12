@@ -30,10 +30,7 @@ public class Missao
     }
     public void ativarMissao()
     {
-        if(controladorMissoes != null)
-            controladorMissoes = GameObject.Find("ControladorGeral").GetComponent<ControladorMissoes>();
         estaAtiva = true;
-        controladorMissoes.atualizarMissoesCallback();
     }
     public int concluirMissao()
     {
@@ -41,7 +38,6 @@ public class Missao
             controladorMissoes = GameObject.Find("ControladorGeral").GetComponent<ControladorMissoes>();
         concluida = true;
         estaAtiva = false;
-        controladorMissoes.atualizarMissoesCallback();
         return recompensaOuro;
     }
     public void mostreiNaHUD()

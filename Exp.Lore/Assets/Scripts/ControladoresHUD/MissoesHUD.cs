@@ -32,13 +32,15 @@ public class MissoesHUD : MonoBehaviour
                         slotsMissoesConcluidas[i].AdicionarMissao(missoesAux[i]);
                         slotsMissoesAtivas[i].ClearSlot();
 
-                        if (missoesAux[i + 1].getEstaAtiva())
+                        if (missoesAux[i + 1] != null)
                         {
-                            slotsMissoesAtivas[i].AdicionarMissao(missoesAux[i + 1]);
-                            slotsMissoesAtivas[i + 1].ClearSlot();
-                            controladorMissoes.diminuirIndiceMissoes(i);
+                            if (missoesAux[i + 1].getEstaAtiva())
+                            {
+                                slotsMissoesAtivas[i].AdicionarMissao(missoesAux[i + 1]);
+                                slotsMissoesAtivas[i + 1].ClearSlot();
+                                controladorMissoes.diminuirIndiceMissoes(i);
+                            }
                         }
-
                         if (!missoesAux[i].getJaMostrouNaHUD())
                         {
                             painelMissaoConcluida.GetComponentInChildren<Text>().text = "Missão " + missoesAux[i].getTitulo() + " concluida!";

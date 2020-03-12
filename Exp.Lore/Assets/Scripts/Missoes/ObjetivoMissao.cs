@@ -15,7 +15,7 @@ public class ObjetivoMissao
         quantidadeAtual = 0;
         quantidadeNescessaria = 0;
     }
-    public bool concluiu()
+    private bool concluiu()
     {
         return (quantidadeAtual >= quantidadeNescessaria);
     }

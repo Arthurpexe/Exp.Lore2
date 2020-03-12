@@ -25,7 +25,7 @@ public class InventarioHUD : MonoBehaviour
         //ControladorPersonagem.instancia.seMissaoMudarCallback += marcadorNovaMissaoHUD;
     }
 
-    private void Update()
+    private void Update()//essas porra aqui é do controlador personagem
     {
         if (Input.GetButtonDown("Inventario"))
         {
@@ -71,9 +71,14 @@ public class InventarioHUD : MonoBehaviour
             }
         }
 
-        textoOuroJogador.text = ControladorPersonagem.instancia.getOuro().ToString();
+        
         if (!painelInventario.activeSelf)
             marcadorNovoItem.SetActive(true);
+    }
+
+    public void atualizarOuroHUD(int ouro)
+    {
+        textoOuroJogador.text = ouro.ToString();
     }
 
     public void marcadorNovaMissaoHUD()

@@ -19,6 +19,7 @@ public class ControladorPersonagem : MonoBehaviour
 
     GameObject controladorGeral;
     ControladorJogo controladorJogo;
+    InventarioHUD inventarioHUD;
 
     //movimentação do personagem
     MovimentoPersonagem movimentoPersonagem;
@@ -28,7 +29,7 @@ public class ControladorPersonagem : MonoBehaviour
     bool pausa;
 
     //parte de combate
-    SerVivoStats personagemStats;
+    SerVivoStats serVivoStats;
 
     //parte das missoes
     ControladorMissoes controladorMissoes;
@@ -40,9 +41,10 @@ public class ControladorPersonagem : MonoBehaviour
         controladorGeral = GameObject.Find("ControladorGeral");
         controladorMissoes = controladorGeral.GetComponent<ControladorMissoes>();
         controladorJogo = controladorGeral.GetComponent<ControladorJogo>();
+        inventarioHUD = GameObject.Find("HUDCanvas").GetComponent<InventarioHUD>();
         movimentoPersonagem = new MovimentoPersonagem(GetComponent<Rigidbody>(), GetComponentInChildren<Animator>());
 
-		personagemStats = GetComponent<SerVivoStats>();
+		serVivoStats = GetComponent<SerVivoStats>();
 		cdRolamentoAtual = cdRolamentoMax;
     }
 
@@ -107,6 +109,7 @@ public class ControladorPersonagem : MonoBehaviour
     public void atualizarOuro(int ouroGanho)
     {
         ouro += ouroGanho;
+        inventarioHUD.atualizarOuroHUD(ouro);
     }
 
     public void pausarPlayer(bool pausado)
@@ -142,6 +145,6 @@ public class ControladorPersonagem : MonoBehaviour
         }
     }
 
-    public SerVivoStats getSerVivoStats(){ return personagemStats; }
+    public SerVivoStats getSerVivoStats(){ return serVivoStats; }
     public int getOuro() { return ouro; }
 }

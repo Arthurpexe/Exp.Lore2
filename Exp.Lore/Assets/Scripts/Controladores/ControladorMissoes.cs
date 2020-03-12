@@ -23,8 +23,9 @@ public class ControladorMissoes : MonoBehaviour
 
     public void adicionarMissao(Missao missao)
     {
-        missao.ativarMissao();
+        
         missoes[contadorMissoesAtivas] = missao;
+        missao.ativarMissao();
         contadorMissoesAtivas++;
         atualizarMissoesCallback();
 
@@ -60,10 +61,13 @@ public class ControladorMissoes : MonoBehaviour
     {
         for (int i = 0; i < missoes.Length; i++)
         {
-            if(missoes[i].getTitulo() == "A Hora da Verdade")
+            if (missoes[i] != null)
             {
-                controladorPersonagem.atualizarOuro(missoes[i].concluirMissao());
-                atualizarMissoesCallback();
+                if (missoes[i].getTitulo() == "A Hora da Verdade")
+                {
+                    controladorPersonagem.atualizarOuro(missoes[i].concluirMissao());
+                    atualizarMissoesCallback();
+                }
             }
         }
     }

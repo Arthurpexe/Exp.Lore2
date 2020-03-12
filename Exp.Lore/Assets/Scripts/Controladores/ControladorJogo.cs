@@ -20,7 +20,7 @@ public class ControladorJogo : MonoBehaviour
         controladorPersonagem = ControladorPersonagem.instancia;
         cameraPrincipal = GameObject.Find("Main Camera").GetComponent<ControladorCamera>();
     }
-    private void Update()
+    void Update()
     {
         //se algum desses paineis estiver ativo o jogo vai ser pausado
         if (painelMenu.activeSelf || painelInventario.activeSelf || painelFimDeJogo.activeSelf)
