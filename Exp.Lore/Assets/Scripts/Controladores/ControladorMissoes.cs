@@ -9,6 +9,7 @@ public class ControladorMissoes : MonoBehaviour
 
     public delegate void SeMissaoMudar();
     public SeMissaoMudar seMissaoMudarCallback;
+
     void Start()
     {
         controladorPersonagem = ControladorPersonagem.instancia;

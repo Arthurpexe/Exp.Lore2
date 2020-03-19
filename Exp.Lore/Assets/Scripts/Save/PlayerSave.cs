@@ -22,14 +22,14 @@ public class PlayerSave
         svs = controladorPersonagem.getSerVivoStats();
 
         posicao = controladorPersonagem.transform.position;
-        vida = svs.vidaAtual;
+        vida = svs.getVidaAtual();
     }
     public void descarregarDependencias()
     {
         svs = controladorPersonagem.getSerVivoStats();
 
         controladorPersonagem.transform.position = posicao;
-        svs.vidaAtual = vida;
-        svs.carregarVida();
+        svs.curar(svs.getVidaMaxima());
+        svs.curar(vida - svs.getVidaMaxima());
     }
 }

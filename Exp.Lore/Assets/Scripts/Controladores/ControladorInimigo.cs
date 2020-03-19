@@ -3,76 +3,88 @@ using UnityEngine.AI;
 
 public class ControladorInimigo : MonoBehaviour
 {
-	public float raioDeVisao = 10f;
+	public float raioDeVisao = 10;
+	public float raioDeAtaque = 3;
 
 	Transform target;
-	NavMeshAgent agent;
-	PersonagemCombate combate;
-	public GameObject[] Waypoints;
-	private int WaypointDestino = 0;
-    Animator anim;
 
-	// Start is called before the first frame update
+	NavMeshAgent agent;
+	public Transform waypointsPai;
+	int quantidadeWaypoints;
+	GameObject[] listaWaypoints;
+	int waypointDestino = 0;
+	float distanciaProxWaypoint;
+
+	Animator anim;
+	SerVivoStats jogadorStats;
+	InimigoStats meusStats;
+
+	float cooldownAtaqueAtual = 0;
+	float cooldownAtaqueMax = 2;
+	float distancia;
+	
 	void Start()
-    {
+	{
 		target = ControladorPersonagem.instancia.transform;
+		jogadorStats = target.GetComponent<SerVivoStats>();
+		meusStats = GetComponent<InimigoStats>();
 		agent = GetComponent<NavMeshAgent>();
-		combate = GetComponent<PersonagemCombate>();
-        anim = this.gameObject.GetComponentInChildren<Animator>();
+		anim = this.gameObject.GetComponentInChildren<Animator>();
+
+		quantidadeWaypoints = waypointsPai.childCount;
+		listaWaypoints = new GameObject[quantidadeWaypoints];
+		for(int i = 0; i < quantidadeWaypoints; i++)
+		{
+			listaWaypoints[i] = waypointsPai.GetChild(i).gameObject;
+		}
 	}
 
-    // Update is called once per frame
-    void Update()
-    {
-        
-        anim.SetBool("perseguindo", false);
-		float distancia = Vector3.Distance(target.position, transform.position);
-
-		agent.SetDestination(Waypoints[WaypointDestino].transform.position);
-
-		float distancia_inimigo_destino = Vector3.Distance(Waypoints[WaypointDestino].transform.position, agent.transform.position);
-
-		if (distancia_inimigo_destino < 2)
-		{
-			if (WaypointDestino < Waypoints.Length - 1)
-			{
-				WaypointDestino++;
-			}
-			else
-			{
-				WaypointDestino = 0;
-			}
-
-		}
-
-
+	void Update()
+	{
+		cooldownAtaqueAtual -= Time.deltaTime;
+		distancia = Vector3.Distance(target.position, transform.position);
 
 		if (distancia <= raioDeVisao)
 		{
-            anim.SetBool("perseguindo", true);
-            target.LookAt(new Vector3(transform.position.x, target.position.y, transform.position.z));
+			anim.SetBool("perseguindo", true);
+			olharParaAlvo();
 
-            agent.SetDestination(target.position);
+			agent.SetDestination(target.position);
 
-			if(distancia <= 3)
+			if (distancia <= raioDeAtaque && cooldownAtaqueAtual <= 0)
 			{
-				JogadorStats alvoStats = target.GetComponent<JogadorStats>();
-				if(alvoStats != null)
-				{
-					combate.Ataque(alvoStats);
-                    if (combate.atacando)
-                    {
-                        anim.SetTrigger("atacar");
-                        combate.atacando = false;
-                    }
-				}
-				
-				OlharParaAlvo();
+				Invoke("atacar", 0.6f);
+				anim.SetTrigger("atacar");
+				cooldownAtaqueAtual = cooldownAtaqueMax;
 			}
 		}
-    }
+		else
+		{
+			anim.SetBool("perseguindo", false);
+			agent.SetDestination(listaWaypoints[waypointDestino].transform.position);
+			distanciaProxWaypoint = Vector3.Distance(listaWaypoints[waypointDestino].transform.position, agent.transform.position);
 
-	void OlharParaAlvo()
+			if (distanciaProxWaypoint < 2)
+			{
+				if (waypointDestino < listaWaypoints.Length - 1)
+				{
+					waypointDestino++;
+				}
+				else
+				{
+					waypointDestino = 0;
+				}
+			}
+		}
+	}
+
+	void atacar()
+	{
+		if (distancia <= raioDeAtaque + (raioDeAtaque / 5))
+			jogadorStats.TomarDano(meusStats.getDano());
+	}
+
+	void olharParaAlvo()
 	{
 		Vector3 direcao = (target.position - transform.position).normalized;
 		Quaternion lookRotation = Quaternion.LookRotation(new Vector3(direcao.x, 0, direcao.z));
@@ -81,9 +93,9 @@ public class ControladorInimigo : MonoBehaviour
 
 	private void OnDrawGizmosSelected()
 	{
-		Gizmos.color = Color.red;
+		Gizmos.color = Color.yellow;
 		Gizmos.DrawWireSphere(transform.position, raioDeVisao);
+		Gizmos.color = Color.red;
+		Gizmos.DrawWireSphere(transform.position, raioDeAtaque);
 	}
 }
-
-

@@ -20,6 +20,7 @@ public class ControladorPersonagem : MonoBehaviour
     GameObject controladorGeral;
     ControladorJogo controladorJogo;
     InventarioHUD inventarioHUD;
+    SerVivoStats meusStats;
 
     //movimentação do personagem
     MovimentoPersonagem movimentoPersonagem;
@@ -27,9 +28,6 @@ public class ControladorPersonagem : MonoBehaviour
 	float cdRolamentoMax = 3;
 	float cdRolamentoAtual;
     bool pausa;
-
-    //parte de combate
-    SerVivoStats serVivoStats;
 
     //parte das missoes
     ControladorMissoes controladorMissoes;
@@ -44,7 +42,7 @@ public class ControladorPersonagem : MonoBehaviour
         inventarioHUD = GameObject.Find("HUDCanvas").GetComponent<InventarioHUD>();
         movimentoPersonagem = new MovimentoPersonagem(GetComponent<Rigidbody>(), GetComponentInChildren<Animator>());
 
-		serVivoStats = GetComponent<SerVivoStats>();
+		meusStats = GetComponent<SerVivoStats>();
 		cdRolamentoAtual = cdRolamentoMax;
     }
 
@@ -99,6 +97,11 @@ public class ControladorPersonagem : MonoBehaviour
             movimentoPersonagem.rolar();
 			cdRolamentoAtual = cdRolamentoMax;
 		}
+
+        if (Input.GetKeyDown(KeyCode.U))//HACK pra curar 10 de vida instantaneamente
+        {
+            meusStats.curar(10);
+        }
     }
 
 	void FixedUpdate()
@@ -145,6 +148,6 @@ public class ControladorPersonagem : MonoBehaviour
         }
     }
 
-    public SerVivoStats getSerVivoStats(){ return serVivoStats; }
+    public SerVivoStats getSerVivoStats(){ return meusStats; }
     public int getOuro() { return ouro; }
 }

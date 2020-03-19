@@ -65,8 +65,6 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-    m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
-      Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
   m_Sprite: {fileID: 21300000, guid: dde8989c272d0d7408b943b0e2ab86a3, type: 3}
   m_Type: 1
   m_PreserveAspect: 0
@@ -120,7 +118,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 8465577056624293936}
+      - m_Target: {fileID: 0}
         m_MethodName: MostrarDescricao
         m_Mode: 1
         m_Arguments:
@@ -131,8 +129,6 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
-    m_TypeName: UnityEngine.UI.Button+ButtonClickedEvent, UnityEngine.UI, Version=1.0.0.0,
-      Culture=neutral, PublicKeyToken=null
 --- !u!1 &5194771479555426970
 GameObject:
   m_ObjectHideFlags: 0
@@ -196,8 +192,6 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-    m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
-      Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
   m_FontData:
     m_Font: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 0}
     m_FontSize: 18
@@ -222,7 +216,6 @@ GameObject:
   m_Component:
   - component: {fileID: 5709296035147879366}
   - component: {fileID: 5709296035147879364}
-  - component: {fileID: 8465577056624293936}
   m_Layer: 5
   m_Name: SlotMissao
   m_TagString: Untagged
@@ -258,30 +251,3 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 5709296035147879361}
   m_CullTransparentMesh: 0
---- !u!114 &8465577056624293936
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5709296035147879361}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 60997b93d53c07e4d83ec50ffa16b599, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  painelDescricao: {fileID: 0}
-  titulo: {fileID: 2722451284385728005}
-  descricao: {fileID: 0}
-  recompensaOuro: {fileID: 0}
-  missao:
-    estaAtiva: 0
-    completada: 0
-    titulo: 
-    descricao: 
-    recompensaOuro: 0
-    objetivo:
-      tipoObjetivo: 0
-      quantidadeNescessaria: 0
-      quantidadeAtual: 0
-  slotMissaoConcluida: {fileID: 0}

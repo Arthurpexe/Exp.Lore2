@@ -2,8 +2,6 @@
 [System.Serializable]
 public class Missao
 {
-    ControladorMissoes controladorMissoes;
-
     bool estaAtiva = false;
     bool concluida = false;
     bool jaMostrouNaHUD = false;
@@ -34,8 +32,6 @@ public class Missao
     }
     public int concluirMissao()
     {
-        if (controladorMissoes != null)
-            controladorMissoes = GameObject.Find("ControladorGeral").GetComponent<ControladorMissoes>();
         concluida = true;
         estaAtiva = false;
         return recompensaOuro;

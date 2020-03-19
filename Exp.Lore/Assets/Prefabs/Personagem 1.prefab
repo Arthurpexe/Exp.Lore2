@@ -67,31 +67,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 896505e0604674d479bd8a6d7c762234, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  painelMenu: {fileID: 0}
-  painelInventario: {fileID: 0}
-  painelFimDeJogo: {fileID: 0}
-  SpeedIncrease: 2.25
-  VelocidadeAbaixado: 0.5
-  Speed: 5
-  DashDistance: 2
-  PlayerNumber: 1
-  player: {fileID: 1604488581812827305}
-  _inputs: {x: 0, y: 0, z: 0}
-  _isFastSpeed: 0
-  CD: 3
-  cameraPrincipal: {fileID: 0}
-  posCamPersonagem: {fileID: 0}
-  personagemStats: {fileID: 1604488581812827307}
-  vidaAtual: 0
-  barraVidaBoss: {fileID: 0}
-  posCamBoss: {fileID: 0}
-  inimigos: []
-  distancia: 0
-  distaciaMaxima: 5
-  missoes: []
-  contadorMissoesAtivas: 0
   ouro: 0
-  titulo: {fileID: 0}
 --- !u!114 &1604488581812827307
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -104,13 +80,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 45368aa64f1fabe4ca7f5bbb40583ca4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  vidaMaxima: 100
-  vidaAtual: 0
+  tempoFeedbackDano: 0.1
   danoInimigo: 10
   dano: 10
-  armadura: 0
-  item: {fileID: 0}
-  player: {fileID: 0}
 --- !u!114 &1604488581812827306
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -124,8 +96,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   velocidadeAtaque: 1
-  cooldownAtaque: 2
-  CooldownAtaque: 2
+  cooldownAtaqueAtual: 0
+  cooldownAtaqueMax: 2
   ataqueDelay: 0.6
   atacando: 0
 --- !u!114 &1604488581812827301
@@ -148,7 +120,7 @@ BoxCollider:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1604488581812827303}
-  m_Material: {fileID: 0}
+  m_Material: {fileID: 13400000, guid: 92467a851c3b4244097dddc18fb1312f, type: 2}
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
@@ -239,6 +211,7 @@ MeshRenderer:
   m_MotionVectors: 1
   m_LightProbeUsage: 0
   m_ReflectionProbeUsage: 0
+  m_RayTracingMode: 2
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
@@ -347,6 +320,7 @@ MeshRenderer:
   m_MotionVectors: 1
   m_LightProbeUsage: 0
   m_ReflectionProbeUsage: 0
+  m_RayTracingMode: 2
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
@@ -636,6 +610,7 @@ SkinnedMeshRenderer:
   m_MotionVectors: 1
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
+  m_RayTracingMode: 0
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
@@ -932,7 +907,7 @@ BoxCollider:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 6024629697231822059}
-  m_Material: {fileID: 0}
+  m_Material: {fileID: 13400000, guid: 92467a851c3b4244097dddc18fb1312f, type: 2}
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2

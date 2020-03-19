@@ -2,44 +2,30 @@
 
 public class JogadorStats : SerVivoStats
 {
-    static Animator anim;
-    // Start is called before the first frame update
     void Start()
     {
-		ControladorEquipamento.instance.trocaDeEquipamento += TrocaDeEquipamento;
-        anim = GetComponentInChildren<Animator>();
+		ControladorEquipamento.instance.trocaDeEquipamento += trocaDeEquipamento;
     }
-
     
-	void TrocaDeEquipamento (Equipamento novoItem, Equipamento velhoItem)
+	void trocaDeEquipamento (Equipamento novoItem, Equipamento velhoItem)
 	{
 		if(novoItem != null)
 		{
-			armadura = armadura + novoItem.armaduraModificador;
-			dano = dano + novoItem.danoModificador;
-
+			armadura += novoItem.getArmaduraModificador();
+			dano += novoItem.getDanoModificador();
+			vidaMaxima += novoItem.getVidaMaximaModificador();
 		}
 
 		if(velhoItem != null)
 		{
-			armadura = armadura - velhoItem.armaduraModificador;
-			dano = dano - velhoItem.danoModificador;
+			armadura -= velhoItem.getArmaduraModificador();
+			dano -= velhoItem.getDanoModificador();
+			vidaMaxima -= novoItem.getVidaMaximaModificador();
 		}
 	}
-
 
 	public override void MorrerAnimacao()
 	{
 		anim.SetTrigger("morto");
-
-	}
-
-
-	public override void Morrer()
-	{
-		
-		anim.SetTrigger("morto");
-		
-		
 	}
 }

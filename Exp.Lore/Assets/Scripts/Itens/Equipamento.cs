@@ -3,15 +3,23 @@
 [CreateAssetMenu(fileName = "Novo Equipamento", menuName = "Inventário/Equipamento")]
 public class Equipamento : Item
 {
-	public EquipamentoSlot equiparSlot;
+    ControladorEquipamento controladorEquipamento;
 
-	public int armaduraModificador;
-    public int danoModificador;
-    public int vidaModificador;
+    [SerializeField]
+	EquipamentoSlot equipamentoSlot;
+    [SerializeField]
+	int armaduraModificador;
+    [SerializeField]
+    int danoModificador;
+    [SerializeField]
+    int vidaMaximaModificador;
 
     public override void Use()
 	{
-		ControladorEquipamento.instance.Equipar(this);
+        base.Use();
+
+        controladorEquipamento = ControladorEquipamento.instance;
+		controladorEquipamento.Equipar(this);
         //colocar na aba equipamentos no slot referente ao enum EquipamentoSlot
         RemoverDoInventario();
     }
@@ -19,8 +27,12 @@ public class Equipamento : Item
     public override void desequipar()
     {
         base.desequipar();
-        ControladorEquipamento.instance.Desequipar((int)equiparSlot);
+        controladorEquipamento.Desequipar((int)equipamentoSlot);
     }
+    public EquipamentoSlot getEquipamentoSlot() { return equipamentoSlot; }
+    public int getArmaduraModificador() { return armaduraModificador; }
+    public int getDanoModificador() { return danoModificador; }
+    public int getVidaMaximaModificador() { return vidaMaximaModificador; }
 }
 
 public enum EquipamentoSlot { Capacete, Peitoral, Pernas, Pés}

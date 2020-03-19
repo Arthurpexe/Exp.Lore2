@@ -5,7 +5,7 @@ using UnityEngine;
 public class FSM_Boss1_Ataque : StateMachineBehaviour
 {
 	public GameObject Boss;
-	private Boss1Combate script;
+	private ControladorBoss script;
 	private SerVivoStats script2;
 	public GameObject player;
 	
@@ -14,7 +14,7 @@ public class FSM_Boss1_Ataque : StateMachineBehaviour
     override public void OnStateEnter(Animator animator, AnimatorStateInfo stateInfo, int layerIndex)
     {
 		Boss = GameObject.Find("Boss");
-		script = Boss.GetComponent<Boss1Combate>();
+		script = Boss.GetComponent<ControladorBoss>();
 		player = GameObject.Find("Personagem");
 		script2 = player.GetComponent<SerVivoStats>();
 		//playerStats = player.GetComponent<PersonagemStats>();
@@ -30,7 +30,7 @@ public class FSM_Boss1_Ataque : StateMachineBehaviour
     // OnStateExit is called when a transition ends and the state machine finishes evaluating this state
     override public void OnStateExit(Animator animator, AnimatorStateInfo stateInfo, int layerIndex)
     {
-		script.Disparar(script2);
+		script.disparar(script2);
     }
 
     // OnStateMove is called right after Animator.OnAnimatorMove()

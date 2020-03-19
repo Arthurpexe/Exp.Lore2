@@ -35,7 +35,7 @@ public class ControladorEquipamento : MonoBehaviour
 
 	public void Equipar(Equipamento newItem)
 	{
-		int slotIndex = (int)newItem.equiparSlot;
+		int slotIndex = (int)newItem.getEquipamentoSlot();
 
 		Equipamento itemAntigo = null;
 

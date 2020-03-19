@@ -2,18 +2,15 @@
 
 public class SerVivoStats : MonoBehaviour
 {
+	protected Animator anim;
 	Renderer rend;
     Color corInicial;
 	[SerializeField]
 	float tempoFeedbackDano = 0.1f;
-	int vidaMaxima = 100;
-    public int vidaAtual; //{ get; private set; }
-	public int danoInimigo;
-	public int dano;
-	public int armadura;
-
-	public GameObject item;
-	public GameObject player;
+	protected int vidaMaxima = 100;
+    int vidaAtual;
+	protected int dano = 3;
+	protected int armadura;
 
     public event System.Action<int, int> seVidaMudar;
 
@@ -22,8 +19,8 @@ public class SerVivoStats : MonoBehaviour
 		rend = GetComponentInChildren<Renderer>();
         corInicial = rend.material.color;
 		vidaAtual = vidaMaxima;
-        player = GameObject.FindWithTag("Player");
-    }
+		anim = GetComponentInChildren<Animator>();
+	}
 
 	public void TomarDano(int dano)
 	{
@@ -31,20 +28,17 @@ public class SerVivoStats : MonoBehaviour
 		dano = Mathf.Clamp(dano, 0, int.MaxValue);
 
 		vidaAtual -= dano;
+		if(vidaAtual < 0)
+			vidaAtual = 0;
+
         rend.material.color = Color.red;
         Invoke("voltarCor", tempoFeedbackDano);
         Debug.Log(transform.name + " Tomou " + dano + " dano.");
 
-        seVidaMudar(vidaMaxima, vidaAtual);
+		carregarVida();
 
 		if(vidaAtual <= 0)
-		{
-            if (item != null)
-            {
-                Instantiate(item, this.transform.position + Vector3.up, Quaternion.identity);
-            }
 			MorrerAnimacao();
-		}
 	}
 
     public int carregarVida()
@@ -54,7 +48,6 @@ public class SerVivoStats : MonoBehaviour
 		return vidaAtual;
     }
 
-
 	public virtual void MorrerAnimacao(){}
 
 	public virtual void Morrer(){}
@@ -63,4 +56,28 @@ public class SerVivoStats : MonoBehaviour
     {
         rend.material.color = corInicial;
     }
+
+	public void curar(int heal)
+	{
+		vidaAtual += heal;
+		if(vidaAtual > vidaMaxima)
+			vidaAtual = vidaMaxima;
+		if (vidaAtual < 0)
+			vidaAtual = 1;
+
+		carregarVida();
+	}
+	public void aumentarArmadura(int armor)
+	{
+		armadura += armor;
+	}
+	public void aumentarDano(int damage)
+	{
+		dano += damage;
+	}
+
+	public int getVidaAtual() { return vidaAtual; }
+	public int getVidaMaxima() { return vidaMaxima; }
+	public int getArmadura() { return armadura; }
+	public int getDano() { return dano; }
 }
