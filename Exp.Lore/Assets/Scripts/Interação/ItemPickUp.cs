@@ -24,7 +24,7 @@ public class ItemPickUp : Interagivel
 	public void pickUp()
 	{
 		Debug.Log("Pegando " + item.getNome());
-		bool wasPickedUp = Inventario.instance.Add(item);
+		bool wasPickedUp = Inventario.instance.adicionar(item);
 
 		if(wasPickedUp)
 		  Destroy(gameObject);

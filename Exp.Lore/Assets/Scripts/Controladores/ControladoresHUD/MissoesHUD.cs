@@ -5,51 +5,45 @@ public class MissoesHUD : MonoBehaviour
 {
     ControladorMissoes controladorMissoes;
 
-    public GameObject painelDescricaoMissao;
+    public GameObject painelMissaoAtiva, marcadorNovaMissao;
     public GameObject painelMissaoConcluida;
-    public Transform espacoMissoesAtivas;
-    public Transform espacoMissoesConcluidas;
-    public MissaoSlot[] slotsMissoesAtivas;
-    public MissaoSlot[] slotsMissoesConcluidas;
+    public Transform espacosMissoesAtivas;
+    public Transform espacosMissoesConcluidas;
+    MissaoSlot[] slotsMissoesAtivas = new MissaoSlot[6];
+    MissaoSlot[] slotsMissoesConcluidas = new MissaoSlot[6];
 
     void Start()
     {
         controladorMissoes = GameObject.Find("ControladorGeral").GetComponent<ControladorMissoes>();
         controladorMissoes.seMissaoMudarCallback += atualizarMissoesHUD;
-
-        criarSlotsMissoes();
+        controladorMissoes.seMissaoMudarCallback += marcadorNovaMissaoHUD;
+        associarSlotsMissoes(0);
     }
 
-    void criarSlotsMissoes()
+    void associarSlotsMissoes(int cont)
     {
-        slotsMissoesAtivas = new MissaoSlot[6];
-        slotsMissoesConcluidas = new MissaoSlot[6];
-        for (int i = 0; i < 6; i++)
+        if (cont < 6)
         {
-            slotsMissoesAtivas[i] = new MissaoSlot(espacoMissoesAtivas.GetChild(i), painelDescricaoMissao);
+            slotsMissoesAtivas[cont] = espacosMissoesAtivas.GetChild(cont).GetComponent<MissaoSlot>();
+            slotsMissoesConcluidas[cont] = espacosMissoesConcluidas.GetChild(cont).GetComponent<MissaoSlot>();
+            cont++;
+            associarSlotsMissoes(cont);
         }
-    }
-
-    public void mostrarDescricaoMissaoAtiva(int slot)
-    {
-        slotsMissoesAtivas[slot].MostrarDescricao();
-    }
-    public void mostrarDescricaoMissaoConcluida(int slot)
-    {
-        slotsMissoesConcluidas[slot].MostrarDescricao();
     }
 
     public void atualizarMissoesHUD()
     {
+        Missao[] missoesAux = controladorMissoes.getMissoes();
+
         for (int i = 0; i < controladorMissoes.getMissoes().Length; i++)
         {
-            Missao[] missoesAux = controladorMissoes.getMissoes();
             if (i <= controladorMissoes.getContadorMissoesAtivas())
             {
                 if (missoesAux[i] != null)
                 {
                     if (missoesAux[i].getEstaAtiva())
                     {
+                        Debug.Log(slotsMissoesAtivas[i].name);
                         slotsMissoesAtivas[i].AdicionarMissao(missoesAux[i]);
                     }
                     else if (missoesAux[i].getConcluida())
@@ -83,6 +77,13 @@ public class MissoesHUD : MonoBehaviour
         }
         Debug.Log("Mudei a HUD das Missoes");
     }
+
+    public void marcadorNovaMissaoHUD()
+    {
+        if (!painelMissaoAtiva.activeSelf)
+            marcadorNovaMissao.SetActive(true);
+    }
+    
 
     public void desativarPainelMissaoConcluida()
     {

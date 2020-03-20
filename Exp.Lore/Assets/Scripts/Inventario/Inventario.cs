@@ -1,5 +1,5 @@
-﻿using UnityEngine;
-using System.Text;
+﻿using System.Text;
+using UnityEngine;
 
 public class Inventario : MonoBehaviour
 {
@@ -18,22 +18,25 @@ public class Inventario : MonoBehaviour
     }
     #endregion
 
-	public delegate void OnItemChanged();
-	public OnItemChanged onItemChangedCallback;
+    public delegate void OnItemChanged();
+    public OnItemChanged onItemChangedCallback;
 
-	public int space = 20;
+    [SerializeField]
+    int espaco = 20;
 
-	public ListaItem listaItens;
+    [SerializeField]
+    ListaItem listaItens;
 
-    public void Start()
+    private void Start()
     {
         listaItens = new ListaItem();
     }
-    public bool Add (Item item)
-	{
-		if (!item.getIsDefaultItem())
+
+    public bool adicionar(Item item)
+    {
+        if (!item.getIsDefaultItem())
         {
-            if (listaItens.contador >= space)
+            if (listaItens.contador >= espaco)
             {
                 Debug.Log("Sem espaço suficiente no inventário.");
                 return false;
@@ -41,25 +44,26 @@ public class Inventario : MonoBehaviour
             }
             listaItens.inserir(item);
 
-			if(onItemChangedCallback != null)
-			   onItemChangedCallback.Invoke();
-		}
-		return true;
-	}
+            if (onItemChangedCallback != null)
+                onItemChangedCallback.Invoke();
+        }
+        return true;
+    }
 
-	public void Remove(Item item)
-	{
-		listaItens.retirar(item);
+    public void remover(Item item)
+    {
+        listaItens.retirar(item);
 
-		if (onItemChangedCallback != null)
-			onItemChangedCallback.Invoke();
-	}
+        if (onItemChangedCallback != null)
+            onItemChangedCallback.Invoke();
+    }
+
     public string imprimirNomeDosItens()
     {
         Item[] vItens;
         StringBuilder aux = new StringBuilder("Lista de Itens no inventario: ");
         vItens = listaItens.imprimirLista();
-        for(int i = 0; i < vItens.Length; i++)
+        for (int i = 0; i < vItens.Length; i++)
         {
             aux.Append(i + "° " + vItens[i].getNome() + ". ");
         }

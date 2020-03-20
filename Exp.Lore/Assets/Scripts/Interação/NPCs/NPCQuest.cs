@@ -110,7 +110,6 @@ public class NPCQuest : InteragirNPC
 
     public void aceitarQuest()
     {
-        Debug.Log(controladorMissoes.name);
         controladorMissoes.adicionarMissao(missao);
     }
     public void respostaSim()

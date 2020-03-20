@@ -24,7 +24,6 @@ public class ControladorMissoes : MonoBehaviour
 
     public void adicionarMissao(Missao missao)
     {
-        
         missoes[contadorMissoesAtivas] = missao;
         missao.ativarMissao();
         contadorMissoesAtivas++;
@@ -45,14 +44,20 @@ public class ControladorMissoes : MonoBehaviour
     {
         for (int i = 0; i < missoes.Length; i++)
         {
-            if(missoes[i].getTitulo() == "A Invasão" && !missoes[i].getConcluida())
+            if (missoes[i] != null)
             {
-                if (missoes[i].getObjetivo().chegouNumLugar())
+                
+                if (missoes[i].getTitulo() == "A Invasão" && !missoes[i].getConcluida())
                 {
-                    controladorPersonagem.atualizarOuro(missoes[i].concluirMissao());
-                    atualizarMissoesCallback();
-                    //atualizar posição das missões na HUD
-                    //contadorMissoesAtivas--;
+                    if (missoes[i].getObjetivo().chegouNumLugar())
+                    {
+                        Debug.Log(missoes[i].getTitulo());
+                        controladorPersonagem.atualizarOuro(missoes[i].concluirMissao());
+                        atualizarMissoesCallback();
+                        //atualizar posição das missões na HUD
+                        //contadorMissoesAtivas--;
+                    }
+                    return;
                 }
             }
         }

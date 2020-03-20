@@ -17,40 +17,40 @@ public class EquipamentoHUD : MonoBehaviour
     {
         if(controladorEquipamento.equipamentoAtual[0] != null)
         {
-            slotEquipCabeca.AddItem(controladorEquipamento.equipamentoAtual[0]);
-            inventario.Remove(controladorEquipamento.equipamentoAtual[0]);
+            slotEquipCabeca.adicionarItem(controladorEquipamento.equipamentoAtual[0]);
+            inventario.remover(controladorEquipamento.equipamentoAtual[0]);
 
         }
         else
         {
-            slotEquipCabeca.ClearSlot();
+            slotEquipCabeca.limparSlot();
         }
         if(controladorEquipamento.equipamentoAtual[1] != null)
         {
-            slotEquipPeito.AddItem(controladorEquipamento.equipamentoAtual[1]);
-            inventario.Remove(controladorEquipamento.equipamentoAtual[1]);
+            slotEquipPeito.adicionarItem(controladorEquipamento.equipamentoAtual[1]);
+            inventario.remover(controladorEquipamento.equipamentoAtual[1]);
         }
         else
         {
-            slotEquipPeito.ClearSlot();
+            slotEquipPeito.limparSlot();
         }
         if (controladorEquipamento.equipamentoAtual[2] != null)
         {
-            slotEquipPerna.AddItem(controladorEquipamento.equipamentoAtual[2]);
-            inventario.Remove(controladorEquipamento.equipamentoAtual[2]);
+            slotEquipPerna.adicionarItem(controladorEquipamento.equipamentoAtual[2]);
+            inventario.remover(controladorEquipamento.equipamentoAtual[2]);
         }
         else
         {
-            slotEquipPerna.ClearSlot();
+            slotEquipPerna.limparSlot();
         }
         if (controladorEquipamento.equipamentoAtual[3] != null)
         {
-            slotEquipPe.AddItem(controladorEquipamento.equipamentoAtual[3]);
-            inventario.Remove(controladorEquipamento.equipamentoAtual[3]);
+            slotEquipPe.adicionarItem(controladorEquipamento.equipamentoAtual[3]);
+            inventario.remover(controladorEquipamento.equipamentoAtual[3]);
         }
         else
         {
-            slotEquipPe.ClearSlot();
+            slotEquipPe.limparSlot();
         }
     }
 }

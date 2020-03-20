@@ -13,7 +13,7 @@ public class ObjetivoMissao
     {
         tipoObjetivo = TipoObjetivo.coletar;
         quantidadeAtual = 0;
-        quantidadeNescessaria = 0;
+        quantidadeNescessaria = 1;
     }
     private bool concluiu()
     {

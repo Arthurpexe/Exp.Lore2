@@ -5,11 +5,6 @@ public class InventarioHUD : MonoBehaviour
 {
     public Transform itensParent;
 
-    public GameObject painelInventario, marcadorNovoItem;
-    public GameObject painelMissoes, marcadorNovaMissao;
-    public GameObject painelAceitarQuest;
-    public GameObject painelDialogo;
-    public GameObject painelMenu;
     public Text textoOuroJogador;
 
     Inventario inventario;
@@ -20,40 +15,6 @@ public class InventarioHUD : MonoBehaviour
         inventario = Inventario.instance;
         inventario.onItemChangedCallback += atualizarInventarioHUD;
         slotsItens = itensParent.GetComponentsInChildren<InventarioSlot>();
-
-        //o codigo abaixo faz aparecer o marcador de nova missao mas esse codigo deveria estar em outro lugar.
-        //ControladorPersonagem.instancia.seMissaoMudarCallback += marcadorNovaMissaoHUD;
-    }
-
-    private void Update()//essas porra aqui é do controlador personagem
-    {
-        if (Input.GetButtonDown("Inventario"))
-        {
-            abrirPainel(painelInventario);
-
-            if (marcadorNovoItem.activeSelf)
-                marcadorNovoItem.SetActive(false);
-        }
-        if (Input.GetButtonDown("Missoes"))
-        {
-            abrirPainel(painelMissoes);
-
-            if (marcadorNovaMissao.activeSelf)
-                marcadorNovaMissao.SetActive(false);
-        }
-        if (Input.GetButtonDown("Menu"))
-        {
-            if (painelInventario.activeSelf)
-                painelInventario.SetActive(false);
-            else if (painelMissoes.activeSelf)
-                painelMissoes.SetActive(false);
-            else if (painelAceitarQuest.activeSelf)
-                painelAceitarQuest.SetActive(false);
-            else if (painelDialogo.activeSelf)
-                painelDialogo.SetActive(false);
-            else
-                abrirPainel(painelMenu);
-        }
     }
 
     public void atualizarInventarioHUD()
@@ -63,41 +24,17 @@ public class InventarioHUD : MonoBehaviour
             if (i <= inventario.listaItens.contador)
             {
                 if (inventario.listaItens.localizarPorEndereco(i).meuItem != null)
-                    slotsItens[i].AddItem(inventario.listaItens.localizarPorEndereco(i).meuItem);
+                    slotsItens[i].adicionarItem(inventario.listaItens.localizarPorEndereco(i).meuItem);
             }
             else
             {
-                slotsItens[i].ClearSlot();
+                slotsItens[i].limparSlot();
             }
         }
-
-        
-        if (!painelInventario.activeSelf)
-            marcadorNovoItem.SetActive(true);
     }
 
     public void atualizarOuroHUD(int ouro)
     {
         textoOuroJogador.text = ouro.ToString();
-    }
-
-    public void marcadorNovaMissaoHUD()
-    {
-        if (!painelMissoes.activeSelf)
-            marcadorNovaMissao.SetActive(true);
-    }
-
-    public void abrirPainel(GameObject painel)
-    {
-        painel.SetActive(!painel.activeSelf);
-
-        if (marcadorNovoItem.activeSelf && painel == painelInventario)
-        {
-            marcadorNovoItem.SetActive(false);
-        }
-        if (marcadorNovaMissao.activeSelf && painel == painelMissoes)
-        {
-            marcadorNovaMissao.SetActive(false);
-        }
     }
 }

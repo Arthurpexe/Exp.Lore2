@@ -1,42 +1,37 @@
 ﻿using UnityEngine;
 using UnityEngine.UI;
 
-[System.Serializable]
-public class MissaoSlot
+public class MissaoSlot : MonoBehaviour
 {
-    GameObject painelDescricaoMissao;
+    public GameObject painelDescricao;
 
-    Text tituloSlot;
+    public Text titulo;
     Text tituloDescricao;
     Text descricao;
     Text recompensaOuro;
 
-    [SerializeField]
     Missao missao;
 
-    public MissaoSlot(Transform meuSlot, GameObject painelDescricao)
+    private void Start()
     {
-        painelDescricaoMissao = painelDescricao;
-        tituloDescricao = painelDescricaoMissao.transform.GetChild(0).GetComponent<Text>();
-        descricao = painelDescricaoMissao.transform.GetChild(1).GetComponent<Text>();
-        recompensaOuro = painelDescricaoMissao.transform.GetChild(4).GetComponent<Text>();
-
-        tituloSlot = meuSlot.GetChild(0).GetChild(0).GetComponent<Text>();
+        tituloDescricao = painelDescricao.transform.GetChild(0).GetComponent<Text>();
+        descricao = painelDescricao.transform.GetChild(1).GetComponent<Text>();
+        recompensaOuro = painelDescricao.transform.GetChild(4).GetComponent<Text>();
     }
     public void AdicionarMissao(Missao novaMissao)
     {
         missao = novaMissao;
 
-        tituloSlot.text = missao.getTitulo();
-        tituloSlot.enabled = true;
+        titulo.text = missao.getTitulo();
+        titulo.enabled = true;
     }
 
     public void ClearSlot()
     {
         missao = null;
 
-        tituloSlot.text = null;
-        tituloSlot.enabled = false;
+        titulo.text = null;
+        titulo.enabled = false;
     }
 
     public void MostrarDescricao()
@@ -47,7 +42,7 @@ public class MissaoSlot
             descricao.text = missao.getDescricao();
             recompensaOuro.text = missao.getRecompensaOuro().ToString();
 
-            painelDescricaoMissao.SetActive(!painelDescricaoMissao.activeSelf);
+            painelDescricao.SetActive(!painelDescricao.activeSelf);
         }
     }
 }

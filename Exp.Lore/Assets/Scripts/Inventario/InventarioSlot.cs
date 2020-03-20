@@ -4,43 +4,40 @@ using UnityEngine.UI;
 public class InventarioSlot : MonoBehaviour
 {    
     public Image icone;
-    public Image botaoExcluir;
+    public Image botaoExcluirImagem;
 
 	public Item item;
-    private void Start()
-    {
 
-    }
-    public void AddItem (Item newItem)
+    public void adicionarItem (Item newItem)
 	{
 		item = newItem;
 
 		icone.sprite = item.getIcone();
 		icone.enabled = true;
-        if(botaoExcluir != null)
-            botaoExcluir.enabled = true;
+        if(botaoExcluirImagem != null)
+            botaoExcluirImagem.enabled = true;
         Debug.Log(Inventario.instance.imprimirNomeDosItens());
     }
 
-	public void ClearSlot ()
+	public void limparSlot ()
 	{
 		item = null;
 
 		icone.sprite = null;
 		icone.enabled = false;
-        if (botaoExcluir != null)
-            botaoExcluir.enabled = false;
+        if (botaoExcluirImagem != null)
+            botaoExcluirImagem.enabled = false;
 	}
 
-    public void OnRemoveButton()
+    public void apertarBotaoExcluir()
     {
         Debug.Log(Inventario.instance.imprimirNomeDosItens());
-        Inventario.instance.Remove(item);
+        Inventario.instance.remover(item);
         Debug.Log(Inventario.instance.imprimirNomeDosItens());
 
     }
 
-    public void UseItem()
+    public void usarItem()
 	{
 		if (item != null)
 		{

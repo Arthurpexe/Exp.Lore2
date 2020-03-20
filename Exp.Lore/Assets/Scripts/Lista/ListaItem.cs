@@ -1,21 +1,22 @@
 using UnityEngine;
 
 [System.Serializable]
-public class ListaItem{
-	
-	public ElementoListaItem primeiro, ultimo;
-    public int contador;
-	
-	public ListaItem(){//cria uma nova lista
+public class ListaItem
+{
+    [SerializeField]
+    ElementoListaItem primeiro, ultimo;
+    int contador;
 
+    public ListaItem()
+    {//cria uma nova lista
         primeiro = new ElementoListaItem(null);
         ultimo = primeiro;
-        
-        contador = 0;
-	}
-	
-	public void inserir(Item novoItem){//insere um novo dado no final da lista 
 
+        contador = 0;
+    }
+
+    public void inserir(Item novoItem)
+    {//insere um novo dado no final da lista 
         ElementoListaItem novoElemento = new ElementoListaItem(novoItem);
 
         ultimo.proximo = novoElemento;
@@ -24,12 +25,12 @@ public class ListaItem{
         contador++;
         novoElemento.endereco = ultimo.endereco = contador;
     }
-	
-	public Item retirar(Item itemRetirado){//retorna o dado, seja ele qual for, para o programa processa-lo como quiser 
 
+    public Item retirar(Item itemRetirado)
+    {//retorna o dado, seja ele qual for, para o programa processa-lo como quiser 
         ElementoListaItem aux;
 
-		aux = localizarPorItem(itemRetirado);
+        aux = localizarPorItem(itemRetirado);
 
         if (aux == null)
         {
@@ -39,10 +40,11 @@ public class ListaItem{
 
         ElementoListaItem auxRet = aux.proximo;
 
-        if (auxRet == ultimo){
+        if (auxRet == ultimo)
+        {
             aux.proximo = null;
             ultimo = aux;
-		}
+        }
         else
         {
             aux.proximo = auxRet.proximo;
@@ -52,22 +54,22 @@ public class ListaItem{
         contador--;
         ultimo.endereco = contador;
 
-		return auxRet.meuItem;
-	}
-	
-	public ElementoListaItem localizarPorEndereco(int endereco)//localiza o elemento, e o retorna, sem fazer nada com ele
-    {
-		if(vazia())
-			return null;
-		
-		ElementoListaItem aux = primeiro;
+        return auxRet.meuItem;
+    }
 
-		while (aux != null && aux.endereco != endereco) 
-        { 
-			aux = aux.proximo;
-		}
+    public ElementoListaItem localizarPorEndereco(int endereco)//localiza o elemento, e o retorna, sem fazer nada com ele
+    {
+        if (vazia())
+            return null;
+
+        ElementoListaItem aux = primeiro;
+
+        while (aux != null && aux.endereco != endereco)
+        {
+            aux = aux.proximo;
+        }
         return aux;
-	}
+    }
 
     public ElementoListaItem localizarPorItem(Item itemRetirado)//localiza o elemento, e o retorna, sem fazer nada com ele
     {
@@ -83,18 +85,19 @@ public class ListaItem{
         return aux;
     }
 
-    public bool vazia(){//checa se a lista esta vazia
-		if(primeiro.proximo == null)
-			return true;
-		else
-			return false;
-	}
+    public bool vazia()
+    {//checa se a lista esta vazia
+        if (primeiro.proximo == null)
+            return true;
+        else
+            return false;
+    }
 
     public Item[] imprimirLista()
     {
         Item[] itens = new Item[contador];
         ElementoListaItem aux = primeiro.proximo;
-        for(int i = 0; i < contador; i++)
+        for (int i = 0; i < contador; i++)
         {
             itens[i] = aux.meuItem;
             aux = aux.proximo;
@@ -102,5 +105,3 @@ public class ListaItem{
         return itens;
     }
 }
-
-	

@@ -1,13 +1,14 @@
 [System.Serializable]
-public class ElementoListaItem{
-	
+public class ElementoListaItem
+{
 	public ElementoListaItem proximo;
 	public Item meuItem;
-    public int endereco;
-	
-	public ElementoListaItem(Item novoItem){//cria um novo elemento
+	public int endereco;
+
+	public ElementoListaItem(Item novoItem)
+	{//cria um novo elemento
 		proximo = null;
 		meuItem = novoItem;
-        endereco = 0;
+		endereco = 0;
 	}
 }

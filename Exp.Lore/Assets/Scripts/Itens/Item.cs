@@ -26,7 +26,7 @@ public class Item : ScriptableObject
 
     public void RemoverDoInventario()
 	{
-		Inventario.instance.Remove(this);
+		Inventario.instance.remover(this);
         Debug.Log("removi " + nome);
 	}
 

@@ -42,7 +42,7 @@ public class ControladorEquipamento : MonoBehaviour
 		if (equipamentoAtual[slotIndex] != null)
 		{
 			itemAntigo = equipamentoAtual[slotIndex];
-			inventario.Add(itemAntigo);
+			inventario.adicionar(itemAntigo);
 		}
 
 		if (trocaDeEquipamento != null)
@@ -59,7 +59,7 @@ public class ControladorEquipamento : MonoBehaviour
 		if(equipamentoAtual[slotIndex] != null) 
 		{
 			Equipamento itemAntigo = equipamentoAtual[slotIndex];
-			inventario.Add(itemAntigo);
+			inventario.adicionar(itemAntigo);
 
 			equipamentoAtual[slotIndex] = null;
 
