@@ -17,18 +17,23 @@ public class Equipamento : Item
     public override void Use()
 	{
         base.Use();
+        if (controladorEquipamento == null)
+            controladorEquipamento = ControladorEquipamento.instance;
 
-        controladorEquipamento = ControladorEquipamento.instance;
-		controladorEquipamento.Equipar(this);
-        //colocar na aba equipamentos no slot referente ao enum EquipamentoSlot
-        RemoverDoInventario();
+        if (equipado)
+        {
+            controladorEquipamento.desequipar((int)equipamentoSlot);
+            equipado = false;
+        }
+        else
+        {
+            controladorEquipamento.equipar(this);
+            //colocar na aba equipamentos no slot referente ao enum EquipamentoSlot
+            RemoverDoInventario();
+            equipado = true;
+        }
     }
 
-    public override void desequipar()
-    {
-        base.desequipar();
-        controladorEquipamento.Desequipar((int)equipamentoSlot);
-    }
     public EquipamentoSlot getEquipamentoSlot() { return equipamentoSlot; }
     public int getArmaduraModificador() { return armaduraModificador; }
     public int getDanoModificador() { return danoModificador; }

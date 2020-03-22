@@ -5,7 +5,7 @@ public class ItemPickUp : Interagivel
 	[SerializeField]
 	Item item;
 
-    private void Update()
+	private void Update()
     {
         float distance = Vector3.Distance(player.transform.position, transform.position);
         if (distance <= raio)
@@ -14,14 +14,14 @@ public class ItemPickUp : Interagivel
         }
     }
 
-    public void Interact()
+    protected override void Interact()
 	{
 		base.Interact();
         Debug.Log("Interagindo com " + item.getNome());
 		pickUp();
 	}
 
-	public void pickUp()
+	private void pickUp()
 	{
 		Debug.Log("Pegando " + item.getNome());
 		bool wasPickedUp = Inventario.instance.adicionar(item);

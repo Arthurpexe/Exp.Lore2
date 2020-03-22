@@ -5,18 +5,13 @@ public class Interagivel : MonoBehaviour
 	[SerializeField]
 	protected float raio = 1f;
 	protected GameObject player;
-    protected ControladorPersonagem controladorPersonagem;
 
-	private void Start()
+	protected virtual void Start()
 	{
-		controladorPersonagem = ControladorPersonagem.instancia;
 		player = GameObject.FindWithTag("Player");
 	}
 
-	public void Interact()
-	{	
-		Debug.Log("Interagiu");
-	}
+	protected virtual void Interact() { }
 	
 	private void OnDrawGizmosSelected()
 	{

@@ -44,12 +44,4 @@ public class InventarioSlot : MonoBehaviour
 			item.Use();
 		}
 	}
-
-    public void desequipar()
-    {
-        if (item != null)
-        {
-            item.desequipar();
-        }
-    }
 }

@@ -36,7 +36,7 @@ public class Inventario : MonoBehaviour
     {
         if (!item.getIsDefaultItem())
         {
-            if (listaItens.contador >= espaco)
+            if (listaItens.getContador() >= espaco)
             {
                 Debug.Log("Sem espaço suficiente no inventário.");
                 return false;
@@ -69,4 +69,5 @@ public class Inventario : MonoBehaviour
         }
         return aux.ToString();
     }
+    public ListaItem getListaItens() { return listaItens; }
 }

@@ -11,23 +11,26 @@ public class InteragirNPC : Interagivel
     [SerializeField]
     protected string dialogo;
 
+
     InstanciarBotao instanciarBotao;
-    protected virtual void Start()
+    protected override void Start()
     {
+        base.Start();
         textoDialogo = painelDialogo.GetComponentInChildren<Text>();
         instanciarBotao = new InstanciarBotao();
     }
 
     protected virtual void Update()
     {
-        if (instanciarBotao.instanciarBotaoPorProximidade(transform, raio) && Input.GetButtonDown("Interagir"))
+        if (instanciarBotao.instanciarBotaoPorProximidade(transform.position, raio, player) && Input.GetButtonDown("Interagir"))
         {
             Interact();
         }
     }
 
-    public virtual void Interact()
+    protected override void Interact()
     {
+        base.Interact();
         textoNomeNPCDialogo.text = nomeNPC;
         textoDialogo.text = dialogo;
         painelDialogo.SetActive(!painelDialogo.activeSelf);

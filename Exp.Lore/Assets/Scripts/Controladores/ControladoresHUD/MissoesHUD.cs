@@ -5,7 +5,7 @@ public class MissoesHUD : MonoBehaviour
 {
     ControladorMissoes controladorMissoes;
 
-    public GameObject painelMissaoAtiva, marcadorNovaMissao;
+    public GameObject painelListaDeMissoes, marcadorNovaMissao;
     public GameObject painelMissaoConcluida;
     public Transform espacosMissoesAtivas;
     public Transform espacosMissoesConcluidas;
@@ -80,7 +80,7 @@ public class MissoesHUD : MonoBehaviour
 
     public void marcadorNovaMissaoHUD()
     {
-        if (!painelMissaoAtiva.activeSelf)
+        if (!painelListaDeMissoes.activeSelf)
             marcadorNovaMissao.SetActive(true);
     }
     

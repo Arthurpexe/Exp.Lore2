@@ -13,15 +13,11 @@ public class Item : ScriptableObject
     protected Sprite icone = null;
     [SerializeField]
     protected bool isDefaultItem = false;
+    protected bool equipado = false;
 	
     public virtual void Use()
     {
         //usar o item
-    }
-
-    public virtual void desequipar()
-    {
-        //dessequipar o item
     }
 
     public void RemoverDoInventario()
@@ -35,4 +31,5 @@ public class Item : ScriptableObject
     public int getPreco() { return preco; }
     public Sprite getIcone() { return icone; }
     public bool getIsDefaultItem() { return isDefaultItem; }
+    public bool getEquipado() { return equipado; }
 }

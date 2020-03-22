@@ -2,7 +2,8 @@
 
 public class EquipamentoHUD : MonoBehaviour
 {
-    public InventarioSlot slotEquipCabeca, slotEquipPeito, slotEquipPerna, slotEquipPe;
+    public GameObject gridEspacosEquips;
+    InventarioSlot slotEquipCabeca, slotEquipPeito, slotEquipPerna, slotEquipPe;
     ControladorEquipamento controladorEquipamento;
     Inventario inventario;
     
@@ -11,42 +12,47 @@ public class EquipamentoHUD : MonoBehaviour
         inventario = Inventario.instance;
         controladorEquipamento = ControladorEquipamento.instance;
         controladorEquipamento.atualizarEquipamento += atualizarEquipsHUD;
+
+        slotEquipCabeca = gridEspacosEquips.GetComponentsInChildren<InventarioSlot>()[0];
+        slotEquipPeito = gridEspacosEquips.GetComponentsInChildren<InventarioSlot>()[1];
+        slotEquipPerna = gridEspacosEquips.GetComponentsInChildren<InventarioSlot>()[2];
+        slotEquipPe = gridEspacosEquips.GetComponentsInChildren<InventarioSlot>()[3];
     }
 
     public void atualizarEquipsHUD()
     {
-        if(controladorEquipamento.equipamentoAtual[0] != null)
+        Equipamento[] equipamentoAtualHUD = controladorEquipamento.getEquipamentoAtual();
+        if (equipamentoAtualHUD[0] != null)
         {
-            slotEquipCabeca.adicionarItem(controladorEquipamento.equipamentoAtual[0]);
-            inventario.remover(controladorEquipamento.equipamentoAtual[0]);
-
+            slotEquipCabeca.adicionarItem(equipamentoAtualHUD[0]);
+            inventario.remover(equipamentoAtualHUD[0]);
         }
         else
         {
             slotEquipCabeca.limparSlot();
         }
-        if(controladorEquipamento.equipamentoAtual[1] != null)
+        if(equipamentoAtualHUD[1] != null)
         {
-            slotEquipPeito.adicionarItem(controladorEquipamento.equipamentoAtual[1]);
-            inventario.remover(controladorEquipamento.equipamentoAtual[1]);
+            slotEquipPeito.adicionarItem(equipamentoAtualHUD[1]);
+            inventario.remover(equipamentoAtualHUD[1]);
         }
         else
         {
             slotEquipPeito.limparSlot();
         }
-        if (controladorEquipamento.equipamentoAtual[2] != null)
+        if (equipamentoAtualHUD[2] != null)
         {
-            slotEquipPerna.adicionarItem(controladorEquipamento.equipamentoAtual[2]);
-            inventario.remover(controladorEquipamento.equipamentoAtual[2]);
+            slotEquipPerna.adicionarItem(equipamentoAtualHUD[2]);
+            inventario.remover(equipamentoAtualHUD[2]);
         }
         else
         {
             slotEquipPerna.limparSlot();
         }
-        if (controladorEquipamento.equipamentoAtual[3] != null)
+        if (equipamentoAtualHUD[3] != null)
         {
-            slotEquipPe.adicionarItem(controladorEquipamento.equipamentoAtual[3]);
-            inventario.remover(controladorEquipamento.equipamentoAtual[3]);
+            slotEquipPe.adicionarItem(equipamentoAtualHUD[3]);
+            inventario.remover(equipamentoAtualHUD[3]);
         }
         else
         {

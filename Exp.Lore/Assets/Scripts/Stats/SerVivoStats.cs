@@ -75,6 +75,10 @@ public class SerVivoStats : MonoBehaviour
 	{
 		dano += damage;
 	}
+	public void aumentarVidaMaxima(int maxHP)
+	{
+		vidaMaxima += maxHP;
+	}
 
 	public int getVidaAtual() { return vidaAtual; }
 	public int getVidaMaxima() { return vidaMaxima; }

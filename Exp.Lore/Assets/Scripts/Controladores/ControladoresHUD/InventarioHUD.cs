@@ -21,10 +21,10 @@ public class InventarioHUD : MonoBehaviour
     {
         for (int i = 1; i < slotsItens.Length; i++)
         {
-            if (i <= inventario.listaItens.contador)
+            if (i <= inventario.getListaItens().getContador())
             {
-                if (inventario.listaItens.localizarPorEndereco(i).meuItem != null)
-                    slotsItens[i].adicionarItem(inventario.listaItens.localizarPorEndereco(i).meuItem);
+                if (inventario.getListaItens().localizarPorEndereco(i).meuItem != null)
+                    slotsItens[i].adicionarItem(inventario.getListaItens().localizarPorEndereco(i).meuItem);
             }
             else
             {

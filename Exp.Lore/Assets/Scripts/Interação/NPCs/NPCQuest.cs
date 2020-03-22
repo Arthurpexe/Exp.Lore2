@@ -54,7 +54,7 @@ public class NPCQuest : InteragirNPC
         #endregion
     }
 
-    public override void Interact()
+    protected override void Interact()
     {
         base.Interact();
 
@@ -108,11 +108,11 @@ public class NPCQuest : InteragirNPC
         }
     }
 
-    public void aceitarQuest()
+    private void aceitarQuest()
     {
         controladorMissoes.adicionarMissao(missao);
     }
-    public void respostaSim()
+    private void respostaSim()
     {
         aceitarQuest();
         painelAceitarQuest.SetActive(false);

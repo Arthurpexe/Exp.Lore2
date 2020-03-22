@@ -11,16 +11,16 @@ public class JogadorStats : SerVivoStats
 	{
 		if(novoItem != null)
 		{
-			armadura += novoItem.getArmaduraModificador();
-			dano += novoItem.getDanoModificador();
-			vidaMaxima += novoItem.getVidaMaximaModificador();
+			aumentarArmadura(novoItem.getArmaduraModificador());
+			aumentarDano(novoItem.getDanoModificador());
+			aumentarVidaMaxima(novoItem.getVidaMaximaModificador());
 		}
 
 		if(velhoItem != null)
 		{
-			armadura -= velhoItem.getArmaduraModificador();
-			dano -= velhoItem.getDanoModificador();
-			vidaMaxima -= novoItem.getVidaMaximaModificador();
+			aumentarArmadura(-velhoItem.getArmaduraModificador());
+			aumentarDano(-velhoItem.getDanoModificador());
+			aumentarVidaMaxima(-velhoItem.getVidaMaximaModificador());
 		}
 	}
 

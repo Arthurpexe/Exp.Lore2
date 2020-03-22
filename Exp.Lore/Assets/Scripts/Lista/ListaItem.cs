@@ -104,4 +104,5 @@ public class ListaItem
         }
         return itens;
     }
+    public int getContador() { return contador; }
 }

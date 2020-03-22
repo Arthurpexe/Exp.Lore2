@@ -22,7 +22,7 @@ public class PassarOMouse : MonoBehaviour, IPointerEnterHandler,IPointerExitHand
     }
     public void OnPointerExit(PointerEventData eventData)
     {
-        if (localPainelDescricaoItem.GetChild(0) != null)
+        if (localPainelDescricaoItem.childCount > 0) 
             Destroy(localPainelDescricaoItem.GetChild(0).gameObject);
     }
 }

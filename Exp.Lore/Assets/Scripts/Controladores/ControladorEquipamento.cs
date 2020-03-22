@@ -1,6 +1,4 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
+﻿using UnityEngine;
 
 public class ControladorEquipamento : MonoBehaviour
 {
@@ -16,14 +14,14 @@ public class ControladorEquipamento : MonoBehaviour
 	#endregion
 
 
-	public Equipamento[] equipamentoAtual;
+	Equipamento[] equipamentoAtual;
+	Inventario inventario;
 
-    public delegate void AtualizarEquipamento();
+	public delegate void AtualizarEquipamento();
     public AtualizarEquipamento atualizarEquipamento;
 
     public delegate void TrocaDeEquipamento(Equipamento itemNovo, Equipamento itemAntigo);
 	public TrocaDeEquipamento trocaDeEquipamento;
-	Inventario inventario;
 
 	 void Start()
 	 {
@@ -33,7 +31,7 @@ public class ControladorEquipamento : MonoBehaviour
 		equipamentoAtual = new Equipamento[numSlots];
 	 }
 
-	public void Equipar(Equipamento newItem)
+	public void equipar(Equipamento newItem)
 	{
 		int slotIndex = (int)newItem.getEquipamentoSlot();
 
@@ -54,7 +52,7 @@ public class ControladorEquipamento : MonoBehaviour
         atualizarEquipamento.Invoke();
 	}
 
-	public void Desequipar(int slotIndex) // mudar slotIndex para varivael "Selecionado"
+	public void desequipar(int slotIndex) // mudar slotIndex para varivael "Selecionado"
 	{
 		if(equipamentoAtual[slotIndex] != null) 
 		{
@@ -70,4 +68,6 @@ public class ControladorEquipamento : MonoBehaviour
             atualizarEquipamento.Invoke();
         }
 	}
+
+	public Equipamento[] getEquipamentoAtual() { return equipamentoAtual; }
 }
