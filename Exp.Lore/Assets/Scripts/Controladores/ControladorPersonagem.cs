@@ -21,6 +21,9 @@ public class ControladorPersonagem : MonoBehaviour
     ControladorJogo controladorJogo;
     InventarioHUD inventarioHUD;
     SerVivoStats meusStats;
+    ControladorMissoes controladorMissoes;
+    [SerializeField]
+    int ouro;
 
     //movimentação do personagem
     MovimentoPersonagem movimentoPersonagem;
@@ -28,11 +31,6 @@ public class ControladorPersonagem : MonoBehaviour
 	float cdRolamentoMax = 3;
 	float cdRolamentoAtual;
     bool pausa;
-
-    //parte das missoes
-    ControladorMissoes controladorMissoes;
-    [SerializeField]
-    int ouro;
 
     void Start()
 	{

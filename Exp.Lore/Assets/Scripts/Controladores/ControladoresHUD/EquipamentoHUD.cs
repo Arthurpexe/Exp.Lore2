@@ -4,14 +4,12 @@ public class EquipamentoHUD : MonoBehaviour
 {
     public GameObject gridEspacosEquips;
     InventarioSlot slotEquipCabeca, slotEquipPeito, slotEquipPerna, slotEquipPe;
-    ControladorEquipamento controladorEquipamento;
     Inventario inventario;
     
     void Start()
     {
         inventario = Inventario.instance;
-        controladorEquipamento = ControladorEquipamento.instance;
-        controladorEquipamento.atualizarEquipamento += atualizarEquipsHUD;
+        ControladorEquipamento.instance.atualizarEquipamento += atualizarEquipsHUD;
 
         slotEquipCabeca = gridEspacosEquips.GetComponentsInChildren<InventarioSlot>()[0];
         slotEquipPeito = gridEspacosEquips.GetComponentsInChildren<InventarioSlot>()[1];
@@ -19,9 +17,8 @@ public class EquipamentoHUD : MonoBehaviour
         slotEquipPe = gridEspacosEquips.GetComponentsInChildren<InventarioSlot>()[3];
     }
 
-    public void atualizarEquipsHUD()
+    public void atualizarEquipsHUD(Equipamento[] equipamentoAtualHUD)
     {
-        Equipamento[] equipamentoAtualHUD = controladorEquipamento.getEquipamentoAtual();
         if (equipamentoAtualHUD[0] != null)
         {
             slotEquipCabeca.adicionarItem(equipamentoAtualHUD[0]);

@@ -2,17 +2,23 @@
 
 public class ControladorCamera : MonoBehaviour
 {
-    ControladorPersonagem controladorPersonagem;
+    Transform personagemTrans;
+    Transform cameraTrans;
     public Transform posCamBoss;
+
     ModoCamera modoCamera;
+
+    [SerializeField]
+    float sensibilidadeMouse = 300;
 
     private void Start()
     {
-        controladorPersonagem = ControladorPersonagem.instancia;
+        personagemTrans = ControladorPersonagem.instancia.transform;
         modoCamera = ModoCamera.seguePlayer;
+        cameraTrans = transform.GetChild(0);
     }
 
-    public void Update()
+    private void Update()
     {
         switch(modoCamera)//controla o que a camera vai seguir
         {
@@ -34,8 +40,13 @@ public class ControladorCamera : MonoBehaviour
     public void seguePlayer()
     {
         modoCamera = ModoCamera.seguePlayer;
-        transform.position = Vector3.Lerp(transform.position, new Vector3(controladorPersonagem.transform.position.x, controladorPersonagem.transform.position.y + 14f, controladorPersonagem.transform.position.z + 7f), 6 * Time.deltaTime);
-        transform.rotation = Quaternion.Euler(50f, 180f, 0f);
+
+        //segue a posição do player
+        transform.position = Vector3.Lerp(transform.position, personagemTrans.position, 6 * Time.deltaTime);
+
+        //rotaciona a camera na orbita do player
+        float rotX = Input.GetAxis("Mouse X") * sensibilidadeMouse * Time.fixedDeltaTime;
+        cameraTrans.RotateAround(transform.position , Vector3.up, rotX);
     }
     /// <summary>
     /// A câmera fica fixa posicionada na area do boss de um angulo que de pra ver toda a batalha
