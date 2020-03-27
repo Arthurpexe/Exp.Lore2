@@ -30346,7 +30346,7 @@ GameObject:
   - component: {fileID: 1041190264}
   m_Layer: 0
   m_Name: CameraPrincipal
-  m_TagString: Untagged
+  m_TagString: MainCamera
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -38415,7 +38415,7 @@ GameObject:
   - component: {fileID: 1313393286}
   m_Layer: 0
   m_Name: Main Camera
-  m_TagString: MainCamera
+  m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -38478,13 +38478,13 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1313393285}
-  m_LocalRotation: {x: 0.42261827, y: -0, z: -0, w: 0.9063079}
-  m_LocalPosition: {x: 0, y: 13.848168, z: -7}
+  m_LocalRotation: {x: 0.32556805, y: 0, z: 0, w: 0.9455186}
+  m_LocalPosition: {x: 0, y: 14, z: -11}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 1041190265}
   m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 50, y: 180, z: 0}
+  m_LocalEulerAnglesHint: {x: 38, y: 0, z: 0}
 --- !u!1 &1318887698
 GameObject:
   m_ObjectHideFlags: 0
@@ -84164,6 +84164,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   tempoFeedbackDano: 0.1
+  vidaMaxima: 100
+  dano: 3
+  armadura: 0
 --- !u!114 &4698841909732294283
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -85324,6 +85327,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   tempoFeedbackDano: 0.1
+  vidaMaxima: 100
+  dano: 3
+  armadura: 0
 --- !u!195 &4946470327155242986
 NavMeshAgent:
   m_ObjectHideFlags: 0
@@ -90359,6 +90365,21 @@ PrefabInstance:
       propertyPath: m_Name
       value: Personagem
       objectReference: {fileID: 0}
+    - target: {fileID: 1604488581812827304, guid: 76759819411728c4ca2ad5355b0d055e,
+        type: 3}
+      propertyPath: movimentoPersonagem.velocidadeCorrendo
+      value: 18
+      objectReference: {fileID: 0}
+    - target: {fileID: 1604488581812827304, guid: 76759819411728c4ca2ad5355b0d055e,
+        type: 3}
+      propertyPath: movimentoPersonagem.velocidadeAbaixado
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 1604488581812827304, guid: 76759819411728c4ca2ad5355b0d055e,
+        type: 3}
+      propertyPath: movimentoPersonagem.velocidade
+      value: 9
+      objectReference: {fileID: 0}
     - target: {fileID: 3014133621094637051, guid: 76759819411728c4ca2ad5355b0d055e,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -90367,7 +90388,7 @@ PrefabInstance:
     - target: {fileID: 3014133621094637051, guid: 76759819411728c4ca2ad5355b0d055e,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: 10.2
+      value: 10.08
       objectReference: {fileID: 0}
     - target: {fileID: 3014133621094637051, guid: 76759819411728c4ca2ad5355b0d055e,
         type: 3}
@@ -90416,6 +90437,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: 1604488581812827306, guid: 76759819411728c4ca2ad5355b0d055e, type: 3}
+    - {fileID: 1604488581812827300, guid: 76759819411728c4ca2ad5355b0d055e, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: 76759819411728c4ca2ad5355b0d055e, type: 3}
 --- !u!33 &6062875467657877947
 MeshFilter:
@@ -99934,6 +99956,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   tempoFeedbackDano: 0.1
+  vidaMaxima: 100
+  dano: 3
+  armadura: 0
 --- !u!114 &8701169936301442724
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -100655,6 +100680,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   tempoFeedbackDano: 0.1
+  vidaMaxima: 100
+  dano: 3
+  armadura: 0
 --- !u!114 &8797940595523842282
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -102960,6 +102988,11 @@ PrefabInstance:
       propertyPath: audioListenerBoss
       value: 
       objectReference: {fileID: 1353127273}
+    - target: {fileID: 2583485189060241878, guid: e86abfabb0a112a4c86b9612224f540c,
+        type: 3}
+      propertyPath: dano
+      value: 30
+      objectReference: {fileID: 0}
     - target: {fileID: 3906895658676509915, guid: e86abfabb0a112a4c86b9612224f540c,
         type: 3}
       propertyPath: m_LocalPosition.x

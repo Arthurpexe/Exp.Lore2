@@ -7,13 +7,10 @@ public class SaveLoad
     Criptografia cripto;
     public PlayerSave playerSave;
 
-	Animator anim;//só para não bugar a animação
-
     public SaveLoad(GameObject player)
     {
         cripto = new Criptografia();
         playerSave = new PlayerSave();
-		anim = player.GetComponentInChildren<Animator>();//pegando o componente animator do player.
     }
 
     public void salvarPlayer()
@@ -47,6 +44,5 @@ public class SaveLoad
         //controladorPersonagem.mudouMissao();
         File.Delete("Player.xml");
         Time.timeScale = 1;
-        anim.Rebind();
     }
 }

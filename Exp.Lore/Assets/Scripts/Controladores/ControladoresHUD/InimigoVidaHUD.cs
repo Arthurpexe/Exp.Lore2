@@ -15,7 +15,7 @@ public class InimigoVidaHUD : VidaHUD
     protected override void Start()
     {
         base.Start();
-        mainCamera = Camera.main.transform;
+        mainCamera = GameObject.FindGameObjectWithTag("MainCamera").GetComponentInChildren<Camera>().transform;
 
         barraDeVida = Instantiate(vidaPrefab, canvasWorldSpace.transform).transform;
         barraVida = barraDeVida.GetChild(0).GetComponent<Image>();

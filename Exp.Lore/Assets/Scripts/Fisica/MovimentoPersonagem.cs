@@ -1,40 +1,81 @@
 ﻿using UnityEngine;
 
+[System.Serializable]
 public class MovimentoPersonagem
 {
-    float velocidadeCorrendo;
-    float velocidadeAbaixado;
-    float velocidade;
+    [SerializeField]
+    float velocidadeCorrendo = 20;
+    [SerializeField]
+    float velocidadeAbaixado = 5;
+    [SerializeField]
+    float velocidade = 10;
     float distanciaRolamento;
     Rigidbody personagemRB;
     bool correndo;
     bool abaixado;
     Animator animator;
-    Vector3 frente;
+
+    Transform cameraTrans;
+    Vector3 frente, direita;
+    Vector3 direcao;
 
     public MovimentoPersonagem(Rigidbody rb, Animator anim)
     {
-        velocidadeCorrendo = 2f;
-        velocidadeAbaixado = 0.5f;
-        velocidade = 5f;
         distanciaRolamento = 2;
         personagemRB = rb;
         correndo = false;
         abaixado = false;
         animator = anim;
-        frente = personagemRB.transform.forward;
+
+        cameraTrans = GameObject.FindGameObjectWithTag("MainCamera").transform.GetChild(0);
+        frente = new Vector3(cameraTrans.forward.x,0,cameraTrans.forward.z);
+        direita = new Vector3(cameraTrans.right.x, 0, cameraTrans.right.z);
     }
 
     public void movePosicao(Vector3 inputs)
     {
-        personagemRB.MovePosition(personagemRB.position - inputs * velocidade * Time.fixedDeltaTime);
+        frente = new Vector3(cameraTrans.forward.x, 0, cameraTrans.forward.z);
+        direita = new Vector3(cameraTrans.right.x, 0, cameraTrans.right.z);
+
+        direcao = Vector3.zero;
+        
+        if(inputs.z > 0)
+        {
+            direcao += frente;
+        }
+        if(inputs.z < 0)
+        {
+            direcao += -frente / 4;
+        }
+        if (inputs.x > 0)
+        {
+            direcao += direita / 2;
+        }
+        if (inputs.x < 0)
+        {
+            direcao += -direita / 2;
+        }
+
+        if (correndo)
+        {
+            direcao *= velocidadeCorrendo;
+        }
+        else if (abaixado)
+        {
+            direcao *= velocidadeAbaixado;
+        }
+        else
+        {
+            direcao *= velocidade;
+        }
+        personagemRB.MovePosition(personagemRB.transform.position + direcao * Time.fixedDeltaTime);
     }
 
     public void andar(Vector3 inputs)
     {
         animator.SetFloat("mov", 1);
-        frente = -inputs;
-        personagemRB.transform.forward = frente;
+
+        personagemRB.transform.forward = (direcao + frente) * Time.fixedDeltaTime;
     }
     public void correr()
     {
@@ -69,10 +110,4 @@ public class MovimentoPersonagem
         Vector3 velocidadeRolamento = Vector3.Scale(frente, distanciaRolamento * new Vector3(5, 0, 5));
         personagemRB.AddForce(velocidadeRolamento, ForceMode.VelocityChange);
     }
-
-
-    public float getVelocidadeCorrendo() { return velocidadeCorrendo; }
-    public float getVelocidadeAbaixado() { return velocidadeAbaixado; }
-    public bool getCorrendo() { return correndo; }
-    public bool getAbaixado() { return abaixado; }
 }

@@ -20,14 +20,14 @@ public class ControladorCamera : MonoBehaviour
 
     private void Update()
     {
-        switch(modoCamera)//controla o que a camera vai seguir
+        switch (modoCamera)//controla o que a camera vai seguir
         {
             case ModoCamera.seguePlayer:
-                    seguePlayer();
+                seguePlayer();
                 break;
 
             case ModoCamera.fixaBoss:
-                    fixaBoss();
+                fixaBoss();
                 break;
             default:
                 seguePlayer();
@@ -35,7 +35,7 @@ public class ControladorCamera : MonoBehaviour
         }
     }
     /// <summary>
-    /// A câmera segue o player(mas não se movimenta[AINDA])
+    /// A câmera segue o player e rotaciona em sua orbita através do movimento do mouse
     /// </summary>
     public void seguePlayer()
     {
@@ -46,7 +46,7 @@ public class ControladorCamera : MonoBehaviour
 
         //rotaciona a camera na orbita do player
         float rotX = Input.GetAxis("Mouse X") * sensibilidadeMouse * Time.fixedDeltaTime;
-        cameraTrans.RotateAround(transform.position , Vector3.up, rotX);
+        cameraTrans.RotateAround(transform.position, Vector3.up, rotX);
     }
     /// <summary>
     /// A câmera fica fixa posicionada na area do boss de um angulo que de pra ver toda a batalha
@@ -58,5 +58,5 @@ public class ControladorCamera : MonoBehaviour
         transform.rotation = posCamBoss.rotation;
     }
 
-    public enum ModoCamera{seguePlayer, fixaBoss}
+    public enum ModoCamera { seguePlayer, fixaBoss }
 }

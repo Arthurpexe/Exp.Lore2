@@ -26,6 +26,7 @@ public class ControladorPersonagem : MonoBehaviour
     int ouro;
 
     //movimentação do personagem
+    [SerializeField]
     MovimentoPersonagem movimentoPersonagem;
     Vector3 inputs = Vector3.zero;
 	float cdRolamentoMax = 3;
@@ -72,18 +73,6 @@ public class ControladorPersonagem : MonoBehaviour
 		{
             movimentoPersonagem.parar();
 		}
-
-        //se o personagem estiver correndo
-        if (movimentoPersonagem.getCorrendo())
-		{
-			inputs = inputs * movimentoPersonagem.getVelocidadeCorrendo();//pegando a velocidade correndo do movimento do personagem
-        }
-
-        //se o personagem estiver abaixado e estiver andando
-        if (inputs != Vector3.zero && movimentoPersonagem.getAbaixado())
-		{
-		    inputs = inputs * movimentoPersonagem.getVelocidadeAbaixado();//pegando a velocidade abaixado do movimento do personagem
-        }
 
 		if (Input.GetButtonDown("Abaixar"))
 		{

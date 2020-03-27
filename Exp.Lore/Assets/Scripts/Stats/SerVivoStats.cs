@@ -4,12 +4,15 @@ public class SerVivoStats : MonoBehaviour
 {
 	protected Animator anim;
 	Renderer rend;
-    Color corInicial;
+	Color corInicial;
 	[SerializeField]
 	float tempoFeedbackDano = 0.1f;
+	[SerializeField]
 	protected int vidaMaxima = 100;
-    int vidaAtual;
+	int vidaAtual;
+	[SerializeField]
 	protected int dano = 3;
+	[SerializeField]
 	protected int armadura;
 
     public event System.Action<int, int> seVidaMudar;
