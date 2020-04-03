@@ -18,10 +18,11 @@ public class MovimentoPersonagem
     Transform cameraTrans;
     Vector3 frente, direita;
     Vector3 direcao;
+    Vector3 direcaoRolamento;
 
     public MovimentoPersonagem(Rigidbody rb, Animator anim)
     {
-        distanciaRolamento = 2;
+        distanciaRolamento = 10;
         personagemRB = rb;
         correndo = false;
         abaixado = false;
@@ -69,6 +70,12 @@ public class MovimentoPersonagem
             direcao *= velocidade;
         }
         personagemRB.MovePosition(personagemRB.transform.position + direcao * Time.fixedDeltaTime);
+
+        //se a velocidade do personagem for menor que um certo limite a variavel direcaoRolamento não vai pegar o valor de direcao para que ele sempre tenha uma direcao pra rolar mesmo que parado.
+        if(direcao.normalized.x > 0.5f || direcao.normalized.x < -0.5f || direcao.normalized.z > 0.5f || direcao.normalized.z < -0.5f)
+        {
+            direcaoRolamento = direcao.normalized;
+        }
     }
 
     public void andar(Vector3 inputs)
@@ -107,7 +114,8 @@ public class MovimentoPersonagem
     public void rolar()
     {
         animator.SetTrigger("rolar");
-        Vector3 velocidadeRolamento = Vector3.Scale(frente, distanciaRolamento * new Vector3(5, 0, 5));
+
+        Vector3 velocidadeRolamento = Vector3.Scale(direcaoRolamento, distanciaRolamento * new Vector3(1, 0, 1));
         personagemRB.AddForce(velocidadeRolamento, ForceMode.VelocityChange);
     }
 }
