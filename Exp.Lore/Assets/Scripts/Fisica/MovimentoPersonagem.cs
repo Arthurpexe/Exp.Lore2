@@ -1,15 +1,10 @@
 ﻿using UnityEngine;
-
-[System.Serializable]
 public class MovimentoPersonagem
-{
-    [SerializeField]
-    float velocidadeCorrendo = 20;
-    [SerializeField]
-    float velocidadeAbaixado = 5;
-    [SerializeField]
-    float velocidade = 10;
-    float distanciaRolamento;
+{ 
+    float velocidadeCorrendo = 18;
+    float velocidadeAbaixado = 3;
+    float velocidade = 9;
+    float distanciaRolamento = 15;
     Rigidbody personagemRB;
     bool correndo;
     bool abaixado;
@@ -22,7 +17,6 @@ public class MovimentoPersonagem
 
     public MovimentoPersonagem(Rigidbody rb, Animator anim)
     {
-        distanciaRolamento = 10;
         personagemRB = rb;
         correndo = false;
         abaixado = false;
@@ -39,24 +33,29 @@ public class MovimentoPersonagem
         direita = new Vector3(cameraTrans.right.x, 0, cameraTrans.right.z);
 
         direcao = Vector3.zero;
-        
+        //define a direção do movimento do personagem
         if(inputs.z > 0)
         {
             direcao += frente;
         }
         if(inputs.z < 0)
         {
-            direcao += -frente / 4;
+            direcao += -frente;
         }
         if (inputs.x > 0)
         {
-            direcao += direita / 2;
+            direcao += direita;
         }
         if (inputs.x < 0)
         {
-            direcao += -direita / 2;
+            direcao += -direita;
         }
-
+        //se estiver andando na diagonal diminui sua velocidade
+        if(inputs.z != 0 && inputs.x != 0)
+        {
+            direcao /= 1.5f;
+        }
+        //modificadores de velocidade por estados
         if (correndo)
         {
             direcao *= velocidadeCorrendo;

@@ -2,11 +2,13 @@
 
 public class ControladorPaineisHUD : MonoBehaviour
 {
+    [Header("Game Objects")]
     public GameObject painelInventario, marcadorNovoItem;
     public GameObject painelListaDeMissoes, marcadorNovaMissao;
     public GameObject painelAceitarQuest;
     public GameObject painelDialogo;
     public GameObject painelMenu;
+    public GameObject painelFimDeJogo;
 
     void Start()
     {
@@ -20,27 +22,22 @@ public class ControladorPaineisHUD : MonoBehaviour
         if (Input.GetButtonDown("Inventario"))
         {
             abrirPainel(painelInventario);
-
-            if (marcadorNovoItem.activeSelf)
-                marcadorNovoItem.SetActive(false);
         }
         if (Input.GetButtonDown("Missoes"))
         {
             abrirPainel(painelListaDeMissoes);
-
-            if (marcadorNovaMissao.activeSelf)
-                marcadorNovaMissao.SetActive(false);
         }
         if (Input.GetButtonDown("Menu"))
         {
+            //se tiver algum painel ativo o botão de menu vai fecha-lo primeiro
             if (painelInventario.activeSelf)
-                painelInventario.SetActive(false);
+                abrirPainel(painelInventario);
             else if (painelListaDeMissoes.activeSelf)
-                painelListaDeMissoes.SetActive(false);
+                abrirPainel(painelListaDeMissoes);
             else if (painelAceitarQuest.activeSelf)
-                painelAceitarQuest.SetActive(false);
+                abrirPainel(painelAceitarQuest);
             else if (painelDialogo.activeSelf)
-                painelDialogo.SetActive(false);
+                abrirPainel(painelDialogo);
             else
                 abrirPainel(painelMenu);
         }
@@ -58,10 +55,27 @@ public class ControladorPaineisHUD : MonoBehaviour
             marcadorNovaMissao.SetActive(true);
     }
 
+    /// <summary>
+    /// se o painel estiver desativado ele ativa, se estiver ativado desativa.
+    /// </summary>
+    /// <param name="painel">painel que vai ser ativado/desativado</param>
     public void abrirPainel(GameObject painel)
     {
         painel.SetActive(!painel.activeSelf);
 
+        //configurações do cursor
+        if (painel.activeSelf)
+        {
+            Cursor.lockState = CursorLockMode.None;
+            Cursor.visible = true;
+        }
+        else
+        {
+            Cursor.lockState = CursorLockMode.Locked;
+            Cursor.visible = false;
+        }
+
+        //marcadores de novos itens de interesse
         if (marcadorNovoItem.activeSelf && painel == painelInventario)
         {
             marcadorNovoItem.SetActive(false);

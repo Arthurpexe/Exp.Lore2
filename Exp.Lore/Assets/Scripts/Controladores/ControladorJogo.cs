@@ -18,7 +18,10 @@ public class ControladorJogo : MonoBehaviour
     {
         saveLoad = new SaveLoad(GameObject.FindWithTag("Player"));
         controladorPersonagem = ControladorPersonagem.instancia;
-        cameraPrincipal = GameObject.Find("Main Camera").GetComponent<ControladorCamera>();
+        cameraPrincipal = GameObject.FindGameObjectWithTag("MainCamera").GetComponent<ControladorCamera>();
+
+        //configurações do cursor
+        trancarCursor();
     }
     void Update()
     {
@@ -48,13 +51,19 @@ public class ControladorJogo : MonoBehaviour
 
     public void entreiAreaBoss()
     {
-        cameraPrincipal.fixaBoss();
+        cameraPrincipal.mudaCamera(ControladorCamera.ModoCamera.fixaBoss);
         barraDeVidaBoss.SetActive(true);
     }
     public void saiAreaBoss()
     {
-        cameraPrincipal.seguePlayer();
+        cameraPrincipal.mudaCamera(ControladorCamera.ModoCamera.seguePlayer);
         barraDeVidaBoss.SetActive(false);
+    }
+
+    public void trancarCursor()
+    {
+        Cursor.lockState = CursorLockMode.Locked;
+        Cursor.visible = false;
     }
 
     public IEnumerator entreiAreaTitulo()
