@@ -6054,7 +6054,7 @@ Transform:
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
-  - {fileID: 5242926617304552858}
+  - {fileID: 2084108143}
   - {fileID: 4698841909746642796}
   - {fileID: 8701169935870797857}
   - {fileID: 8797940594773872817}
@@ -66351,6 +66351,37 @@ PrefabInstance:
       objectReference: {fileID: 891362224}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 934a47265c1a3594cabc461552becf7e, type: 3}
+--- !u!1 &2084108142
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 2084108143}
+  m_Layer: 0
+  m_Name: Boss_01
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &2084108143
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2084108142}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children:
+  - {fileID: 5242926617304552858}
+  m_Father: {fileID: 156161658}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!4 &2088450009 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 8597826185811941086, guid: 68dbab9ffc07d704082ae2f206d6901a,
@@ -66969,7 +67000,7 @@ Animator:
   m_GameObject: {fileID: 8296172667604322711}
   m_Enabled: 1
   m_Avatar: {fileID: 9000000, guid: 48a8cfcdb6d86054ead03d12eaaa4e2c, type: 3}
-  m_Controller: {fileID: 9100000, guid: ee9e46bb87500a041afcd1e686887239, type: 2}
+  m_Controller: {fileID: 9100000, guid: 73d1c2da64e860a40b6aea4d576de4bd, type: 2}
   m_CullingMode: 0
   m_UpdateMode: 0
   m_ApplyRootMotion: 0
@@ -82323,7 +82354,7 @@ Animator:
   m_GameObject: {fileID: 8296172668768389137}
   m_Enabled: 1
   m_Avatar: {fileID: 9000000, guid: 48a8cfcdb6d86054ead03d12eaaa4e2c, type: 3}
-  m_Controller: {fileID: 9100000, guid: c55803f2b52c28241b90e5cce9a3829d, type: 2}
+  m_Controller: {fileID: 9100000, guid: 73d1c2da64e860a40b6aea4d576de4bd, type: 2}
   m_CullingMode: 1
   m_UpdateMode: 0
   m_ApplyRootMotion: 0
@@ -82342,7 +82373,7 @@ Animator:
   m_GameObject: {fileID: 8296172667683217029}
   m_Enabled: 1
   m_Avatar: {fileID: 9000000, guid: 48a8cfcdb6d86054ead03d12eaaa4e2c, type: 3}
-  m_Controller: {fileID: 9100000, guid: 2e009a1fc34fb7c488d72ffc57fe3311, type: 2}
+  m_Controller: {fileID: 9100000, guid: 73d1c2da64e860a40b6aea4d576de4bd, type: 2}
   m_CullingMode: 1
   m_UpdateMode: 0
   m_ApplyRootMotion: 0
@@ -94670,6 +94701,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Personagem
+      objectReference: {fileID: 0}
+    - target: {fileID: 1604488581812827307, guid: 76759819411728c4ca2ad5355b0d055e,
+        type: 3}
+      propertyPath: dano
+      value: 20
       objectReference: {fileID: 0}
     - target: {fileID: 3014133621094637051, guid: 76759819411728c4ca2ad5355b0d055e,
         type: 3}
@@ -107270,7 +107306,7 @@ PrefabInstance:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Modification:
-    m_TransformParent: {fileID: 156161658}
+    m_TransformParent: {fileID: 2084108143}
     m_Modifications:
     - target: {fileID: 2583485189060241878, guid: e86abfabb0a112a4c86b9612224f540c,
         type: 3}

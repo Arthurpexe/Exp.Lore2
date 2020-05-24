@@ -1,6 +1,6 @@
 ﻿using UnityEngine;
 
-public class FSM_Player_Morrer : StateMachineBehaviour
+public class PersonagemMorre : StateMachineBehaviour
 {
 	GameObject controlador;
 	ControladorPaineisHUD controladorPaineis;

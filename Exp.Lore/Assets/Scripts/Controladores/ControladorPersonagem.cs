@@ -1,4 +1,5 @@
-﻿using UnityEngine;
+﻿using System;
+using UnityEngine;
 
 public class ControladorPersonagem : MonoBehaviour
 {
@@ -33,6 +34,13 @@ public class ControladorPersonagem : MonoBehaviour
 	float cdRolamentoAtual;
     bool pausa;
 
+    //ataque
+    GameObject inimigosObj;
+    SerVivoStats[] inimigos;
+    float rangeAtaque = 5;
+    float cdAtaqueMax = 1;
+    float cdAtaqueAtual;
+
     void Start()
 	{
         controladorGeral = GameObject.Find("ControladorGeral");
@@ -41,8 +49,12 @@ public class ControladorPersonagem : MonoBehaviour
         inventarioHUD = GameObject.Find("HUDCanvas").GetComponent<InventarioHUD>();
         movimentoPersonagem = new MovimentoPersonagem(GetComponent<Rigidbody>(), GetComponentInChildren<Animator>());
 
+        inimigosObj = GameObject.Find("Inimigos");
+        
+
 		meusStats = GetComponent<SerVivoStats>();
 		cdRolamentoAtual = cdRolamentoMax;
+        cdAtaqueAtual = cdAtaqueMax;
     }
 
 	void Update()
@@ -54,6 +66,7 @@ public class ControladorPersonagem : MonoBehaviour
 
         //Area dos cooldowns
 		cdRolamentoAtual -= Time.deltaTime;
+        cdAtaqueAtual -= Time.deltaTime;
 
         //Area de inputs
         inputs.x = Input.GetAxis("Horizontal");
@@ -73,6 +86,12 @@ public class ControladorPersonagem : MonoBehaviour
 		{
             movimentoPersonagem.parar();
 		}
+
+        if (Input.GetButtonDown("Atacar") && cdAtaqueAtual <= 0)
+        {
+            if (tentarAtacar())
+                cdAtaqueAtual = cdAtaqueMax;
+        }
 
 		if (Input.GetButtonDown("Abaixar"))
 		{
@@ -107,6 +126,21 @@ public class ControladorPersonagem : MonoBehaviour
         pausa = pausado;
     }
 
+    bool tentarAtacar()
+    {
+        inimigos = inimigosObj.GetComponentsInChildren<SerVivoStats>();
+        foreach (SerVivoStats inimigo in inimigos)
+        {
+            float distancia = Vector3.Distance(transform.position, inimigo.transform.position);
+            if(distancia <= rangeAtaque)
+            {
+                meusStats.atacar(inimigo.GetComponentInChildren<SerVivoStats>());
+                return true;
+            }
+        }
+        Debug.Log("nenhum inimigo dentro do range de ataque");
+        return false;
+    }
 
     private void OnTriggerEnter(Collider other)
     {

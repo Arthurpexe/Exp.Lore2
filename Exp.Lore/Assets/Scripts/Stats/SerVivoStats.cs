@@ -25,6 +25,12 @@ public class SerVivoStats : MonoBehaviour
 		anim = GetComponentInChildren<Animator>();
 	}
 
+	public void atacar(SerVivoStats alvo)
+	{
+		Debug.Log(gameObject.name + " atacou " + alvo.gameObject.name);
+		alvo.TomarDano(dano);
+	}
+
 	public void TomarDano(int dano)
 	{
 		dano -= armadura;
@@ -47,7 +53,6 @@ public class SerVivoStats : MonoBehaviour
     public int carregarVida()
     {
         seVidaMudar(vidaMaxima, vidaAtual);
-        Debug.Log("vida atual "+vidaAtual);
 		return vidaAtual;
     }
 
@@ -66,7 +71,7 @@ public class SerVivoStats : MonoBehaviour
 		if(vidaAtual > vidaMaxima)
 			vidaAtual = vidaMaxima;
 		if (vidaAtual < 0)
-			vidaAtual = 1;
+			vidaAtual = 0;
 
 		carregarVida();
 	}
