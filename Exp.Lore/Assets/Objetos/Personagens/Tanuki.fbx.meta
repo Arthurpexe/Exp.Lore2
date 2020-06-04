@@ -52,7 +52,7 @@ ModelImporter:
     isReadable: 1
   meshes:
     lODScreenPercentages: []
-    globalScale: 1
+    globalScale: 0.55
     meshCompression: 0
     addColliders: 1
     useSRGBMaterialColor: 1
@@ -324,392 +324,392 @@ ModelImporter:
       scale: {x: 100, y: 100, z: 100}
     - name: Master
       parentName: ArmatureTanuki
-      position: {x: 0, y: -0.014111734, z: 0.013509093}
+      position: {x: 0, y: -0.00007761454, z: 0.00007430001}
       rotation: {x: 1, y: -2.8421713e-14, z: 0.0000004331258, w: -0.00000014901163}
       scale: {x: 1, y: 0.9999999, z: 0.9999999}
     - name: Barriga
       parentName: Master
-      position: {x: 0.0000000029800578, y: -0.014179645, z: -0.003944777}
+      position: {x: 1.6390318e-11, y: -0.00007798805, z: -0.000021696273}
       rotation: {x: 0.5000001, y: 0.4999995, z: 0.49999982, w: 0.50000066}
       scale: {x: 1, y: 1, z: 1.0000002}
     - name: Peitoral
       parentName: Barriga
-      position: {x: -1.7991164e-15, y: -0.0000000023841857, z: 4.371135e-10}
+      position: {x: -9.89514e-18, y: -1.3113022e-11, z: 2.4041244e-12}
       rotation: {x: -0.70710385, y: 0.002206832, z: -0.7071029, w: -0.0022023264}
       scale: {x: 1.0010207, y: 1, z: 0.9999998}
     - name: Cabeca
       parentName: Peitoral
-      position: {x: -1.8873792e-17, y: 0.010834187, z: 3.72529e-11}
+      position: {x: -1.03805855e-19, y: 0.00005958803, z: 2.0489095e-13}
       rotation: {x: 0.053034138, y: -0.00000007955532, z: -0.000000033527613, w: 0.9985928}
       scale: {x: 1.0000001, y: 1, z: 0.9999999}
     - name: Orelha.L
       parentName: Cabeca
-      position: {x: -0.006325567, y: 0.014173189, z: 0.0006258837}
+      position: {x: -0.00003479062, y: 0.000077952536, z: 0.0000034423604}
       rotation: {x: -0.40288714, y: 0.86005896, z: -0.30796576, w: 0.056015424}
       scale: {x: 0.99999946, y: 1.0000002, z: 1.0000002}
     - name: OrelhaPonta.L
       parentName: Orelha.L
-      position: {x: 0.0000000020489097, y: 0.0038990122, z: 4.4703483e-10}
+      position: {x: 1.1269004e-11, y: 0.000021444568, z: 2.4586915e-12}
       rotation: {x: -0.29375935, y: -0.008858443, z: 0.18572031, w: 0.937622}
       scale: {x: 0.999651, y: 1.0000659, z: 1.0002843}
     - name: OrelhaPonta.L_end
       parentName: OrelhaPonta.L
-      position: {x: -0, y: 0.002905289, z: 0}
+      position: {x: -0, y: 0.000015979089, z: 0}
       rotation: {x: 0, y: -0, z: -0, w: 1}
       scale: {x: 1, y: 1, z: 1}
     - name: Orelha.R
       parentName: Cabeca
-      position: {x: 0.0063255685, y: 0.014173104, z: 0.00062588893}
+      position: {x: 0.000034790628, y: 0.00007795208, z: 0.0000034423895}
       rotation: {x: 0.4028932, y: 0.8600559, z: -0.30796605, w: -0.056016486}
       scale: {x: 0.9999997, y: 1.0000004, z: 1.0000002}
     - name: OrelhaPonta.R
       parentName: Orelha.R
-      position: {x: 0.0000000034831464, y: 0.0038989969, z: -5.9604643e-10}
+      position: {x: 1.9157306e-11, y: 0.00002144448, z: -3.2782555e-12}
       rotation: {x: -0.29376003, y: 0.008858316, z: -0.1857245, w: 0.937621}
       scale: {x: 0.9996508, y: 1.0000654, z: 1.0002846}
     - name: OrelhaPonta.R_end
       parentName: OrelhaPonta.R
-      position: {x: -0, y: 0.002905289, z: 0}
+      position: {x: -0, y: 0.000015979089, z: 0}
       rotation: {x: 0, y: -0, z: -0, w: 1}
       scale: {x: 1, y: 1, z: 1}
     - name: Ombro.L
       parentName: Peitoral
-      position: {x: -0.007535414, y: 0.0073995846, z: 0.000046140773}
+      position: {x: -0.00004144478, y: 0.000040697712, z: 0.00000025377426}
       rotation: {x: 0.002204567, y: -0.002204602, z: 0.7070989, w: 0.7071079}
       scale: {x: 1.0004506, y: 0.99955046, z: 0.99999994}
     - name: Braco.L
       parentName: Ombro.L
-      position: {x: -0.0000000015366822, y: 0.0072863623, z: 1.6618087e-10}
+      position: {x: -8.451752e-12, y: 0.000040074992, z: 9.139948e-13}
       rotation: {x: -0.0000022576419, y: 0.7071067, z: 0.0000022315648, w: 0.70710677}
       scale: {x: 1.0005223, y: 0.9994786, z: 0.99999976}
     - name: Mao.L
       parentName: Braco.L
-      position: {x: 0.0000000019371509, y: 0.0058262325, z: -0.0000000015646219}
+      position: {x: 1.065433e-11, y: 0.000032044278, z: -8.60542e-12}
       rotation: {x: 0.000000020744432, y: -0.00000005960463, z: -0.00000006338506,
         w: 1}
       scale: {x: 0.99976593, y: 1.0003211, z: 0.9999135}
     - name: DedoMeio.L
       parentName: Mao.L
-      position: {x: 2.9802322e-10, y: 0.006050013, z: -0.00019150734}
+      position: {x: 1.6391277e-12, y: 0.00003327507, z: -0.0000010532904}
       rotation: {x: 0.0032379113, y: 0.00000038874032, z: 0.05814091, w: 0.9983031}
       scale: {x: 1.0000004, y: 0.99999464, z: 1.0000061}
     - name: DedoMeio.L_end
       parentName: DedoMeio.L
-      position: {x: -0, y: 0.0031316185, z: 0}
+      position: {x: -0, y: 0.000017223902, z: 0}
       rotation: {x: 0, y: -0, z: -0, w: 1}
       scale: {x: 1, y: 1, z: 1}
     - name: Mindinho.L
       parentName: Mao.L
-      position: {x: 0.001983742, y: 0.0059275944, z: 0.00009769887}
+      position: {x: 0.000010910581, y: 0.00003260177, z: 0.0000005373438}
       rotation: {x: 0.0056324927, y: -0.0006935878, z: 0.06441536, w: 0.9979071}
       scale: {x: 1, y: 0.9999955, z: 1.0000061}
     - name: Mindinho.L_end
       parentName: Mindinho.L
-      position: {x: -0, y: 0.0031316166, z: 0}
+      position: {x: -0, y: 0.00001722389, z: 0}
       rotation: {x: 0, y: -0, z: -0, w: 1}
       scale: {x: 1, y: 1, z: 1}
     - name: Dedo.L
       parentName: Mao.L
-      position: {x: -0.0016847622, y: 0.0059292377, z: 0.00009381175}
+      position: {x: -0.000009266192, y: 0.000032610806, z: 0.00000051596464}
       rotation: {x: -0.0000001432557, y: 0.00000077701964, z: 0.12757091, w: 0.9918295}
       scale: {x: 0.99999994, y: 0.99999464, z: 1.0000061}
     - name: Dedo.L_end
       parentName: Dedo.L
-      position: {x: -0, y: 0.0031316155, z: 0}
+      position: {x: -0, y: 0.000017223885, z: 0}
       rotation: {x: 0, y: -0, z: -0, w: 1}
       scale: {x: 1, y: 1, z: 1}
     - name: Dedao.L
       parentName: Mao.L
-      position: {x: -0.0027401506, y: 0.0020473076, z: -8.9406965e-10}
+      position: {x: -0.000015070828, y: 0.000011260193, z: -4.917383e-12}
       rotation: {x: 0.005626193, y: 0.0027801723, z: 0.20815039, w: 0.97807676}
       scale: {x: 1.000009, y: 1.0000447, z: 0.99994737}
     - name: Dedao.L_end
       parentName: Dedao.L
-      position: {x: -0, y: 0.0034356506, z: 0}
+      position: {x: -0, y: 0.00001889608, z: 0}
       rotation: {x: 0, y: -0, z: -0, w: 1}
       scale: {x: 1, y: 1, z: 1}
     - name: Ombro.R
       parentName: Peitoral
-      position: {x: 0.007535414, y: 0.0073994887, z: 0.000046141555}
+      position: {x: 0.00004144478, y: 0.00004069719, z: 0.00000025377858}
       rotation: {x: 0.0022045965, y: 0.0022045264, z: -0.70710784, w: 0.7070988}
       scale: {x: 1.0004249, y: 0.99957603, z: 0.99999994}
     - name: Braco.R
       parentName: Ombro.R
-      position: {x: -6.519258e-11, y: 0.007286362, z: 3.3901415e-10}
+      position: {x: -3.5855918e-13, y: 0.00004007499, z: 1.864578e-12}
       rotation: {x: 0.000002234592, y: -0.70710677, z: 0.0000023359898, w: 0.7071069}
       scale: {x: 1.0004075, y: 0.99967915, z: 0.99991256}
     - name: Mao.R
       parentName: Braco.R
-      position: {x: 8.9406965e-10, y: 0.0058262325, z: 1.4901161e-10}
+      position: {x: 4.917383e-12, y: 0.000032044278, z: 8.1956387e-13}
       rotation: {x: -0.000000020991246, y: -0.00000005960463, z: -0.000000021155524,
         w: 1}
       scale: {x: 1.0000001, y: 0.99999994, z: 0.9999999}
     - name: DedoMeio.R
       parentName: Mao.R
-      position: {x: -0.000006143376, y: 0.006133891, z: -0.00013129711}
+      position: {x: -0.00000003378857, y: 0.000033736404, z: -0.00000072213413}
       rotation: {x: -0.0031670986, y: 0.00000009049102, z: -0.059958726, w: 0.9981959}
       scale: {x: 0.99999976, y: 1.0000223, z: 0.99997884}
     - name: DedoMeio.R_end
       parentName: DedoMeio.R
-      position: {x: -0, y: 0.0031316185, z: 0}
+      position: {x: -0, y: 0.000017223902, z: 0}
       rotation: {x: 0, y: -0, z: -0, w: 1}
       scale: {x: 1, y: 1, z: 1}
     - name: Mindinho.R
       parentName: Mao.R
-      position: {x: -0.0019735312, y: 0.005934379, z: 0.00022007406}
+      position: {x: -0.000010854421, y: 0.000032639087, z: 0.0000012104073}
       rotation: {x: -0.0054279263, y: -0.000668882, z: -0.06627549, w: 0.9977864}
       scale: {x: 1.0000008, y: 1.0000211, z: 0.99997914}
     - name: Mindinho.R_end
       parentName: Mindinho.R
-      position: {x: -0, y: 0.0031316166, z: 0}
+      position: {x: -0, y: 0.00001722389, z: 0}
       rotation: {x: 0, y: -0, z: -0, w: 1}
       scale: {x: 1, y: 1, z: 1}
     - name: Dedo.R
       parentName: Mao.R
-      position: {x: 0.0016806906, y: 0.0058385697, z: -0.00008878261}
+      position: {x: 0.000009243799, y: 0.000032112133, z: -0.00000048830435}
       rotation: {x: -0.000000003200085, y: -0.0000008664581, z: 0.12757105, w: -0.9918295}
       scale: {x: 1.0000013, y: 1.0000206, z: 0.999979}
     - name: Dedo.R_end
       parentName: Dedo.R
-      position: {x: -0, y: 0.0031316155, z: 0}
+      position: {x: -0, y: 0.000017223885, z: 0}
       rotation: {x: 0, y: -0, z: -0, w: 1}
       scale: {x: 1, y: 1, z: 1}
     - name: Dedao.R
       parentName: Mao.R
-      position: {x: 0.0027401506, y: 0.0020473062, z: -0.0000000017881393}
+      position: {x: 0.000015070828, y: 0.000011260184, z: -9.834766e-12}
       rotation: {x: 0.0053890483, y: -0.0026634957, z: 0.20989041, w: -0.9777065}
       scale: {x: 0.99998826, y: 0.9999902, z: 1.0000226}
     - name: Dedao.R_end
       parentName: Dedao.R
-      position: {x: -0, y: 0.0034356506, z: 0}
+      position: {x: -0, y: 0.00001889608, z: 0}
       rotation: {x: 0, y: -0, z: -0, w: 1}
       scale: {x: 1, y: 1, z: 1}
     - name: Mochila
       parentName: Peitoral
-      position: {x: 2.273332e-10, y: -0.0007701487, z: -0.0091182245}
+      position: {x: 1.2503326e-12, y: -0.0000042358183, z: -0.000050150233}
       rotation: {x: -0.0000000844011, y: -0.00000011920882, z: -4.6566123e-10, w: 1}
       scale: {x: 1.0000001, y: 1, z: 1}
     - name: Mapa
       parentName: Mochila
-      position: {x: -0.0034312739, y: 0.0054573053, z: -0.0013674726}
+      position: {x: -0.000018872008, y: 0.00003001518, z: -0.000007521099}
       rotation: {x: -0.018962909, y: -0.005187836, z: 0.27459398, w: 0.9613593}
       scale: {x: 1.0000751, y: 0.99992496, z: 0.99999946}
     - name: Mapa_end
       parentName: Mapa
-      position: {x: -0, y: 0.010834185, z: 0}
+      position: {x: -0, y: 0.00005958802, z: 0}
       rotation: {x: 0, y: -0, z: -0, w: 1}
       scale: {x: 1, y: 1, z: 1}
     - name: Panela
       parentName: Mochila
-      position: {x: 0.0071458453, y: 0.004626194, z: -0.005836583}
+      position: {x: 0.00003930215, y: 0.000025444067, z: -0.00003210121}
       rotation: {x: 0.70710003, y: 0.0000035844473, z: 0.70711356, w: -0.0000037536965}
       scale: {x: 1.0000148, y: 1.000026, z: 0.99996006}
     - name: Panela_end
       parentName: Panela
-      position: {x: -0, y: 0.010834187, z: 0}
+      position: {x: -0, y: 0.00005958803, z: 0}
       rotation: {x: 0, y: -0, z: -0, w: 1}
       scale: {x: 1, y: 1, z: 1}
     - name: Cocha.L
       parentName: Barriga
-      position: {x: -0.000038602073, y: 0.0017474475, z: -0.011033563}
+      position: {x: -0.0000002123114, y: 0.000009610962, z: -0.000060684597}
       rotation: {x: -0.015120037, y: 0.7069463, z: 0.015120029, w: 0.706944}
       scale: {x: 1.0000001, y: 0.9999998, z: 0.99999976}
     - name: Perna.L
       parentName: Cocha.L
-      position: {x: 0.000000001288209, y: 0.011554379, z: 1.5870682e-11}
+      position: {x: 7.0851497e-12, y: 0.00006354909, z: 8.728875e-14}
       rotation: {x: -0.00000015273692, y: -0.98667055, z: 0.1627307, w: -0.00000092387205}
       scale: {x: 0.99999976, y: 1, z: 0.9999997}
     - name: pe.L
       parentName: Perna.L
-      position: {x: 0.0000000021797242, y: 0.0026490681, z: 1.7767406e-11}
+      position: {x: 1.1988483e-11, y: 0.000014569875, z: 9.772074e-14}
       rotation: {x: 0.00000016973931, y: 0.70971954, z: -0.70448446, w: -0.00000020191865}
       scale: {x: 0.99999976, y: 1.0000001, z: 0.9999999}
     - name: DedoPe.L
       parentName: pe.L
-      position: {x: -2.7382369e-10, y: 0.003354163, z: -8.497522e-12}
+      position: {x: -1.5060302e-12, y: 0.000018447898, z: -4.673637e-14}
       rotation: {x: 0.18742879, y: -0.0000002879593, z: 0.00000008758232, w: 0.98227817}
       scale: {x: 1, y: 0.9999997, z: 1}
     - name: DedoPe.L_end
       parentName: DedoPe.L
-      position: {x: -0, y: 0.0030567497, z: 0}
+      position: {x: -0, y: 0.000016812124, z: 0}
       rotation: {x: 0, y: -0, z: -0, w: 1}
       scale: {x: 1, y: 1, z: 1}
     - name: Rabo
       parentName: Barriga
-      position: {x: -0.0082314825, y: 0.00594954, z: -0.000000012741352}
+      position: {x: -0.000045273155, y: 0.00003272247, z: -7.007743e-11}
       rotation: {x: -0.49999997, y: 0.49999917, z: -0.5000001, w: -0.5000008}
       scale: {x: 0.99999994, y: 1.0000004, z: 1.0000004}
     - name: RaboPonta
       parentName: Rabo
-      position: {x: -5.32907e-16, y: 0.009999997, z: 0.0000000011920928}
+      position: {x: -2.9309886e-18, y: 0.00005499999, z: 6.5565105e-12}
       rotation: {x: -0.000000059604645, y: -0.000000834465, z: -0.000000014901161,
         w: 1}
       scale: {x: 1, y: 0.9999999, z: 0.9999998}
     - name: RaboPonta_end
       parentName: RaboPonta
-      position: {x: -0, y: 0.0108931465, z: 0}
+      position: {x: -0, y: 0.00005991231, z: 0}
       rotation: {x: 0, y: -0, z: -0, w: 1}
       scale: {x: 1, y: 1, z: 1}
     - name: Banha
       parentName: Barriga
-      position: {x: 0.0038379007, y: 0.0029127419, z: 0.0000000060843806}
+      position: {x: 0.000021108453, y: 0.000016020082, z: 3.3464093e-11}
       rotation: {x: -0.4999999, y: -0.49999923, z: -0.5000001, w: 0.50000083}
       scale: {x: 0.99999976, y: 0.99999994, z: 1}
     - name: Banha_end
       parentName: Banha
-      position: {x: -0, y: 0.007243277, z: 0}
+      position: {x: -0, y: 0.000039838025, z: 0}
       rotation: {x: 0, y: -0, z: -0, w: 1}
       scale: {x: 1, y: 1, z: 1}
     - name: Cocha.R
       parentName: Barriga
-      position: {x: -0.000038636008, y: 0.0017474493, z: 0.011033566}
+      position: {x: -0.00000021249805, y: 0.000009610972, z: 0.000060684615}
       rotation: {x: -0.015120078, y: 0.706945, z: 0.015119998, w: 0.70694524}
       scale: {x: 0.99999946, y: 0.99999964, z: 0.9999996}
     - name: Perna.R
       parentName: Cocha.R
-      position: {x: 3.4262562e-10, y: 0.011554379, z: 5.968104e-11}
+      position: {x: 1.884441e-12, y: 0.00006354909, z: 3.282457e-13}
       rotation: {x: 0.00000023376198, y: -0.98667055, z: 0.1627307, w: 0.0000008642674}
       scale: {x: 0.9999998, y: 1.0000002, z: 1.0000002}
     - name: pe.R
       parentName: Perna.R
-      position: {x: 5.36804e-11, y: 0.0026490688, z: -1.7479352e-13}
+      position: {x: 2.952422e-13, y: 0.000014569878, z: -9.613644e-16}
       rotation: {x: -0.00000017857586, y: 0.7097194, z: -0.7044845, w: 0.00000012482428}
       scale: {x: 1.0000005, y: 1.0000001, z: 1.0000002}
     - name: DedoPe.R
       parentName: pe.R
-      position: {x: 0.0000000014220001, y: 0.0033541631, z: 7.296137e-12}
+      position: {x: 7.821001e-12, y: 0.0000184479, z: 4.0128752e-14}
       rotation: {x: 0.1874286, y: 0.00000020039046, z: 0.000000017537822, w: 0.9822782}
       scale: {x: 1.0000004, y: 0.9999998, z: 1.0000001}
     - name: DedoPe.R_end
       parentName: DedoPe.R
-      position: {x: -0, y: 0.0030567497, z: 0}
+      position: {x: -0, y: 0.000016812124, z: 0}
       rotation: {x: 0, y: -0, z: -0, w: 1}
       scale: {x: 1, y: 1, z: 1}
     - name: MasterEstilingue
       parentName: Master
-      position: {x: -0.018852077, y: -0.0039366977, z: -0.004756853}
+      position: {x: -0.00010368643, y: -0.000021651837, z: -0.000026162692}
       rotation: {x: -0.0000000022737767, y: 1, z: -0, w: 0.00000046950558}
       scale: {x: 0.9999996, y: 1, z: 0.99999994}
     - name: Estilingue
       parentName: MasterEstilingue
-      position: {x: 5.9604643e-10, y: -0.0015659366, z: -0.0021571105}
+      position: {x: 3.2782555e-12, y: -0.000008612652, z: -0.000011864107}
       rotation: {x: -0.000000065918776, y: -0.7071068, z: -0.7071068, w: 0.000000011254429}
       scale: {x: 0.9999997, y: 0.99999976, z: 0.99999994}
     - name: Puxador
       parentName: Estilingue
-      position: {x: 0.0064972793, y: 0.00047256227, z: -0.009717286}
+      position: {x: 0.000035735033, y: 0.0000025990926, z: -0.000053445074}
       rotation: {x: -0.00000008940697, y: 0.0000000045474757, z: -0.00000001818988,
         w: 1}
       scale: {x: 1.0000005, y: 1.0000004, z: 0.99999994}
     - name: Elastico0101
       parentName: Puxador
-      position: {x: 0.0021119702, y: 0.0019958105, z: 0.012981194}
+      position: {x: 0.000011615836, y: 0.000010976959, z: 0.00007139657}
       rotation: {x: -0.7021081, y: 0.0069281817, z: 0.006928137, w: 0.71200305}
       scale: {x: 0.9999999, y: 0.99999994, z: 1}
     - name: Elastico0102
       parentName: Elastico0101
-      position: {x: 0.0000000011920929, y: 0.0040278747, z: 0.0000000011920929}
+      position: {x: 6.556511e-12, y: 0.00002215331, z: 6.556511e-12}
       rotation: {x: -0.04999917, y: 0.0009327101, z: 0.06328003, w: 0.9967422}
       scale: {x: 1.0000001, y: 1.0000004, z: 1.0000001}
     - name: Elastico0103
       parentName: Elastico0102
-      position: {x: -5.9604643e-10, y: 0.0040283734, z: -0.0000000020861626}
+      position: {x: -3.2782555e-12, y: 0.000022156053, z: -1.1473894e-11}
       rotation: {x: -0.00008372588, y: 0.00052597775, z: -0.012037555, w: 0.99992746}
       scale: {x: 0.99999946, y: 0.99999934, z: 1}
     - name: Elastico0103_end
       parentName: Elastico0103
-      position: {x: -0, y: 0.004014088, z: 0}
+      position: {x: -0, y: 0.000022077482, z: 0}
       rotation: {x: 0, y: -0, z: -0, w: 1}
       scale: {x: 1, y: 1, z: 1}
     - name: Elastico0201
       parentName: Puxador
-      position: {x: 0.0020095408, y: -0.000436289, z: 0.012981195}
+      position: {x: 0.000011052474, y: -0.0000023995897, z: 0.00007139657}
       rotation: {x: -0.6987607, y: -0.0019179084, z: -0.0019179293, w: 0.71535045}
       scale: {x: 1.0000005, y: 1.0000006, z: 1}
     - name: Elastico0202
       parentName: Elastico0201
-      position: {x: 0.0000000017881393, y: 0.0040278765, z: -0.0000000023841857}
+      position: {x: 9.834766e-12, y: 0.000022153323, z: -1.3113022e-11}
       rotation: {x: 0.010175197, y: 0.00085622456, z: 0.07063679, w: 0.9974498}
       scale: {x: 1.0000001, y: 1.0000008, z: 0.9999999}
     - name: Elastico0203
       parentName: Elastico0202
-      position: {x: 2.9802322e-10, y: 0.004011331, z: -0.0000000011920929}
+      position: {x: 1.6391277e-12, y: 0.000022062322, z: -6.556511e-12}
       rotation: {x: 0.017936656, y: -0.0013243152, z: -0.004680592, w: 0.9998274}
       scale: {x: 1.0000002, y: 1.0000002, z: 1.0000001}
     - name: Elastico0203_end
       parentName: Elastico0203
-      position: {x: -0, y: 0.0040140883, z: 0}
+      position: {x: -0, y: 0.000022077485, z: 0}
       rotation: {x: 0, y: -0, z: -0, w: 1}
       scale: {x: 1, y: 1, z: 1}
     - name: Elastico0301
       parentName: Puxador
-      position: {x: -0.00017029166, y: -0.0017204419, z: 0.012981194}
+      position: {x: -0.00000093660424, y: -0.00000946243, z: 0.00007139657}
       rotation: {x: -0.7045422, y: -0.008134546, z: -0.008134444, w: 0.7095689}
       scale: {x: 1.0000004, y: 1.0000002, z: 1.0000002}
     - name: Elastico0302
       parentName: Elastico0301
-      position: {x: -0, y: 0.004027875, z: -0.0000000020861626}
+      position: {x: -0, y: 0.000022153312, z: -1.1473894e-11}
       rotation: {x: 0.07410889, y: 0.0008579403, z: 0.0014765391, w: 0.9972487}
       scale: {x: 1.0000007, y: 1.0000011, z: 1}
     - name: Elastico0303
       parentName: Elastico0302
-      position: {x: -0, y: 0.004042549, z: 0.0000000017881393}
+      position: {x: -0, y: 0.00002223402, z: 9.834766e-12}
       rotation: {x: 0.040816452, y: 0.0009749751, z: 0.007264237, w: 0.9991398}
       scale: {x: 1, y: 1.0000001, z: 1.0000001}
     - name: Elastico0303_end
       parentName: Elastico0303
-      position: {x: -0, y: 0.004014088, z: 0}
+      position: {x: -0, y: 0.000022077482, z: 0}
       rotation: {x: 0, y: -0, z: -0, w: 1}
       scale: {x: 1, y: 1, z: 1}
     - name: Elastico0401
       parentName: Puxador
-      position: {x: -0.0024120598, y: -0.0003877777, z: 0.012981195}
+      position: {x: -0.000013266329, y: -0.0000021327774, z: 0.00007139657}
       rotation: {x: -0.7113353, y: -0.0073598926, z: -0.007359901, w: 0.7027758}
       scale: {x: 1.0000004, y: 0.9999997, z: 1.0000005}
     - name: Elastico0402
       parentName: Elastico0401
-      position: {x: 5.9604643e-10, y: 0.004027878, z: -2.9802322e-10}
+      position: {x: 3.2782555e-12, y: 0.00002215333, z: -1.6391277e-12}
       rotation: {x: 0.057845123, y: 0.0010846463, z: -0.07971235, w: 0.9951375}
       scale: {x: 0.99999934, y: 1.0000001, z: 1}
     - name: Elastico0403
       parentName: Elastico0402
-      position: {x: -0, y: 0.0040600947, z: 0.0000000011920929}
+      position: {x: -0, y: 0.000022330521, z: 6.556511e-12}
       rotation: {x: -0.024559911, y: -0.0014127222, z: 0.015572163, w: 0.99957615}
       scale: {x: 0.99999994, y: 1.0000007, z: 0.99999994}
     - name: Elastico0403_end
       parentName: Elastico0403
-      position: {x: -0, y: 0.0040140892, z: 0}
+      position: {x: -0, y: 0.000022077491, z: 0}
       rotation: {x: 0, y: -0, z: -0, w: 1}
       scale: {x: 1, y: 1, z: 1}
     - name: Elastico0501
       parentName: Puxador
-      position: {x: -0.0022081065, y: 0.0021641678, z: 0.012981191}
+      position: {x: -0.0000121445855, y: 0.000011902923, z: 0.00007139656}
       rotation: {x: -0.71551764, y: 0.00094183494, z: 0.0009418169, w: 0.6985934}
       scale: {x: 1.0000005, y: 1.0000001, z: 1}
     - name: Elastico0502
       parentName: Elastico0501
-      position: {x: -0.0000000011920929, y: 0.0040278756, z: -5.9604643e-10}
+      position: {x: -6.556511e-12, y: 0.000022153317, z: -3.2782555e-12}
       rotation: {x: -0.031041056, y: 0.0010449569, z: -0.0838615, w: 0.99599326}
       scale: {x: 0.99999976, y: 0.99999976, z: 1}
     - name: Elastico0503
       parentName: Elastico0502
-      position: {x: 5.9604643e-10, y: 0.0040366394, z: -0.0000000019371509}
+      position: {x: 3.2782555e-12, y: 0.000022201517, z: -1.065433e-11}
       rotation: {x: 0.018632364, y: 0.00056782283, z: 0.022640325, w: 0.9995699}
       scale: {x: 1.0000004, y: 1, z: 0.9999997}
     - name: Elastico0503_end
       parentName: Elastico0503
-      position: {x: -0, y: 0.0040140874, z: 0}
+      position: {x: -0, y: 0.00002207748, z: 0}
       rotation: {x: 0, y: -0, z: -0, w: 1}
       scale: {x: 1, y: 1, z: 1}
     - name: PontaEstilingue
       parentName: Estilingue
-      position: {x: -2.6077032e-10, y: 0.0043142247, z: 5.494803e-10}
+      position: {x: -1.4342367e-12, y: 0.000023728235, z: 3.0221418e-12}
       rotation: {x: -0.00000008940697, y: 0.000000040927283, z: -0.00000001818988,
         w: 1}
       scale: {x: 1.0000002, y: 1.0000001, z: 1.0000002}
     - name: PontaEstilingue_end
       parentName: PontaEstilingue
-      position: {x: -0, y: 0.006691017, z: 0}
+      position: {x: -0, y: 0.000036800597, z: 0}
       rotation: {x: 0, y: -0, z: -0, w: 1}
       scale: {x: 1, y: 1, z: 1}
     armTwist: 0.5
@@ -719,7 +719,7 @@ ModelImporter:
     armStretch: 0.05
     legStretch: 0.05
     feetSpacing: 0
-    globalScale: 1
+    globalScale: 0.0055
     rootMotionBoneName: Master
     hasTranslationDoF: 0
     hasExtraRoot: 1
