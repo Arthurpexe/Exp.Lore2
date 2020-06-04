@@ -25,6 +25,8 @@ public class InventarioHUD : MonoBehaviour
             {
                 if (inventario.getListaItens().localizarPorEndereco(i).meuItem != null)
                     slotsItens[i].adicionarItem(inventario.getListaItens().localizarPorEndereco(i).meuItem);
+                else
+                    slotsItens[i].limparSlot();
             }
             else
             {

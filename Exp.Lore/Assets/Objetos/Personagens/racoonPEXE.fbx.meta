@@ -1,0 +1,510 @@
+fileFormatVersion: 2
+guid: ba0c3caf6c1473d478d6c8759b2617d3
+ModelImporter:
+  serializedVersion: 19300
+  internalIDToNameTable:
+  - first:
+      74: -8939368157431609985
+    second: Armature|andando
+  - first:
+      74: -2327328701932969061
+    second: Armature|ataque
+  - first:
+      74: -6869226311573219466
+    second: Armature|corrida
+  - first:
+      74: 103933099099671182
+    second: Armature|iddle
+  - first:
+      74: -4015175260421615790
+    second: Armature|iddle.001agaixado
+  - first:
+      74: 1422298655982481367
+    second: Armature|morte
+  - first:
+      74: 6343759615933512638
+    second: Armature|rolamento
+  externalObjects: {}
+  materials:
+    materialImportMode: 1
+    materialName: 0
+    materialSearch: 1
+    materialLocation: 1
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    resampleCurves: 1
+    optimizeGameObjects: 0
+    motionNodeName: 
+    rigImportErrors: 
+    rigImportWarnings: 
+    animationImportErrors: 
+    animationImportWarnings: "\nClip 'Armature|andando' has import animation warnings
+      that might lower retargeting quality:\nNote: Activate translation DOF on avatar
+      to improve retargeting quality.\n\t'coxa.L' is inbetween humanoid transforms
+      and has rotation animation that will be discarded.\n\t'coxa.R' is inbetween
+      humanoid transforms and has rotation animation that will be discarded.\n\nClip
+      'Armature|ataque' has import animation warnings that might lower retargeting
+      quality:\nNote: Activate translation DOF on avatar to improve retargeting quality.\n\t'coxa.L'
+      is inbetween humanoid transforms and has rotation animation that will be discarded.\n\t'coxa.R'
+      has translation animation that will be discarded.\n\t'coxa.R' is inbetween
+      humanoid transforms and has rotation animation that will be discarded.\n\t'biceps.L'
+      has translation animation that will be discarded.\n\t'biceps.R' has translation
+      animation that will be discarded.\n\nClip 'Armature|corrida' has import animation
+      warnings that might lower retargeting quality:\nNote: Activate translation
+      DOF on avatar to improve retargeting quality.\n\t'coxa.L' is inbetween humanoid
+      transforms and has rotation animation that will be discarded.\n\t'coxa.R' is
+      inbetween humanoid transforms and has rotation animation that will be discarded.\n\nClip
+      'Armature|iddle' has import animation warnings that might lower retargeting
+      quality:\nNote: Activate translation DOF on avatar to improve retargeting quality.\n\t'coxa.L'
+      has translation animation that will be discarded.\n\t'coxa.R' has translation
+      animation that will be discarded.\n\nClip 'Armature|morte' has import animation
+      warnings that might lower retargeting quality:\nNote: Activate translation
+      DOF on avatar to improve retargeting quality.\n\t'coxa.L' is inbetween humanoid
+      transforms and has rotation animation that will be discarded.\n\t'coxa.R' is
+      inbetween humanoid transforms and has rotation animation that will be discarded.\n\nClip
+      'Armature|rolamento' has import animation warnings that might lower retargeting
+      quality:\nNote: Activate translation DOF on avatar to improve retargeting quality.\n\t'coxa.L'
+      has translation animation that will be discarded.\n\t'coxa.L' is inbetween
+      humanoid transforms and has rotation animation that will be discarded.\n\t'joelho.L'
+      has translation animation that will be discarded.\n\t'coxa.R' has translation
+      animation that will be discarded.\n\t'coxa.R' is inbetween humanoid transforms
+      and has rotation animation that will be discarded.\n"
+    animationRetargetingWarnings: 
+    animationDoRetargetingWarnings: 0
+    importAnimatedCustomProperties: 0
+    importConstraints: 0
+    animationCompression: 3
+    animationRotationError: 0.5
+    animationPositionError: 0.5
+    animationScaleError: 0.5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    extraUserProperties: []
+    clipAnimations: []
+    isReadable: 0
+  meshes:
+    lODScreenPercentages: []
+    globalScale: 1
+    meshCompression: 0
+    addColliders: 0
+    useSRGBMaterialColor: 1
+    sortHierarchyByName: 1
+    importVisibility: 1
+    importBlendShapes: 1
+    importCameras: 1
+    importLights: 1
+    swapUVChannels: 0
+    generateSecondaryUV: 0
+    useFileUnits: 1
+    keepQuads: 0
+    weldVertices: 1
+    preserveHierarchy: 0
+    skinWeightsMode: 0
+    maxBonesPerVertex: 4
+    minBoneWeight: 0.001
+    meshOptimizationFlags: -1
+    indexFormat: 0
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVPackMargin: 4
+    useFileScale: 1
+  tangentSpace:
+    normalSmoothAngle: 60
+    normalImportMode: 1
+    tangentImportMode: 3
+    normalCalculationMode: 4
+    legacyComputeAllNormalsFromSmoothingGroupsWhenMeshHasBlendShapes: 0
+    blendShapeNormalImportMode: 1
+    normalSmoothingSource: 0
+  referencedClips: []
+  importAnimation: 1
+  humanDescription:
+    serializedVersion: 3
+    human:
+    - boneName: barriga
+      humanName: Hips
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: joelho.L
+      humanName: LeftUpperLeg
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: joelho.R
+      humanName: RightUpperLeg
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: tornozelo.L
+      humanName: LeftLowerLeg
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: tornozelo.R
+      humanName: RightLowerLeg
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: pe.L
+      humanName: LeftFoot
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: pe.R
+      humanName: RightFoot
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: peito
+      humanName: Spine
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: cabeca
+      humanName: Head
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: ombro.L
+      humanName: LeftShoulder
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: ombro.R
+      humanName: RightShoulder
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: biceps.L
+      humanName: LeftUpperArm
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: biceps.R
+      humanName: RightUpperArm
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: cotovelo.L
+      humanName: LeftLowerArm
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: cotovelo.R
+      humanName: RightLowerArm
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: antebraco.L
+      humanName: LeftHand
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: antebraco.R
+      humanName: RightHand
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: dedospe.L
+      humanName: LeftToes
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: dedospe.R
+      humanName: RightToes
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: orelha.L
+      humanName: LeftEye
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: orelha.R
+      humanName: RightEye
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    skeleton:
+    - name: racoonPEXE(Clone)
+      parentName: 
+      position: {x: 0, y: 0, z: 0}
+      rotation: {x: 0, y: 0, z: 0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Guaxini
+      parentName: racoonPEXE(Clone)
+      position: {x: -0, y: 0, z: 0}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Armature
+      parentName: racoonPEXE(Clone)
+      position: {x: -0, y: 0, z: 0}
+      rotation: {x: -0.7071068, y: 0, z: -0, w: 0.7071067}
+      scale: {x: 100, y: 100, z: 100}
+    - name: mestre
+      parentName: Armature
+      position: {x: -2.692661e-10, y: 0.00497957, z: 0.012687902}
+      rotation: {x: -0.006604016, y: 0.69348586, z: 0.006860465, w: 0.72040737}
+      scale: {x: 0.9999998, y: 0.9999999, z: 0.99999976}
+    - name: barriga
+      parentName: mestre
+      position: {x: 0.006815812, y: -0.005163624, z: -0.00036702852}
+      rotation: {x: 0.5377966, y: -0.47306916, z: 0.5062393, w: 0.4803146}
+      scale: {x: 0.99999976, y: 0.9999997, z: 0.99999994}
+    - name: coxa.L
+      parentName: barriga
+      position: {x: -0.0015854028, y: 0.0022584687, z: 0.0003267191}
+      rotation: {x: 0.0056500286, y: 0.044702753, z: 0.9943483, w: 0.09613183}
+      scale: {x: 1.0000021, y: 0.99999994, z: 1.0000004}
+    - name: joelho.L
+      parentName: coxa.L
+      position: {x: -0.0000023581458, y: 0.0025736894, z: 0.000000039020083}
+      rotation: {x: 0.16970505, y: -0.70980877, z: -0.052430917, w: -0.6816325}
+      scale: {x: 1, y: 1.0000005, z: 1.0000005}
+    - name: tornozelo.L
+      parentName: joelho.L
+      position: {x: 5.5879346e-11, y: 0.0024703436, z: -1.1175869e-10}
+      rotation: {x: -0.16799478, y: 0.98373985, z: 0.049653463, w: 0.039601367}
+      scale: {x: 0.9999997, y: 1, z: 0.9999995}
+    - name: pe.L
+      parentName: tornozelo.L
+      position: {x: 3.7718564e-10, y: 0.0020506862, z: 1.8626451e-11}
+      rotation: {x: -0.059012763, y: 0.27786115, z: -0.48716602, w: 0.8258208}
+      scale: {x: 0.9999993, y: 1.0000004, z: 0.99999994}
+    - name: dedospe.L
+      parentName: pe.L
+      position: {x: -1.4901161e-10, y: 0.0023391186, z: 1.4901161e-10}
+      rotation: {x: 0.10940908, y: 0.38397166, z: -0.13730416, w: 0.90650046}
+      scale: {x: 1, y: 0.9999994, z: 1.0000012}
+    - name: dedospe.L_end
+      parentName: dedospe.L
+      position: {x: -0, y: 0.0014378603, z: 0}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: tornozelo.L.001
+      parentName: tornozelo.L
+      position: {x: 3.7718564e-10, y: 0.0020506862, z: 1.8626451e-11}
+      rotation: {x: -0.5677843, y: 0.2904355, z: -0.39179152, w: -0.66314983}
+      scale: {x: 0.99999976, y: 1, z: 1.0000001}
+    - name: msterpe.L
+      parentName: tornozelo.L.001
+      position: {x: 0.0011262054, y: -0.0036422857, z: -0.0025457987}
+      rotation: {x: 0.00000020861621, y: 0.0000008642671, z: 0.274933, w: 0.96146345}
+      scale: {x: 0.9999991, y: 1.0000008, z: 1.0000001}
+    - name: msterpe.L_end
+      parentName: msterpe.L
+      position: {x: -0, y: 0.004589867, z: 0}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: coxa.R
+      parentName: barriga
+      position: {x: 0.0015989548, y: 0.0022631625, z: 0.00031516817}
+      rotation: {x: -0.002109289, y: 0.044345345, z: 0.9942194, w: -0.097758815}
+      scale: {x: 1.0000032, y: 1, z: 1.0000008}
+    - name: joelho.R
+      parentName: coxa.R
+      position: {x: 0.000002357168, y: 0.0025736871, z: 0.00000003929366}
+      rotation: {x: -0.16970408, y: -0.70980924, z: -0.05243115, w: 0.6816322}
+      scale: {x: 0.9999995, y: 1.000001, z: 1.0000007}
+    - name: tornozelo.R
+      parentName: joelho.R
+      position: {x: 1.3445968e-10, y: 0.0024703422, z: -1.1175869e-10}
+      rotation: {x: -0.16799624, y: -0.9837392, z: -0.04966083, w: 0.039600935}
+      scale: {x: 0.9999998, y: 1, z: 1}
+    - name: pe.R
+      parentName: tornozelo.R
+      position: {x: 2.3166649e-10, y: 0.0020506852, z: 7.4505804e-11}
+      rotation: {x: 0.05900713, y: 0.2778647, z: -0.4871621, w: -0.8258223}
+      scale: {x: 0.9999996, y: 1.000001, z: 0.99999994}
+    - name: dedospe.R
+      parentName: pe.R
+      position: {x: -7.4505804e-11, y: 0.0023391186, z: 7.4505804e-11}
+      rotation: {x: 0.1094089, y: -0.38397232, z: 0.13730428, w: 0.9065001}
+      scale: {x: 0.9999997, y: 0.99999946, z: 1.0000008}
+    - name: dedospe.R_end
+      parentName: dedospe.R
+      position: {x: -0, y: 0.0014378603, z: 0}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: tornozelo.R.001
+      parentName: tornozelo.R
+      position: {x: 2.3166649e-10, y: 0.0020506852, z: 7.4505804e-11}
+      rotation: {x: -0.57727134, y: -0.2711026, z: 0.3691763, w: -0.6759956}
+      scale: {x: 0.9999996, y: 0.9999999, z: 1.0000005}
+    - name: msterpe.R
+      parentName: tornozelo.R.001
+      position: {x: -0.0013133363, y: -0.0035984246, z: -0.0025457998}
+      rotation: {x: 0.0000004172325, y: -0.00000081956387, z: -0.3072372, w: 0.95163304}
+      scale: {x: 0.9999985, y: 1.0000015, z: 0.9999998}
+    - name: msterpe.R_end
+      parentName: msterpe.R
+      position: {x: -0, y: 0.004589867, z: 0}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: peito
+      parentName: barriga
+      position: {x: 2.1671554e-15, y: 0.006067719, z: 3.8312836e-11}
+      rotation: {x: -0.03760588, y: 0.70783126, z: -0.026783686, w: 0.70487124}
+      scale: {x: 1.0000001, y: 1.0000001, z: 0.9999999}
+    - name: cabeca
+      parentName: peito
+      position: {x: -0.0008934502, y: 0.005921441, z: 0.00014418866}
+      rotation: {x: 0.004837174, y: -0.7070927, z: -0.004837211, w: 0.7070878}
+      scale: {x: 1.0000001, y: 1, z: 0.99999976}
+    - name: orelha.L
+      parentName: cabeca
+      position: {x: -0.0022211848, y: 0.0039934367, z: -0.000395106}
+      rotation: {x: 0.00000022840683, y: -0.000000059604638, z: 0.40758774, w: 0.91316605}
+      scale: {x: 0.99999994, y: 1, z: 1}
+    - name: orelha.L_end
+      parentName: orelha.L
+      position: {x: -0, y: 0.0023170938, z: 0}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: orelha.R
+      parentName: cabeca
+      position: {x: 0.0021583852, y: 0.003993437, z: -0.00039510723}
+      rotation: {x: 0.000000047963105, y: 0.0000004768371, z: -0.40758756, w: 0.9131661}
+      scale: {x: 0.9999999, y: 0.9999999, z: 0.99999994}
+    - name: orelha.R_end
+      parentName: orelha.R
+      position: {x: -0, y: 0.0023170938, z: 0}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: ombro.L
+      parentName: peito
+      position: {x: 0.0012026237, y: 0.004094248, z: -0.000751233}
+      rotation: {x: -0.46880692, y: -0.20330814, z: 0.1394238, w: 0.8482021}
+      scale: {x: 0.9999998, y: 1.0000001, z: 0.9999998}
+    - name: biceps.L
+      parentName: ombro.L
+      position: {x: -0.0007718697, y: 0.0017788517, z: -0.0018371651}
+      rotation: {x: -0.15046471, y: -0.5718543, z: 0.2465449, w: 0.7678273}
+      scale: {x: 1, y: 0.99999994, z: 0.99999994}
+    - name: cotovelo.L
+      parentName: biceps.L
+      position: {x: -1.4901161e-10, y: 0.0024963438, z: -1.1175869e-10}
+      rotation: {x: 0.030167896, y: -0.004982261, z: -0.0244586, w: 0.9992331}
+      scale: {x: 1, y: 0.99999976, z: 0.99999976}
+    - name: antebraco.L
+      parentName: cotovelo.L
+      position: {x: -1.4901161e-10, y: 0.0027786563, z: 0}
+      rotation: {x: 0.021325616, y: -0.47569203, z: 0.009820922, w: 0.87929857}
+      scale: {x: 1.0000002, y: 1.0000005, z: 0.9999998}
+    - name: antebraco.L_end
+      parentName: antebraco.L
+      position: {x: -0, y: 0.0024712917, z: 0}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: ombro.R
+      parentName: peito
+      position: {x: 0.0012001351, y: 0.0041271923, z: 0.0010439894}
+      rotation: {x: 0.13425319, y: -0.8623162, z: -0.44340128, w: 0.20440722}
+      scale: {x: 0.9999999, y: 1.0000001, z: 0.9999999}
+    - name: biceps.R
+      parentName: ombro.R
+      position: {x: 0.00082531315, y: 0.0015880156, z: -0.0019415142}
+      rotation: {x: 0.17233893, y: -0.5615528, z: 0.2822928, w: -0.75846463}
+      scale: {x: 1.0000007, y: 1.0000005, z: 0.9999998}
+    - name: cotovelo.R
+      parentName: biceps.R
+      position: {x: -1.2107192e-10, y: 0.0024963433, z: 4.1909514e-11}
+      rotation: {x: 0.031544574, y: 0.0045726276, z: 0.02542703, w: 0.9991684}
+      scale: {x: 0.99999976, y: 1.0000001, z: 1}
+    - name: antebraco.R
+      parentName: cotovelo.R
+      position: {x: -7.4505804e-11, y: 0.0027786568, z: -2.9802322e-10}
+      rotation: {x: 0.021325702, y: 0.47569135, z: -0.009820593, w: 0.8792988}
+      scale: {x: 1.0000005, y: 1.0000005, z: 1.0000004}
+    - name: antebraco.R_end
+      parentName: antebraco.R
+      position: {x: -0, y: 0.0024712917, z: 0}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    armTwist: 0.5
+    foreArmTwist: 0.5
+    upperLegTwist: 0.5
+    legTwist: 0.5
+    armStretch: 0.05
+    legStretch: 0.05
+    feetSpacing: 0
+    globalScale: 1
+    rootMotionBoneName: 
+    hasTranslationDoF: 0
+    hasExtraRoot: 1
+    skeletonHasParents: 1
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  autoGenerateAvatarMappingIfUnspecified: 1
+  animationType: 3
+  humanoidOversampling: 1
+  avatarSetup: 1
+  additionalBone: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

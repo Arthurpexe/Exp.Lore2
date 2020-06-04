@@ -137,6 +137,11 @@ public class ControladorPersonagem : MonoBehaviour
                 meusStats.atacar(inimigo.GetComponentInChildren<SerVivoStats>());
                 return true;
             }
+            else if (inimigo.CompareTag("Boss") && distancia <= rangeAtaque * 2)//gambiarra
+            {
+                meusStats.atacar(inimigo.GetComponentInChildren<SerVivoStats>());
+                return true;
+            }
         }
         Debug.Log("nenhum inimigo dentro do range de ataque");
         return false;
@@ -169,6 +174,15 @@ public class ControladorPersonagem : MonoBehaviour
         }
     }
 
+
+    private void OnDrawGizmosSelected()
+    {
+        Gizmos.color = Color.red;
+        Gizmos.DrawWireSphere(transform.position, rangeAtaque);
+
+        Gizmos.color = Color.yellow;//gambiarra
+        Gizmos.DrawWireSphere(transform.position, rangeAtaque * 2);//
+    }
     public SerVivoStats getSerVivoStats(){ return meusStats; }
     public int getOuro() { return ouro; }
 }
