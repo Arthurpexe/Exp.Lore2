@@ -86,6 +86,10 @@ public class NPCQuest : InteragirNPC
             textoDescricao.text = missao.getDescricao();
             textoOuro.text = missao.getRecompensaOuro().ToString();
 
+            //gambiarra
+            Cursor.lockState = CursorLockMode.None;
+            Cursor.visible = true;
+
             #region Missao "Boatos (quase) Inacreditaveis" Desativada
             //if (missao.getTitulo() == "A Invasão")
             //{
@@ -105,6 +109,10 @@ public class NPCQuest : InteragirNPC
         {
             painelDialogo.SetActive(false);
             painelAceitarQuest.SetActive(false);
+
+            //gambiarra
+            Cursor.lockState = CursorLockMode.Locked;
+            Cursor.visible = false;
         }
     }
 
@@ -116,9 +124,17 @@ public class NPCQuest : InteragirNPC
     {
         aceitarQuest();
         painelAceitarQuest.SetActive(false);
+
+        //gambiarra
+        Cursor.lockState = CursorLockMode.Locked;
+        Cursor.visible = false;
     }
     public void respostaNao()
     {
         painelAceitarQuest.SetActive(false);
+
+        //gambiarra
+        Cursor.lockState = CursorLockMode.Locked;
+        Cursor.visible = false;
     }
 }

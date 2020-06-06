@@ -735,6 +735,7 @@ RectTransform:
   - {fileID: 50983798}
   - {fileID: 1327655303}
   - {fileID: 2041067702}
+  - {fileID: 1549800201}
   - {fileID: 834576593}
   - {fileID: 1318887699}
   - {fileID: 578966810}
@@ -743,11 +744,10 @@ RectTransform:
   - {fileID: 626508274}
   - {fileID: 999442767}
   - {fileID: 1061964555}
-  - {fileID: 1549800201}
-  - {fileID: 1162538331}
-  - {fileID: 1813408278}
   - {fileID: 1660922073}
   - {fileID: 1091631156}
+  - {fileID: 1162538331}
+  - {fileID: 1813408278}
   - {fileID: 1842156574}
   - {fileID: 316224193}
   m_Father: {fileID: 0}
@@ -3619,8 +3619,12 @@ PrefabInstance:
       objectReference: {fileID: 626508271}
     - target: {fileID: 2107178263, guid: 6cb7c3bb16601df4c9d86382c62d90b9, type: 3}
       propertyPath: dialogo
-      value: "t\xF4 fingindo estar ocupado para minha m\xE3e n\xE3o me obrigar a
-        fazer tarefas"
+      value: "t\xF4 fingindo estar ocupado para meu pai n\xE3o me obrigar a fazer
+        tarefas"
+      objectReference: {fileID: 0}
+    - target: {fileID: 2107178263, guid: 6cb7c3bb16601df4c9d86382c62d90b9, type: 3}
+      propertyPath: nomeNPC
+      value: Dadinho
       objectReference: {fileID: 0}
     - target: {fileID: 1989287473092352727, guid: 6cb7c3bb16601df4c9d86382c62d90b9,
         type: 3}
@@ -6678,6 +6682,10 @@ PrefabInstance:
       value: "Minha m\xE3e n\xE3o me deixa mais nadar no lago desde que viram algo
         assustador... mas n\xE3o sei o que pode ser :/"
       objectReference: {fileID: 0}
+    - target: {fileID: 2107178263, guid: 6cb7c3bb16601df4c9d86382c62d90b9, type: 3}
+      propertyPath: nomeNPC
+      value: Chiquita Soares
+      objectReference: {fileID: 0}
     - target: {fileID: 1989287473092352727, guid: 6cb7c3bb16601df4c9d86382c62d90b9,
         type: 3}
       propertyPath: painelDialogo
@@ -9359,7 +9367,7 @@ RectTransform:
   - {fileID: 103066827}
   - {fileID: 1142536127}
   m_Father: {fileID: 10977398}
-  m_RootOrder: 6
+  m_RootOrder: 7
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
@@ -11350,6 +11358,10 @@ PrefabInstance:
       propertyPath: dialogo
       value: "Acho que tem algum monstro no lago,,, Chamado NONTI.... sim, o grandioso
         NONTINTERESSA!! e n\xE3o fale mais com minha filha"
+      objectReference: {fileID: 0}
+    - target: {fileID: 2107178263, guid: 6cb7c3bb16601df4c9d86382c62d90b9, type: 3}
+      propertyPath: nomeNPC
+      value: Antonieta Tabira
       objectReference: {fileID: 0}
     - target: {fileID: 1989287473092352727, guid: 6cb7c3bb16601df4c9d86382c62d90b9,
         type: 3}
@@ -14458,7 +14470,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: Aceitar=M e click
+  m_Text: Aceitar
 --- !u!222 &353018648
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -16493,6 +16505,10 @@ PrefabInstance:
       propertyPath: painelDialogo
       value: 
       objectReference: {fileID: 626508271}
+    - target: {fileID: 2107178263, guid: 6cb7c3bb16601df4c9d86382c62d90b9, type: 3}
+      propertyPath: nomeNPC
+      value: Brabius O Marinheiro
+      objectReference: {fileID: 0}
     - target: {fileID: 3636788635424217240, guid: 6cb7c3bb16601df4c9d86382c62d90b9,
         type: 3}
       propertyPath: m_Name
@@ -22402,7 +22418,7 @@ RectTransform:
   - {fileID: 370482242}
   - {fileID: 2049670762}
   m_Father: {fileID: 10977398}
-  m_RootOrder: 5
+  m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 1, y: 0}
   m_AnchorMax: {x: 1, y: 0}
@@ -23819,7 +23835,7 @@ RectTransform:
   - {fileID: 755185799}
   - {fileID: 786719483}
   m_Father: {fileID: 10977398}
-  m_RootOrder: 8
+  m_RootOrder: 9
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
@@ -27200,11 +27216,11 @@ RectTransform:
   m_Father: {fileID: 626508274}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 1}
-  m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 53.710022, y: 17.045013}
-  m_SizeDelta: {x: 269.78, y: 54.71}
-  m_Pivot: {x: 0, y: 1}
+  m_AnchorMin: {x: 0.5, y: 1}
+  m_AnchorMax: {x: 0.5, y: 1}
+  m_AnchoredPosition: {x: 0, y: 17.5}
+  m_SizeDelta: {x: 324.5, y: 54.71}
+  m_Pivot: {x: 0.5, y: 1}
 --- !u!114 &755185800
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -27896,8 +27912,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 1, y: 1}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: -72, y: 10}
-  m_SizeDelta: {x: 160.78, y: 54.71}
+  m_AnchoredPosition: {x: -68.52, y: 22.7}
+  m_SizeDelta: {x: 106.99, y: 67.1}
   m_Pivot: {x: 0, y: 1}
 --- !u!114 &786719484
 MonoBehaviour:
@@ -27912,7 +27928,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 0.8666667, g: 0.8666667, b: 0.8666667, a: 1}
+  m_Color: {r: 1, g: 0.504717, b: 0.504717, a: 1}
   m_RaycastTarget: 1
   m_OnCullStateChanged:
     m_PersistentCalls:
@@ -29751,7 +29767,7 @@ RectTransform:
   - {fileID: 1818542822}
   - {fileID: 968339161}
   m_Father: {fileID: 10977398}
-  m_RootOrder: 3
+  m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 1, y: 1}
   m_AnchorMax: {x: 1, y: 1}
@@ -34196,7 +34212,7 @@ RectTransform:
   - {fileID: 1363843607}
   - {fileID: 133706909}
   m_Father: {fileID: 10977398}
-  m_RootOrder: 9
+  m_RootOrder: 10
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
@@ -35872,7 +35888,7 @@ RectTransform:
   - {fileID: 420736601}
   - {fileID: 1404949109}
   m_Father: {fileID: 10977398}
-  m_RootOrder: 10
+  m_RootOrder: 11
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
@@ -37267,7 +37283,7 @@ RectTransform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 10977398}
-  m_RootOrder: 15
+  m_RootOrder: 13
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0}
   m_AnchorMax: {x: 0.5, y: 0}
@@ -40350,7 +40366,7 @@ RectTransform:
   - {fileID: 129300642}
   - {fileID: 1715430527}
   m_Father: {fileID: 10977398}
-  m_RootOrder: 7
+  m_RootOrder: 8
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
@@ -40961,7 +40977,7 @@ RectTransform:
   - {fileID: 1648041077}
   - {fileID: 637590462}
   m_Father: {fileID: 10977398}
-  m_RootOrder: 12
+  m_RootOrder: 14
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
@@ -41585,7 +41601,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   raio: 3
-  nomeNPC: Pexe
+  nomeNPC: Pexe pai
   textoNomeNPCDialogo: {fileID: 1953885129}
   painelDialogo: {fileID: 626508271}
   dialogo: "Estou saindo daqui com meu filho por n\xE3o nos aceitarem aqui, nos chamam
@@ -45456,37 +45472,6 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
---- !u!1 &1303244442
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 9149776346477300033}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 1303244443}
-  m_Layer: 0
-  m_Name: Boss (Missing Prefab)
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &1303244443
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 9149776346477300033}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1303244442}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children:
-  - {fileID: 5242926617304552858}
-  m_Father: {fileID: 2084108143}
-  m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &1304899373
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -45896,7 +45881,7 @@ RectTransform:
   - {fileID: 1887518997}
   - {fileID: 548241721}
   m_Father: {fileID: 10977398}
-  m_RootOrder: 4
+  m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 1, y: 0}
   m_AnchorMax: {x: 1, y: 0}
@@ -47628,22 +47613,6 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 1351869764}
   m_PrefabAsset: {fileID: 0}
---- !u!1 &1352215020
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 9149776346477300033}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 5242926617304552858}
-  m_Layer: 0
-  m_Name: Missing Prefab (Dummy)
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
 --- !u!1 &1353127271
 GameObject:
   m_ObjectHideFlags: 0
@@ -51555,11 +51524,15 @@ PrefabInstance:
       propertyPath: dialogo
       value: "Vai comprar ou so ficar olhando?!?!... pedr\xE3o, meus irm\xE3os n\xE3o
         querem montar um programa comigo, t\xF4 triste... como assim voc\xEA n\xE3o
-        se impora?!? SAI DA MINHA FRENTE"
+        se importa?!? SAI DA MINHA FRENTE"
       objectReference: {fileID: 0}
     - target: {fileID: 2107178263, guid: 6cb7c3bb16601df4c9d86382c62d90b9, type: 3}
       propertyPath: raio
       value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 2107178263, guid: 6cb7c3bb16601df4c9d86382c62d90b9, type: 3}
+      propertyPath: nomeNPC
+      value: Golias Melancolico
       objectReference: {fileID: 0}
     - target: {fileID: 1989287473092352727, guid: 6cb7c3bb16601df4c9d86382c62d90b9,
         type: 3}
@@ -52673,6 +52646,10 @@ PrefabInstance:
       propertyPath: dialogo
       value: "N\xE3o acredite no cara ali do lado, os peixes est\xE3o agitados"
       objectReference: {fileID: 0}
+    - target: {fileID: 2107178263, guid: 6cb7c3bb16601df4c9d86382c62d90b9, type: 3}
+      propertyPath: nomeNPC
+      value: Jorge O Pirata
+      objectReference: {fileID: 0}
     - target: {fileID: 1989287473092352727, guid: 6cb7c3bb16601df4c9d86382c62d90b9,
         type: 3}
       propertyPath: painelDialogo
@@ -53250,6 +53227,10 @@ PrefabInstance:
       propertyPath: dialogo
       value: "Ouvi dizer que s\xF3 precisa de um copo de leite e uma manga para matar
         at\xE9 o homem mais forte... hehehehehehehe"
+      objectReference: {fileID: 0}
+    - target: {fileID: 2107178263, guid: 6cb7c3bb16601df4c9d86382c62d90b9, type: 3}
+      propertyPath: nomeNPC
+      value: Pigmeu Coragem
       objectReference: {fileID: 0}
     - target: {fileID: 1989287473092352727, guid: 6cb7c3bb16601df4c9d86382c62d90b9,
         type: 3}
@@ -55147,7 +55128,7 @@ RectTransform:
   - {fileID: 1778937968}
   - {fileID: 13581647}
   m_Father: {fileID: 10977398}
-  m_RootOrder: 11
+  m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 1, y: 0.5}
   m_AnchorMax: {x: 1, y: 0.5}
@@ -57253,7 +57234,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   raio: 5
-  nomeNPC: "Pexinho \xC9"
+  nomeNPC: Pexinho filho
   textoNomeNPCDialogo: {fileID: 1953885129}
   painelDialogo: {fileID: 626508271}
   dialogo: "Acho que tem algo atr\xE1s da cachoeira..."
@@ -58152,7 +58133,7 @@ RectTransform:
   m_Children:
   - {fileID: 2136515312}
   m_Father: {fileID: 10977398}
-  m_RootOrder: 14
+  m_RootOrder: 12
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 1, y: 1}
@@ -59210,7 +59191,7 @@ PrefabInstance:
     - target: {fileID: 2354483634011499161, guid: 395780b54e99df8428fc9d1fd306d079,
         type: 3}
       propertyPath: m_NormalizedViewPortRect.width
-      value: 0.13
+      value: 0.15
       objectReference: {fileID: 0}
     - target: {fileID: 2354483634011499163, guid: 395780b54e99df8428fc9d1fd306d079,
         type: 3}
@@ -64461,7 +64442,7 @@ RectTransform:
   m_Children:
   - {fileID: 1623719836}
   m_Father: {fileID: 10977398}
-  m_RootOrder: 13
+  m_RootOrder: 15
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
@@ -67187,6 +67168,10 @@ PrefabInstance:
       propertyPath: dialogo
       value: "Ent\xE3o meu filho n\xE3o esta ocupado! vou dar um jeito nele... obrigado"
       objectReference: {fileID: 0}
+    - target: {fileID: 2107178263, guid: 6cb7c3bb16601df4c9d86382c62d90b9, type: 3}
+      propertyPath: nomeNPC
+      value: "Serj\xE3o"
+      objectReference: {fileID: 0}
     - target: {fileID: 1989287473092352727, guid: 6cb7c3bb16601df4c9d86382c62d90b9,
         type: 3}
       propertyPath: painelDialogo
@@ -69166,7 +69151,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 1, y: 2}
+  m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 150, y: 54}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1966633892
@@ -69200,7 +69185,9 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: esc = fechar
+  m_Text: 'ESC
+
+    fecha'
 --- !u!222 &1966633893
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -72906,7 +72893,7 @@ Transform:
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
-  - {fileID: 1303244443}
+  - {fileID: 5242926617304552858}
   m_Father: {fileID: 156161658}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -97755,21 +97742,12 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 4294967295
   m_IsActive: 1
---- !u!4 &5242926617304552858
+--- !u!4 &5242926617304552858 stripped
 Transform:
-  m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 3906895658676509915, guid: e86abfabb0a112a4c86b9612224f540c,
     type: 3}
   m_PrefabInstance: {fileID: 9149776346477300033}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1352215020}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
-  m_Father: {fileID: 1303244443}
-  m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!23 &5283763134870345654
 MeshRenderer:
   m_ObjectHideFlags: 0
